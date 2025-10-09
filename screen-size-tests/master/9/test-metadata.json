@@ -1,0 +1,14 @@
+{
+  "testRun": {
+    "timestamp": "2025-10-09T06:22:03+00:00",
+    "branch": "master",
+    "commit": "217370ffa0ef2eed03215dc0f2b8732831241ec9",
+    "workflow": "Screen Size Testing - Insights & Players Panel",
+    "runId": "18366585691",
+    "runNumber": "9",
+    "deviceCategories": "all",
+    "updateSnapshots": "false",
+    "screenshotCount": 93
+  },
+  "reportUrl": "https://bkrupa.github.io/eso-log-aggregator-reports/screen-size-tests/master/9/index.html"
+}
