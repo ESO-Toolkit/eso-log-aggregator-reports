@@ -1,0 +1,14 @@
+{
+  "testRun": {
+    "timestamp": "2025-10-11T20:53:45+00:00",
+    "branch": "feature/device-tests",
+    "commit": "a578858918c70e3b69531a22a90f2daaff48cfca",
+    "workflow": "Screen Size Testing - Core Panels & Insights Analysis",
+    "runId": "18434513879",
+    "runNumber": "25",
+    "deviceCategories": "all",
+    "updateSnapshots": "false",
+    "screenshotCount": 33
+  },
+  "reportUrl": "https://bkrupa.github.io/eso-log-aggregator-reports/screen-size-tests/feature/device-tests/25/index.html"
+}
