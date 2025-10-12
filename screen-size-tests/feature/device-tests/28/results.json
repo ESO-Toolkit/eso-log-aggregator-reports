@@ -1,0 +1,1372 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/playwright.screen-sizes-fast.config.ts",
+    "rootDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/global-setup-ci.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+        "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+        "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+      },
+      "gitCommit": {
+        "shortHash": "062cc06",
+        "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+        "subject": "Bulletproof github actions",
+        "body": "Bulletproof github actions\n",
+        "author": {
+          "name": "Bradlee Krupa",
+          "email": "bkrupa21@gmail.com",
+          "time": 1760238650000
+        },
+        "committer": {
+          "name": "Bradlee Krupa",
+          "email": "bkrupa21@gmail.com",
+          "time": 1760238650000
+        },
+        "branch": "feature/device-tests"
+      },
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "screen-size-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "screen-size-report/results.json"
+        }
+      ],
+      [
+        "github",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Mobile Portrait",
+        "name": "Mobile Portrait",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Mobile Landscape",
+        "name": "Mobile Landscape",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Tablet Portrait",
+        "name": "Tablet Portrait",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Tablet Landscape",
+        "name": "Tablet Landscape",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Desktop Standard",
+        "name": "Desktop Standard",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Desktop Large",
+        "name": "Desktop Large",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Breakpoint Critical",
+        "name": "Breakpoint Critical",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "commitHash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18438533773"
+          },
+          "gitCommit": {
+            "shortHash": "062cc06",
+            "hash": "062cc068103384c9ca3cd98bb2e7f01680f50e2a",
+            "subject": "Bulletproof github actions",
+            "body": "Bulletproof github actions\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760238650000
+            },
+            "branch": "feature/device-tests"
+          },
+          "actualWorkers": 3
+        },
+        "id": "Ultrawide",
+        "name": "Ultrawide",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "visual-regression-minimal.spec.ts",
+      "file": "visual-regression-minimal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Visual Regression - Core Panels",
+          "file": "visual-regression-minimal.spec.ts",
+          "line": 73,
+          "column": 6,
+          "specs": [
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Portrait",
+                  "projectName": "Mobile Portrait",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15454,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3084ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:32:39.053Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-c201c2821acd3e120810",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Portrait",
+                  "projectName": "Mobile Portrait",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 74983,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:32:39.258Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-699df234ec71600a278f",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Landscape",
+                  "projectName": "Mobile Landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 16112,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3035ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:32:39.248Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-9427d2fd00e537bf46f3",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Landscape",
+                  "projectName": "Mobile Landscape",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 73904,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:32:57.602Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-de5245d9be5224337fc2",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Tablet Portrait",
+                  "projectName": "Tablet Portrait",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 12517,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3073ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:32:58.684Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-7c74d921c999d04415f4",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Tablet Portrait",
+                  "projectName": "Tablet Portrait",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 69836,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:33:11.498Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-3f3f65f86b3a32c409ca",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Tablet Landscape",
+                  "projectName": "Tablet Landscape",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12437,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3036ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:33:58.930Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-2bd282d11dade3471741",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Tablet Landscape",
+                  "projectName": "Tablet Landscape",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 68770,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:34:11.770Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-f5f2663475144c9b7168",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Standard",
+                  "projectName": "Desktop Standard",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11438,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3042ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:34:14.920Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-ea500d91a0c5b7efd2d4",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Standard",
+                  "projectName": "Desktop Standard",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 69193,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:34:23.170Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-332a2349942f279b0b12",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Large",
+                  "projectName": "Desktop Large",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12518,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3052ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:34:28.883Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-c468663ab215aaea5e2d",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Desktop Large",
+                  "projectName": "Desktop Large",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 70069,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:34:41.755Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-7e948911482bd86bc3eb",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Breakpoint Critical",
+                  "projectName": "Breakpoint Critical",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 11221,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3046ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:35:22.901Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-7e7a7d3daa45a4f3a513",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Breakpoint Critical",
+                  "projectName": "Breakpoint Critical",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 68900,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:35:34.751Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-c1a167aef93a504f73e5",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "players panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Ultrawide",
+                  "projectName": "Ultrawide",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 15896,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⏱️  Players panel loaded in 3051ms\n"
+                        },
+                        {
+                          "text": "✅ Players panel ready for screenshot capture\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:35:36.679Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-72762876dea19ca8b384",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "insights panel visual regression",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Ultrawide",
+                  "projectName": "Ultrawide",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 66156,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔌 Using offline mode with pre-downloaded data\n"
+                        },
+                        {
+                          "text": "🔌 Enabling offline mode with pre-downloaded data...\n"
+                        },
+                        {
+                          "text": "✅ Offline mode enabled - tests will use pre-downloaded data\n"
+                        },
+                        {
+                          "text": "📂 Using mock data for getCurrentUser\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getCurrentUser\n"
+                        },
+                        {
+                          "text": "📂 Loaded offline data for getReportByCode from fight-info.json\n"
+                        },
+                        {
+                          "text": "🔌 Offline response for getReportByCode\n"
+                        },
+                        {
+                          "text": "⚠️ Content loading timeout, taking screenshot anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T03:35:53.580Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e9b81f8ef15431eb1d5-fac9fd1dd0a51c2f5cac",
+              "file": "visual-regression-minimal.spec.ts",
+              "line": 115,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-12T03:32:37.201Z",
+    "duration": 262765.265,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
