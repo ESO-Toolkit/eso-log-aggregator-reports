@@ -1,0 +1,611 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/playwright.screen-sizes-fast.config.ts",
+    "rootDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/global-setup-ci.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+        "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+        "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+      },
+      "gitCommit": {
+        "shortHash": "56e100d",
+        "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+        "subject": "Cleaned up ss tests",
+        "body": "Cleaned up ss tests\n",
+        "author": {
+          "name": "Bradlee Krupa",
+          "email": "bkrupa21@gmail.com",
+          "time": 1760322255000
+        },
+        "committer": {
+          "name": "Bradlee Krupa",
+          "email": "bkrupa21@gmail.com",
+          "time": 1760322255000
+        },
+        "branch": "feature/device-tests"
+      }
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "screen-size-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "screen-size-report/results.json"
+        }
+      ],
+      [
+        "github",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Android Small",
+        "name": "Android Small",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "iPhone SE",
+        "name": "iPhone SE",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Mobile Portrait",
+        "name": "Mobile Portrait",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Mobile Landscape",
+        "name": "Mobile Landscape",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Small Tablet",
+        "name": "Small Tablet",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Tablet Portrait",
+        "name": "Tablet Portrait",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Tablet Landscape",
+        "name": "Tablet Landscape",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Surface Pro",
+        "name": "Surface Pro",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Laptop Standard",
+        "name": "Laptop Standard",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Desktop Standard",
+        "name": "Desktop Standard",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Desktop Large",
+        "name": "Desktop Large",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Desktop 2K",
+        "name": "Desktop 2K",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Breakpoint Critical",
+        "name": "Breakpoint Critical",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/test-results-screen-sizes",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/bkrupa/eso-log-aggregator/commit/56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "commitHash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "buildHref": "https://github.com/bkrupa/eso-log-aggregator/actions/runs/18453322727"
+          },
+          "gitCommit": {
+            "shortHash": "56e100d",
+            "hash": "56e100d15a2fa540f84ac9c23c7e5653ac0b5ab1",
+            "subject": "Cleaned up ss tests",
+            "body": "Cleaned up ss tests\n",
+            "author": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "committer": {
+              "name": "Bradlee Krupa",
+              "email": "bkrupa21@gmail.com",
+              "time": 1760322255000
+            },
+            "branch": "feature/device-tests"
+          }
+        },
+        "id": "Ultrawide",
+        "name": "Ultrawide",
+        "testDir": "/home/runner/work/eso-log-aggregator/eso-log-aggregator/tests/screen-sizes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 3,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "stderr": "pipe",
+      "stdout": "pipe"
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: http://localhost:3000 is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+      "stack": "Error: http://localhost:3000 is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+    }
+  ],
+  "stats": {
+    "startTime": "2025-10-13T02:29:55.472Z",
+    "duration": 31.385999999999967,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
