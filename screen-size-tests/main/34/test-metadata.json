@@ -1,0 +1,14 @@
+{
+  "testRun": {
+    "timestamp": "2026-02-19T03:38:34+00:00",
+    "branch": "main",
+    "commit": "888e76fd615c15d82e8c38bc3447b80dfc1b56ae",
+    "workflow": "Screen Size Testing - Core Panels & Insights Analysis",
+    "runId": "22167430622",
+    "runNumber": "34",
+    "deviceCategories": "all",
+    "updateSnapshots": "false",
+    "screenshotCount": 0
+  },
+  "reportUrl": "https://ESO-Toolkit.github.io/eso-log-aggregator-reports/screen-size-tests/main/34/index.html"
+}
