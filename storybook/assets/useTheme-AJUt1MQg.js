@@ -1,0 +1,1 @@
+import"./iframe-DzNu_8o5.js";import{L as t,x as m,N as s}from"./Box-B0RUrpBX.js";function u(){const e=t(s);return e[m]||e}export{u};
