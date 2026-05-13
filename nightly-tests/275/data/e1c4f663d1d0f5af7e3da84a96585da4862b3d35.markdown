@@ -1,0 +1,1330 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-interactive.spec.ts >> Nightly Regression - Interactive Features >> Live Logging Functionality >> should load live logging interface
+- Location: tests/nightly-regression-interactive.spec.ts:490:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Start"), button:has-text("Stop"), button:has-text("Connect")').first()
+    - locator resolved to <button tabindex="0" type="button" class="MuiButtonBase-root css-t7ok65">…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 100ms
+    48 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - element is outside of the viewport
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - button "ESO Helpers ESO Toolkit" [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img "ESO Helpers" [ref=e11]
+            - text: ESO Toolkit
+        - generic [ref=e12]:
+          - button "roster hub Roster Hub" [ref=e13] [cursor=pointer]:
+            - img "roster hub" [ref=e15]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e16] [cursor=pointer]:
+            - img "build hub" [ref=e18]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e19] [cursor=pointer]:
+            - img "pack hub" [ref=e21]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e22] [cursor=pointer]:
+            - img [ref=e24]
+            - text: Reports
+            - img [ref=e27]
+          - button "Tools" [ref=e29] [cursor=pointer]:
+            - img [ref=e31]
+            - text: Tools
+            - img [ref=e34]
+          - button "Profile" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]: U
+            - paragraph [ref=e39]: Profile
+            - img [ref=e40]
+    - generic [ref=e42]:
+      - button "U Profile View profile" [ref=e45] [cursor=pointer]:
+        - generic [ref=e46]: U
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Profile
+          - paragraph [ref=e50]: View profile
+        - img [ref=e51]
+      - paragraph [ref=e53]: Navigate
+      - generic [ref=e54]:
+        - button "👥 Roster Hub" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 👥
+          - paragraph [ref=e57]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 🏗️
+          - paragraph [ref=e60]: Build Hub
+        - button "🧩 Pack Hub" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]: 🧩
+          - paragraph [ref=e63]: Pack Hub
+      - paragraph [ref=e64]: Reports
+      - generic [ref=e65]:
+        - button "📁 My Reports Your uploaded logs" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📁
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: My Reports
+            - paragraph [ref=e70]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: 🎲
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Sample Report
+            - paragraph [ref=e75]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 📊
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: Latest Reports
+            - paragraph [ref=e80]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: 🏆
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Leaderboards
+            - paragraph [ref=e85]: Top parse rankings
+      - paragraph [ref=e86]: Tools
+      - generic [ref=e87]:
+        - button "📝 Text Editor Format guild announcements" [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: 📝
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Text Editor
+            - paragraph [ref=e92]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e93] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: Calculator
+            - paragraph [ref=e105]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e106] [cursor=pointer]:
+          - generic [ref=e107]: 📈
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Parse Analysis
+            - paragraph [ref=e110]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e111] [cursor=pointer]:
+          - generic [ref=e112]: ⚔️
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: Loadout Manager
+            - paragraph [ref=e115]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: 👥
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: Roster Builder
+            - paragraph [ref=e120]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e121] [cursor=pointer]:
+          - generic [ref=e122]: 🔧
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: Build Editor
+            - paragraph [ref=e125]: Create & share builds
+      - paragraph [ref=e126]: Appearance
+      - generic [ref=e127]:
+        - button "Switch to light mode" [ref=e128] [cursor=pointer]:
+          - img [ref=e130]
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: Theme
+            - paragraph [ref=e134]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e135] [cursor=pointer]':
+          - img [ref=e137]
+          - generic [ref=e139]:
+            - paragraph [ref=e140]: Performance
+            - paragraph [ref=e141]: Auto · Low
+          - img [ref=e142]
+      - button "Log out" [ref=e145] [cursor=pointer]:
+        - img [ref=e147]
+        - text: Log out
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - button "Back to Fight List" [ref=e153] [cursor=pointer]:
+          - img [ref=e155]
+          - text: Fight List
+        - button "Interactive Fight Replay" [ref=e157] [cursor=pointer]:
+          - img [ref=e159]
+          - text: Replay
+        - link "View full report on ESO Logs" [ref=e161] [cursor=pointer]:
+          - /url: https://www.esologs.com/reports/3gjVGWB2dxCL8XAw?fight=58
+          - img [ref=e163]
+          - text: ESO Logs
+        - button "Create a roster from this fight's players" [ref=e165] [cursor=pointer]:
+          - img [ref=e167]
+          - text: Roster
+      - heading "Jynorah and Skorkhif (34%)" [level=4] [ref=e170]
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: Target
+              - generic [ref=e179]:
+                - combobox "Target" [ref=e180] [cursor=pointer]:
+                  - generic [ref=e182]: All Bosses
+                - textbox: "-1"
+                - img
+                - group:
+                  - generic: Target
+            - generic [ref=e184]:
+              - generic [ref=e185]: Player
+              - generic [ref=e186]:
+                - combobox "Player" [ref=e187] [cursor=pointer]: All Players
+                - textbox: all
+                - img
+                - group:
+                  - generic: Player
+          - generic [ref=e188]:
+            - button "Previous fight" [ref=e189] [cursor=pointer]:
+              - img [ref=e190]
+            - group [ref=e192]:
+              - button "All" [pressed] [ref=e193] [cursor=pointer]
+              - button "Bosses" [ref=e194] [cursor=pointer]
+            - paragraph [ref=e196]: 55/55
+            - button "Next fight" [disabled]:
+              - img
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic:
+              - img
+            - tablist [ref=e201]:
+              - tab [selected] [ref=e202] [cursor=pointer]:
+                - img [ref=e203]
+              - tab [ref=e206] [cursor=pointer]:
+                - img [ref=e207]
+              - tab [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: swords
+              - tab [ref=e211] [cursor=pointer]:
+                - img [ref=e212]
+              - tab [ref=e214] [cursor=pointer]:
+                - generic [ref=e215]: skull
+              - tab [ref=e216] [cursor=pointer]:
+                - img [ref=e217]
+              - tab [ref=e219] [cursor=pointer]:
+                - img [ref=e220]
+              - tab [ref=e222] [cursor=pointer]:
+                - img [ref=e223]
+              - tab [ref=e225] [cursor=pointer]:
+                - img [ref=e226]
+            - img [ref=e229] [cursor=pointer]
+          - generic [ref=e231] [cursor=pointer]:
+            - switch "🧪" [ref=e234]
+            - generic [ref=e238]: 🧪
+        - generic [ref=e241]:
+          - generic [ref=e243]:
+            - heading "Fight Insights" [level=6] [ref=e244]
+            - generic [ref=e245]:
+              - generic [ref=e246]: ⏱️
+              - paragraph [ref=e247]:
+                - strong [ref=e248]: "Duration:"
+                - text: 5m 20.8s
+            - generic [ref=e249]:
+              - generic [ref=e250]: 🎯
+              - paragraph [ref=e251]:
+                - strong [ref=e252]: "Fight initiator:"
+                - text: "@Mobitor"
+            - generic [ref=e253]:
+              - heading "Abilities Equipped:" [level=6] [ref=e254]
+              - generic [ref=e255]:
+                - generic [ref=e256]:
+                  - img "Glacial Colossus" [ref=e259]
+                  - generic [ref=e260]:
+                    - paragraph [ref=e261]: Colossus
+                    - generic [ref=e262]: "@TingleTony"
+                - generic [ref=e263]:
+                  - img "Summon Charged Atronach" [ref=e266]
+                  - generic [ref=e267]:
+                    - paragraph [ref=e268]: Atronach
+                    - generic [ref=e269]: "@theLEERest"
+                - generic [ref=e270]:
+                  - img "Reviving Barrier" [ref=e273]
+                  - generic [ref=e274]:
+                    - paragraph [ref=e275]: Barrier
+                    - generic [ref=e276]: "@Mobitor, @Syoni, @Lord_Drad"
+                - generic [ref=e277]:
+                  - img "Aggressive Horn" [ref=e280]
+                  - generic [ref=e281]:
+                    - paragraph [ref=e282]: Horn
+                    - generic [ref=e283]: Not equipped
+            - generic [ref=e284]:
+              - heading "Champion Points Equipped:" [level=6] [ref=e285]
+              - list [ref=e286]:
+                - listitem [ref=e287]:
+                  - generic [ref=e288]: ⚡
+                  - generic [ref=e289]:
+                    - generic [ref=e290]: Enlivening Overflow
+                    - paragraph [ref=e291]: "@Syoni"
+                - listitem [ref=e292]:
+                  - generic [ref=e293]: 🛡️
+                  - generic [ref=e294]:
+                    - generic [ref=e295]: From the Brink
+                    - paragraph [ref=e296]: "@Syoni, @TingleTony"
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - heading "Status Effect Uptimes" [level=6] [ref=e301]
+              - generic "View status effect uptimes timeline" [ref=e302]:
+                - button "Open status effect uptimes timeline" [ref=e303] [cursor=pointer]:
+                  - img [ref=e304]
+            - paragraph [ref=e306]: Shows status effects applied to the selected target. Click on a status effect to view in ESO Logs.
+            - generic [ref=e308]:
+              - img [ref=e310]
+              - textbox "Filter by name..." [ref=e312]
+              - group
+            - list [ref=e314]:
+              - listitem [ref=e315]:
+                - generic [ref=e316] [cursor=pointer]:
+                  - progressbar [ref=e318]
+                  - generic [ref=e320]:
+                    - img "Burning" [ref=e322]
+                    - generic [ref=e323]:
+                      - paragraph [ref=e324]: Burning
+                      - generic [ref=e326]: 191 applications • 47.1s total
+                    - paragraph [ref=e328]: 15%
+              - listitem [ref=e329]:
+                - generic [ref=e330] [cursor=pointer]:
+                  - progressbar [ref=e332]
+                  - generic [ref=e334]:
+                    - img "Poisoned" [ref=e336]
+                    - generic [ref=e337]:
+                      - paragraph [ref=e338]: Poisoned
+                      - generic [ref=e340]: 87 applications • 55.6s total
+                    - paragraph [ref=e342]: 17%
+              - listitem [ref=e343]:
+                - generic [ref=e344] [cursor=pointer]:
+                  - progressbar [ref=e346]
+                  - generic [ref=e348]:
+                    - img "Hemorrhaging" [ref=e350]
+                    - generic [ref=e351]:
+                      - paragraph [ref=e352]: Hemorrhaging
+                      - generic [ref=e354]: 1 applications • 4.0s total
+                    - paragraph [ref=e356]: 1%
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - heading "Buff Uptimes" [level=6] [ref=e361]
+              - generic [ref=e362]:
+                - button "Show All Buffs" [ref=e363] [cursor=pointer]
+                - generic "View buff uptimes timeline" [ref=e364]:
+                  - button "Open buff uptimes timeline" [ref=e365] [cursor=pointer]:
+                    - img [ref=e366]
+            - paragraph [ref=e368]: Shows average buff uptimes across friendly players (filtered to important buffs only). Click on a buff to view in ESO Logs.
+            - generic [ref=e370]:
+              - img [ref=e372]
+              - textbox "Filter by name..." [ref=e374]
+              - group
+            - list [ref=e376]:
+              - listitem [ref=e377]:
+                - generic [ref=e378] [cursor=pointer]:
+                  - progressbar [ref=e380]
+                  - generic [ref=e382]:
+                    - img "Minor Savagery" [ref=e384]
+                    - generic [ref=e385]:
+                      - paragraph [ref=e386]: Minor Savagery
+                      - generic [ref=e388]: 7171 applications • 318.4s total
+                    - paragraph [ref=e390]: 99%
+              - listitem [ref=e391]:
+                - generic [ref=e392] [cursor=pointer]:
+                  - progressbar [ref=e394]
+                  - generic [ref=e396]:
+                    - img "Minor Brutality" [ref=e398]
+                    - generic [ref=e399]:
+                      - paragraph [ref=e400]: Minor Brutality
+                      - generic [ref=e402]: 596 applications • 295.6s total
+                    - paragraph [ref=e404]: 92%
+              - listitem [ref=e405]:
+                - generic [ref=e406] [cursor=pointer]:
+                  - progressbar [ref=e408]
+                  - generic [ref=e410]:
+                    - img "Major Resolve" [ref=e412]
+                    - generic [ref=e413]:
+                      - paragraph [ref=e414]: Major Resolve
+                      - generic [ref=e416]: 234 applications • 282.4s total
+                    - paragraph [ref=e418]: 88%
+              - listitem [ref=e419]:
+                - generic [ref=e420] [cursor=pointer]:
+                  - progressbar [ref=e422]
+                  - generic [ref=e424]:
+                    - img "Minor Resolve" [ref=e426]
+                    - generic [ref=e427]:
+                      - paragraph [ref=e428]: Minor Resolve
+                      - generic [ref=e430]: 795 applications • 268.5s total
+                    - paragraph [ref=e432]: 84%
+              - listitem [ref=e433]:
+                - generic [ref=e434] [cursor=pointer]:
+                  - progressbar [ref=e436]
+                  - generic [ref=e438]:
+                    - img "Pearlescent Ward" [ref=e440]
+                    - generic [ref=e441]:
+                      - paragraph [ref=e442]: Pearlescent Ward
+                      - generic [ref=e444]: 3164 applications • 262.9s total
+                    - paragraph [ref=e446]: 82%
+              - listitem [ref=e447]:
+                - generic [ref=e448] [cursor=pointer]:
+                  - progressbar [ref=e450]
+                  - generic [ref=e452]:
+                    - img "Enlivening Overflow" [ref=e454]
+                    - generic [ref=e455]:
+                      - paragraph [ref=e456]: Enlivening Overflow
+                      - generic [ref=e458]: 261 applications • 255.3s total
+                    - paragraph [ref=e460]: 80%
+              - listitem [ref=e461]:
+                - generic [ref=e462] [cursor=pointer]:
+                  - progressbar [ref=e464]
+                  - generic [ref=e466]:
+                    - img "Major Courage" [ref=e468]
+                    - generic [ref=e469]:
+                      - paragraph [ref=e470]: Major Courage
+                      - generic [ref=e472]: 153 applications • 251.2s total
+                    - paragraph [ref=e474]: 78%
+              - listitem [ref=e475]:
+                - generic [ref=e476] [cursor=pointer]:
+                  - progressbar [ref=e478]
+                  - generic [ref=e480]:
+                    - img "Major Sorcery" [ref=e482]
+                    - generic [ref=e483]:
+                      - paragraph [ref=e484]: Major Sorcery
+                      - generic [ref=e486]: 65 applications • 229.8s total
+                    - paragraph [ref=e488]: 72%
+              - listitem [ref=e489]:
+                - generic [ref=e490] [cursor=pointer]:
+                  - progressbar [ref=e492]
+                  - generic [ref=e494]:
+                    - img "Major Brutality" [ref=e496]
+                    - generic [ref=e497]:
+                      - paragraph [ref=e498]: Major Brutality
+                      - generic [ref=e500]: 65 applications • 229.8s total
+                    - paragraph [ref=e502]: 72%
+              - listitem [ref=e503]:
+                - generic [ref=e504] [cursor=pointer]:
+                  - progressbar [ref=e506]
+                  - generic [ref=e508]:
+                    - img "Ozezan's Plating" [ref=e510]
+                    - generic [ref=e511]:
+                      - paragraph [ref=e512]: Ozezan's Plating
+                      - generic [ref=e514]: 860 applications • 182.4s total
+                    - paragraph [ref=e516]: 57%
+              - listitem [ref=e517]:
+                - generic [ref=e518] [cursor=pointer]:
+                  - progressbar [ref=e520]
+                  - generic [ref=e522]:
+                    - img "Minor Berserk" [ref=e524]
+                    - generic [ref=e525]:
+                      - paragraph [ref=e526]: Minor Berserk
+                      - generic [ref=e528]: 2971 applications • 161.1s total
+                    - paragraph [ref=e530]: 50%
+              - listitem [ref=e531]:
+                - generic [ref=e532] [cursor=pointer]:
+                  - progressbar [ref=e534]
+                  - generic [ref=e536]:
+                    - img "Powerful Assault" [ref=e538]
+                    - generic [ref=e539]:
+                      - paragraph [ref=e540]: Powerful Assault
+                      - generic [ref=e542]: 140 applications • 144.1s total
+                    - paragraph [ref=e544]: 45%
+              - listitem [ref=e545]:
+                - generic [ref=e546] [cursor=pointer]:
+                  - progressbar [ref=e548]
+                  - generic [ref=e550]:
+                    - img "Major Savagery" [ref=e552]
+                    - generic [ref=e553]:
+                      - paragraph [ref=e554]: Major Savagery
+                      - generic [ref=e556]: 221 applications • 144.0s total
+                    - paragraph [ref=e558]: 45%
+              - listitem [ref=e559]:
+                - generic [ref=e560] [cursor=pointer]:
+                  - progressbar [ref=e562]
+                  - generic [ref=e564]:
+                    - img "Minor Evasion" [ref=e566]
+                    - generic [ref=e567]:
+                      - paragraph [ref=e568]: Minor Evasion
+                      - generic [ref=e570]: 74 applications • 136.0s total
+                    - paragraph [ref=e572]: 42%
+              - listitem [ref=e573]:
+                - generic [ref=e574] [cursor=pointer]:
+                  - progressbar [ref=e576]
+                  - generic [ref=e578]:
+                    - img "Major Slayer" [ref=e580]
+                    - generic [ref=e581]:
+                      - paragraph [ref=e582]: Major Slayer
+                      - generic [ref=e584]: 30 applications • 111.8s total
+                    - paragraph [ref=e586]: 35%
+              - listitem [ref=e587]:
+                - generic [ref=e588] [cursor=pointer]:
+                  - progressbar [ref=e590]
+                  - generic [ref=e592]:
+                    - img "Minor Heroism" [ref=e594]
+                    - generic [ref=e595]:
+                      - paragraph [ref=e596]: Minor Heroism
+                      - generic [ref=e598]: 24 applications • 93.9s total
+                    - paragraph [ref=e600]: 29%
+              - listitem [ref=e601]:
+                - generic [ref=e602] [cursor=pointer]:
+                  - progressbar [ref=e604]
+                  - generic [ref=e606]:
+                    - img "Major Evasion" [ref=e608]
+                    - generic [ref=e609]:
+                      - paragraph [ref=e610]: Major Evasion
+                      - generic [ref=e612]: 53 applications • 93.8s total
+                    - paragraph [ref=e614]: 29%
+              - listitem [ref=e615]:
+                - generic [ref=e616] [cursor=pointer]:
+                  - progressbar [ref=e618]
+                  - generic [ref=e620]:
+                    - img "Minor Expedition" [ref=e622]
+                    - generic [ref=e623]:
+                      - paragraph [ref=e624]: Minor Expedition
+                      - generic [ref=e626]: 107 applications • 79.8s total
+                    - paragraph [ref=e628]: 25%
+              - listitem [ref=e629]:
+                - generic [ref=e630] [cursor=pointer]:
+                  - progressbar [ref=e632]
+                  - generic [ref=e634]:
+                    - img "Major Expedition" [ref=e636]
+                    - generic [ref=e637]:
+                      - paragraph [ref=e638]: Major Expedition
+                      - generic [ref=e640]: 142 applications • 78.7s total
+                    - paragraph [ref=e642]: 25%
+              - listitem [ref=e643]:
+                - generic [ref=e644] [cursor=pointer]:
+                  - progressbar [ref=e646]
+                  - generic [ref=e648]:
+                    - img "Pillager's Profit" [ref=e650]
+                    - generic [ref=e651]:
+                      - paragraph [ref=e652]: Pillager's Profit
+                      - generic [ref=e654]: 38 applications • 31.7s total
+                    - paragraph [ref=e656]: 10%
+              - listitem [ref=e657]:
+                - generic [ref=e658] [cursor=pointer]:
+                  - progressbar [ref=e660]
+                  - generic [ref=e662]:
+                    - img "Major Heroism" [ref=e664]
+                    - generic [ref=e665]:
+                      - paragraph [ref=e666]: Major Heroism
+                      - generic [ref=e668]: 32 applications • 12.0s total
+                    - paragraph [ref=e670]: 4%
+              - listitem [ref=e671]:
+                - generic [ref=e672] [cursor=pointer]:
+                  - progressbar [ref=e674]
+                  - generic [ref=e676]:
+                    - img "Major Berserk" [ref=e678]
+                    - generic [ref=e679]:
+                      - paragraph [ref=e680]: Major Berserk
+                      - generic [ref=e682]: 12 applications • 10.0s total
+                    - paragraph [ref=e684]: 3%
+          - generic [ref=e687]:
+            - generic [ref=e688]:
+              - heading "Debuff Uptimes" [level=6] [ref=e689]
+              - generic [ref=e690]:
+                - button "Show All Debuffs" [ref=e691] [cursor=pointer]
+                - generic "View debuff uptimes timeline" [ref=e692]:
+                  - button "Open debuff uptimes timeline" [ref=e693] [cursor=pointer]:
+                    - img [ref=e694]
+            - paragraph [ref=e696]: Shows debuffs applied by friendly players to all targets (filtered to important debuffs only). Click on a debuff to view in ESO Logs.
+            - generic [ref=e698]:
+              - img [ref=e700]
+              - textbox "Filter by name..." [ref=e702]
+              - group
+            - list [ref=e704]:
+              - listitem [ref=e705]:
+                - generic [ref=e706] [cursor=pointer]:
+                  - progressbar [ref=e708]
+                  - generic [ref=e710]:
+                    - img "Minor Maim" [ref=e712]
+                    - generic [ref=e713]:
+                      - paragraph [ref=e714]: Minor Maim
+                      - generic [ref=e716]: 200 applications • 241.0s total
+                    - paragraph [ref=e718]: 75%
+              - listitem [ref=e719]:
+                - generic [ref=e720] [cursor=pointer]:
+                  - progressbar [ref=e722]
+                  - generic [ref=e724]:
+                    - img "Minor Lifesteal" [ref=e726]
+                    - generic [ref=e727]:
+                      - paragraph [ref=e728]: Minor Lifesteal
+                      - generic [ref=e730]: 30 applications • 111.8s total
+                    - paragraph [ref=e732]: 35%
+              - listitem [ref=e733]:
+                - generic [ref=e734] [cursor=pointer]:
+                  - progressbar [ref=e736]
+                  - generic [ref=e738]:
+                    - img "Minor Breach" [ref=e740]
+                    - generic [ref=e741]:
+                      - paragraph [ref=e742]: Minor Breach
+                      - generic [ref=e744]: 200 applications • 72.1s total
+                    - paragraph [ref=e746]: 22%
+              - listitem [ref=e747]:
+                - generic [ref=e748] [cursor=pointer]:
+                  - progressbar [ref=e750]
+                  - generic [ref=e752]:
+                    - img "Major Breach" [ref=e754]
+                    - generic [ref=e755]:
+                      - paragraph [ref=e756]: Major Breach
+                      - generic [ref=e758]: 16 applications • 54.9s total
+                    - paragraph [ref=e760]: 17%
+              - listitem [ref=e761]:
+                - generic [ref=e762] [cursor=pointer]:
+                  - progressbar [ref=e764]
+                  - generic [ref=e766]:
+                    - img "Crusher" [ref=e768]
+                    - generic [ref=e769]:
+                      - paragraph [ref=e770]: Crusher
+                      - generic [ref=e772]: 35 applications • 53.4s total
+                    - paragraph [ref=e774]: 17%
+              - listitem [ref=e775]:
+                - generic [ref=e776] [cursor=pointer]:
+                  - progressbar [ref=e778]
+                  - generic [ref=e780]:
+                    - img "Burning" [ref=e782]
+                    - generic [ref=e783]:
+                      - paragraph [ref=e784]: Burning
+                      - generic [ref=e786]: 191 applications • 47.1s total
+                    - paragraph [ref=e788]: 15%
+              - listitem [ref=e789]:
+                - generic [ref=e790] [cursor=pointer]:
+                  - progressbar [ref=e792]
+                  - generic [ref=e794]:
+                    - img "Minor Vulnerability" [ref=e796]
+                    - generic [ref=e797]:
+                      - paragraph [ref=e798]: Minor Vulnerability
+                      - generic [ref=e800]: 56 applications • 45.0s total
+                    - paragraph [ref=e802]: 14%
+              - listitem [ref=e803]:
+                - generic [ref=e804] [cursor=pointer]:
+                  - progressbar [ref=e806]
+                  - generic [ref=e808]:
+                    - img "Major Vulnerability" [ref=e810]
+                    - generic [ref=e811]:
+                      - paragraph [ref=e812]: Major Vulnerability
+                      - generic [ref=e814]: 20 applications • 32.5s total
+                    - paragraph [ref=e816]: 10%
+              - listitem [ref=e817]:
+                - generic [ref=e818] [cursor=pointer]:
+                  - progressbar [ref=e820]
+                  - generic [ref=e822]:
+                    - img "Minor Brittle" [ref=e824]
+                    - generic [ref=e825]:
+                      - paragraph [ref=e826]: Minor Brittle
+                      - generic [ref=e828]: 56 applications • 24.2s total
+                    - paragraph [ref=e830]: 8%
+              - listitem [ref=e831]:
+                - generic [ref=e832] [cursor=pointer]:
+                  - progressbar [ref=e834]
+                  - generic [ref=e836]:
+                    - img "Off Balance" [ref=e838]
+                    - generic [ref=e839]:
+                      - paragraph [ref=e840]: Off Balance
+                      - generic [ref=e842]: 18 applications • 16.4s total
+                    - paragraph [ref=e844]: 5%
+              - listitem [ref=e845]:
+                - generic [ref=e846] [cursor=pointer]:
+                  - progressbar [ref=e848]
+                  - generic [ref=e850]:
+                    - img "Major Maim" [ref=e852]
+                    - generic [ref=e853]:
+                      - paragraph [ref=e854]: Major Maim
+                      - generic [ref=e856]: 8 applications • 10.3s total
+                    - paragraph [ref=e858]: 3%
+          - generic [ref=e861]:
+            - heading "Damage Breakdown" [level=6] [ref=e862]
+            - paragraph [ref=e863]: "Total damage dealt by friendly players: 126.5M"
+            - list [ref=e865]:
+              - listitem [ref=e866]:
+                - generic [ref=e867]:
+                  - img "Pragmatic Fatecarver" [ref=e869]
+                  - generic [ref=e870]:
+                    - generic [ref=e871]:
+                      - generic [ref=e872]:
+                        - generic [ref=e875]: 67.9% crit
+                        - paragraph [ref=e876]: Pragmatic Fatecarver
+                      - generic [ref=e879]: 48.2%
+                    - generic [ref=e882]:
+                      - generic [ref=e883]: 60.9M
+                      - generic [ref=e884]: damage
+                      - generic [ref=e885]: •
+                      - generic [ref=e886]: "2312"
+                      - generic [ref=e887]: hits
+                      - generic [ref=e888]: •
+                      - generic [ref=e889]: 26.4K
+                      - generic [ref=e890]: avg
+                    - progressbar [ref=e891]
+              - listitem [ref=e893]:
+                - generic [ref=e894]:
+                  - img "Blockade of Fire" [ref=e896]
+                  - generic [ref=e897]:
+                    - generic [ref=e898]:
+                      - generic [ref=e899]:
+                        - generic [ref=e902]: 64.1% crit
+                        - paragraph [ref=e903]: Blockade of Fire
+                      - generic [ref=e906]: 9.8%
+                    - generic [ref=e909]:
+                      - generic [ref=e910]: 12.4M
+                      - generic [ref=e911]: damage
+                      - generic [ref=e912]: •
+                      - generic [ref=e913]: "1618"
+                      - generic [ref=e914]: hits
+                      - generic [ref=e915]: •
+                      - generic [ref=e916]: 7.6K
+                      - generic [ref=e917]: avg
+                    - progressbar [ref=e918]
+              - listitem [ref=e920]:
+                - generic [ref=e921]:
+                  - img "Cephaliarch's Flail" [ref=e923]
+                  - generic [ref=e924]:
+                    - generic [ref=e925]:
+                      - generic [ref=e926]:
+                        - generic [ref=e929]: 65.6% crit
+                        - paragraph [ref=e930]: Cephaliarch's Flail
+                      - generic [ref=e933]: 9.2%
+                    - generic [ref=e936]:
+                      - generic [ref=e937]: 11.7M
+                      - generic [ref=e938]: damage
+                      - generic [ref=e939]: •
+                      - generic [ref=e940]: "433"
+                      - generic [ref=e941]: hits
+                      - generic [ref=e942]: •
+                      - generic [ref=e943]: 27.0K
+                      - generic [ref=e944]: avg
+                    - progressbar [ref=e945]
+              - listitem [ref=e947]:
+                - generic [ref=e948]:
+                  - img "Fiery Rage" [ref=e950]
+                  - generic [ref=e951]:
+                    - generic [ref=e952]:
+                      - generic [ref=e953]:
+                        - generic [ref=e956]: 63.0% crit
+                        - paragraph [ref=e957]: Fiery Rage
+                      - generic [ref=e960]: 5.8%
+                    - generic [ref=e963]:
+                      - generic [ref=e964]: 7.4M
+                      - generic [ref=e965]: damage
+                      - generic [ref=e966]: •
+                      - generic [ref=e967]: "173"
+                      - generic [ref=e968]: hits
+                      - generic [ref=e969]: •
+                      - generic [ref=e970]: 42.7K
+                      - generic [ref=e971]: avg
+                    - progressbar [ref=e972]
+              - listitem [ref=e974]:
+                - generic [ref=e975]:
+                  - img "Inspired Scholarship" [ref=e977]
+                  - generic [ref=e978]:
+                    - generic [ref=e979]:
+                      - generic [ref=e980]:
+                        - generic [ref=e983]: 64.4% crit
+                        - paragraph [ref=e984]: Inspired Scholarship
+                      - generic [ref=e987]: 4.2%
+                    - generic [ref=e990]:
+                      - generic [ref=e991]: 5.3M
+                      - generic [ref=e992]: damage
+                      - generic [ref=e993]: •
+                      - generic [ref=e994]: "405"
+                      - generic [ref=e995]: hits
+                      - generic [ref=e996]: •
+                      - generic [ref=e997]: 13.2K
+                      - generic [ref=e998]: avg
+                    - progressbar [ref=e999]
+              - listitem [ref=e1001]:
+                - generic [ref=e1002]:
+                  - img "Burning" [ref=e1004]
+                  - generic [ref=e1005]:
+                    - generic [ref=e1006]:
+                      - generic [ref=e1007]:
+                        - generic [ref=e1010]: 50.6% crit
+                        - paragraph [ref=e1011]: Burning
+                      - generic [ref=e1014]: 3.0%
+                    - generic [ref=e1017]:
+                      - generic [ref=e1018]: 3.8M
+                      - generic [ref=e1019]: damage
+                      - generic [ref=e1020]: •
+                      - generic [ref=e1021]: "894"
+                      - generic [ref=e1022]: hits
+                      - generic [ref=e1023]: •
+                      - generic [ref=e1024]: 4.2K
+                      - generic [ref=e1025]: avg
+                    - progressbar [ref=e1026]
+              - listitem [ref=e1028]:
+                - generic [ref=e1029]:
+                  - img "Quick Cloak" [ref=e1031]
+                  - generic [ref=e1032]:
+                    - generic [ref=e1033]:
+                      - generic [ref=e1034]:
+                        - generic [ref=e1037]: 56.6% crit
+                        - paragraph [ref=e1038]: Quick Cloak
+                      - generic [ref=e1041]: 1.9%
+                    - generic [ref=e1044]:
+                      - generic [ref=e1045]: 2.4M
+                      - generic [ref=e1046]: damage
+                      - generic [ref=e1047]: •
+                      - generic [ref=e1048]: "431"
+                      - generic [ref=e1049]: hits
+                      - generic [ref=e1050]: •
+                      - generic [ref=e1051]: 5.6K
+                      - generic [ref=e1052]: avg
+                    - progressbar [ref=e1053]
+              - listitem [ref=e1055]:
+                - generic [ref=e1056]:
+                  - img "Radiate" [ref=e1058]
+                  - generic [ref=e1059]:
+                    - generic [ref=e1060]:
+                      - generic [ref=e1061]:
+                        - generic [ref=e1064]: 55.3% crit
+                        - paragraph [ref=e1065]: Radiate
+                      - generic [ref=e1068]: 1.7%
+                    - generic [ref=e1071]:
+                      - generic [ref=e1072]: 2.1M
+                      - generic [ref=e1073]: damage
+                      - generic [ref=e1074]: •
+                      - generic [ref=e1075]: "76"
+                      - generic [ref=e1076]: hits
+                      - generic [ref=e1077]: •
+                      - generic [ref=e1078]: 27.7K
+                      - generic [ref=e1079]: avg
+                    - progressbar [ref=e1080]
+              - listitem [ref=e1082]:
+                - generic [ref=e1083]:
+                  - img "Poisoned" [ref=e1085]
+                  - generic [ref=e1086]:
+                    - generic [ref=e1087]:
+                      - generic [ref=e1088]:
+                        - generic [ref=e1091]: 59.6% crit
+                        - paragraph [ref=e1092]: Poisoned
+                      - generic [ref=e1095]: 1.6%
+                    - generic [ref=e1098]:
+                      - generic [ref=e1099]: 2.1M
+                      - generic [ref=e1100]: damage
+                      - generic [ref=e1101]: •
+                      - generic [ref=e1102]: "411"
+                      - generic [ref=e1103]: hits
+                      - generic [ref=e1104]: •
+                      - generic [ref=e1105]: 5.0K
+                      - generic [ref=e1106]: avg
+                    - progressbar [ref=e1107]
+              - listitem [ref=e1109]:
+                - generic [ref=e1110]:
+                  - img "Flames of Oblivion" [ref=e1112]
+                  - generic [ref=e1113]:
+                    - generic [ref=e1114]:
+                      - generic [ref=e1115]:
+                        - generic [ref=e1118]: 73.4% crit
+                        - paragraph [ref=e1119]: Flames of Oblivion
+                      - generic [ref=e1122]: 1.3%
+                    - generic [ref=e1125]:
+                      - generic [ref=e1126]: 1.6M
+                      - generic [ref=e1127]: damage
+                      - generic [ref=e1128]: •
+                      - generic [ref=e1129]: "79"
+                      - generic [ref=e1130]: hits
+                      - generic [ref=e1131]: •
+                      - generic [ref=e1132]: 20.1K
+                      - generic [ref=e1133]: avg
+                    - progressbar [ref=e1134]
+              - listitem [ref=e1136]:
+                - generic [ref=e1137]:
+                  - img "Fulminating Rune" [ref=e1139]
+                  - generic [ref=e1140]:
+                    - generic [ref=e1141]:
+                      - generic [ref=e1142]:
+                        - generic [ref=e1145]: 61.8% crit
+                        - paragraph [ref=e1146]: Fulminating Rune
+                      - generic [ref=e1149]: 1.1%
+                    - generic [ref=e1152]:
+                      - generic [ref=e1153]: 1.4M
+                      - generic [ref=e1154]: damage
+                      - generic [ref=e1155]: •
+                      - generic [ref=e1156]: "259"
+                      - generic [ref=e1157]: hits
+                      - generic [ref=e1158]: •
+                      - generic [ref=e1159]: 5.5K
+                      - generic [ref=e1160]: avg
+                    - progressbar [ref=e1161]
+              - listitem [ref=e1163]:
+                - generic [ref=e1164]:
+                  - img "Overcharged" [ref=e1166]
+                  - generic [ref=e1167]:
+                    - generic [ref=e1168]:
+                      - generic [ref=e1169]:
+                        - generic [ref=e1172]: 64.8% crit
+                        - paragraph [ref=e1173]: Overcharged
+                      - generic [ref=e1176]: 1.1%
+                    - generic [ref=e1179]:
+                      - generic [ref=e1180]: 1.4M
+                      - generic [ref=e1181]: damage
+                      - generic [ref=e1182]: •
+                      - generic [ref=e1183]: "250"
+                      - generic [ref=e1184]: hits
+                      - generic [ref=e1185]: •
+                      - generic [ref=e1186]: 5.5K
+                      - generic [ref=e1187]: avg
+                    - progressbar [ref=e1188]
+              - listitem [ref=e1190]:
+                - generic [ref=e1191]:
+                  - img "Caustic Carrion" [ref=e1193]
+                  - generic [ref=e1194]:
+                    - generic [ref=e1195]:
+                      - paragraph [ref=e1197]: Caustic Carrion
+                      - generic [ref=e1200]: 1.0%
+                    - generic [ref=e1203]:
+                      - generic [ref=e1204]: 1.3M
+                      - generic [ref=e1205]: damage
+                      - generic [ref=e1206]: •
+                      - generic [ref=e1207]: "220"
+                      - generic [ref=e1208]: hits
+                      - generic [ref=e1209]: •
+                      - generic [ref=e1210]: 5.8K
+                      - generic [ref=e1211]: avg
+                    - progressbar [ref=e1212]
+              - listitem [ref=e1214]:
+                - generic [ref=e1215]:
+                  - img "Burning Light" [ref=e1217]
+                  - generic [ref=e1218]:
+                    - generic [ref=e1219]:
+                      - generic [ref=e1220]:
+                        - generic [ref=e1223]: 56.3% crit
+                        - paragraph [ref=e1224]: Burning Light
+                      - generic [ref=e1227]: 0.9%
+                    - generic [ref=e1230]:
+                      - generic [ref=e1231]: 1.2M
+                      - generic [ref=e1232]: damage
+                      - generic [ref=e1233]: •
+                      - generic [ref=e1234]: "119"
+                      - generic [ref=e1235]: hits
+                      - generic [ref=e1236]: •
+                      - generic [ref=e1237]: 10.1K
+                      - generic [ref=e1238]: avg
+                    - progressbar [ref=e1239]
+              - listitem [ref=e1241]:
+                - generic [ref=e1242]:
+                  - img "Radiate" [ref=e1244]
+                  - generic [ref=e1245]:
+                    - generic [ref=e1246]:
+                      - generic [ref=e1247]:
+                        - generic [ref=e1250]: 55.5% crit
+                        - paragraph [ref=e1251]: Radiate
+                      - generic [ref=e1254]: 0.9%
+                    - generic [ref=e1257]:
+                      - generic [ref=e1258]: 1.2M
+                      - generic [ref=e1259]: damage
+                      - generic [ref=e1260]: •
+                      - generic [ref=e1261]: "191"
+                      - generic [ref=e1262]: hits
+                      - generic [ref=e1263]: •
+                      - generic [ref=e1264]: 6.1K
+                      - generic [ref=e1265]: avg
+                    - progressbar [ref=e1266]
+          - generic [ref=e1270]:
+            - generic [ref=e1271]:
+              - heading "Damage by Type" [level=6] [ref=e1272]
+              - button "Open damage type help" [ref=e1273] [cursor=pointer]:
+                - img [ref=e1274]
+            - paragraph [ref=e1276]: "Damage breakdown by damage type from friendly players: 119.9M"
+            - list [ref=e1278]:
+              - listitem [ref=e1279]:
+                - generic [ref=e1283]:
+                  - generic [ref=e1284]: ✨
+                  - generic [ref=e1285]:
+                    - paragraph [ref=e1286]: Magic
+                    - generic [ref=e1287]:
+                      - generic [ref=e1288]: 101.5M dmg
+                      - generic [ref=e1289]: •
+                      - generic [ref=e1290]: 13.0K avg
+                  - heading "84.6%" [level=6] [ref=e1292]
+              - listitem [ref=e1293]:
+                - generic [ref=e1297]:
+                  - generic [ref=e1298]: 💥
+                  - generic [ref=e1299]:
+                    - paragraph [ref=e1300]: Area of Effect
+                    - generic [ref=e1301]:
+                      - generic [ref=e1302]: 95.6M dmg
+                      - generic [ref=e1303]: •
+                      - generic [ref=e1304]: 17.5K avg
+                  - heading "79.7%" [level=6] [ref=e1306]
+              - listitem [ref=e1307]:
+                - generic [ref=e1311]:
+                  - generic [ref=e1312]: 🎯
+                  - generic [ref=e1313]:
+                    - paragraph [ref=e1314]: Direct
+                    - generic [ref=e1315]:
+                      - generic [ref=e1316]: 88.1M dmg
+                      - generic [ref=e1317]: •
+                      - generic [ref=e1318]: 14.2K avg
+                  - heading "73.4%" [level=6] [ref=e1320]
+              - listitem [ref=e1321]:
+                - generic [ref=e1325]:
+                  - generic [ref=e1326]: 🔄
+                  - generic [ref=e1327]:
+                    - paragraph [ref=e1328]: Damage over Time
+                    - generic [ref=e1329]:
+                      - generic [ref=e1330]: 31.9M dmg
+                      - generic [ref=e1331]: •
+                      - generic [ref=e1332]: 7.0K avg
+                  - heading "26.6%" [level=6] [ref=e1334]
+              - listitem [ref=e1335]:
+                - generic [ref=e1339]:
+                  - generic [ref=e1340]: 🔥
+                  - generic [ref=e1341]:
+                    - paragraph [ref=e1342]: Fire
+                    - generic [ref=e1343]:
+                      - generic [ref=e1344]: 28.4M dmg
+                      - generic [ref=e1345]: •
+                      - generic [ref=e1346]: 8.8K avg
+                  - heading "23.7%" [level=6] [ref=e1348]
+              - listitem [ref=e1349]:
+                - generic [ref=e1353]:
+                  - generic [ref=e1354]: ⚔️
+                  - generic [ref=e1355]:
+                    - paragraph [ref=e1356]: Martial
+                    - generic [ref=e1357]:
+                      - generic [ref=e1358]: 18.5M dmg
+                      - generic [ref=e1359]: •
+                      - generic [ref=e1360]: 6.2K avg
+                  - heading "15.4%" [level=6] [ref=e1362]
+              - listitem [ref=e1363]:
+                - generic [ref=e1367]:
+                  - generic [ref=e1368]: 🌟
+                  - generic [ref=e1369]:
+                    - paragraph [ref=e1370]: Status Effects
+                    - generic [ref=e1371]:
+                      - generic [ref=e1372]: 5.6M dmg
+                      - generic [ref=e1373]: •
+                      - generic [ref=e1374]: 4.6K avg
+                  - heading "4.7%" [level=6] [ref=e1376]
+              - listitem [ref=e1377]:
+                - generic [ref=e1381]:
+                  - generic [ref=e1382]: ☠️
+                  - generic [ref=e1383]:
+                    - paragraph [ref=e1384]: Poison
+                    - generic [ref=e1385]:
+                      - generic [ref=e1386]: 3.2M dmg
+                      - generic [ref=e1387]: •
+                      - generic [ref=e1388]: 4.6K avg
+                  - heading "2.7%" [level=6] [ref=e1390]
+    - contentinfo [ref=e1391]:
+      - generic [ref=e1392]:
+        - generic [ref=e1393]:
+          - generic [ref=e1394]:
+            - generic [ref=e1395]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e1396]
+            - paragraph [ref=e1397]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e1398]:
+            - link "Join Discord" [ref=e1399] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e1401] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e1402]:
+          - generic [ref=e1403]:
+            - generic [ref=e1404]:
+              - img "ESO Helpers" [ref=e1406]
+              - generic [ref=e1407]:
+                - heading "ESO Helper Tools" [level=3] [ref=e1408]
+                - paragraph [ref=e1409]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e1410]:
+              - generic [ref=e1411]: Real-time analytics
+              - generic [ref=e1413]: Player-built insights
+              - generic [ref=e1415]: Free beta access
+              - generic [ref=e1417]: Community-driven support
+          - generic [ref=e1420]:
+            - generic [ref=e1421]:
+              - paragraph [ref=e1422]: Tools
+              - generic [ref=e1423]:
+                - link "Build Calculator" [ref=e1424] [cursor=pointer]:
+                  - /url: /calculator
+                  - generic [ref=e1425]: Build Calculator
+                  - img [ref=e1426]
+                - link "Text Editor" [ref=e1428] [cursor=pointer]:
+                  - /url: /text-editor
+                  - generic [ref=e1429]: Text Editor
+                  - img [ref=e1430]
+                - link "Log Analyzer" [ref=e1432] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e1433]: Log Analyzer
+                  - img [ref=e1434]
+                - link "Roster Builder" [ref=e1436] [cursor=pointer]:
+                  - /url: /roster-builder
+                  - generic [ref=e1437]: Roster Builder
+                  - img [ref=e1438]
+                - link "My Reports" [ref=e1440] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e1441]: My Reports
+                  - img [ref=e1442]
+                - link "Gear Sets" [ref=e1444] [cursor=pointer]:
+                  - /url: /gear-sets
+                  - generic [ref=e1445]: Gear Sets
+                  - img [ref=e1446]
+            - generic [ref=e1448]:
+              - paragraph [ref=e1449]: Quick Links
+              - generic [ref=e1450]:
+                - link "Home" [ref=e1451] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e1452]: Home
+                  - img [ref=e1453]
+                - link "Privacy Settings" [ref=e1455] [cursor=pointer]:
+                  - /url: /privacy-settings
+                  - generic [ref=e1456]: Privacy Settings
+                  - img [ref=e1457]
+                - link "Calculation Knowledge Base" [ref=e1459] [cursor=pointer]:
+                  - /url: /docs/calculations
+                  - generic [ref=e1460]: Calculation Knowledge Base
+                  - img [ref=e1461]
+                - link "What's New" [ref=e1463] [cursor=pointer]:
+                  - /url: /whats-new
+                  - generic [ref=e1464]: What's New
+                  - img [ref=e1465]
+                - link "About" [ref=e1467] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e1468]: About
+                  - img [ref=e1469]
+        - generic [ref=e1472]:
+          - paragraph [ref=e1473]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e1474]:
+            - link "Privacy Policy" [ref=e1475] [cursor=pointer]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e1476] [cursor=pointer]:
+              - img [ref=e1478]
+              - text: Report a Bug
+  - generic [ref=e1482]:
+    - button "close" [ref=e1483] [cursor=pointer]:
+      - img [ref=e1484]
+    - generic [ref=e1486]:
+      - img [ref=e1488]
+      - heading "Privacy & Cookies" [level=6] [ref=e1490]
+    - paragraph [ref=e1491]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e1492] [cursor=pointer]:
+        - /url: /privacy
+    - generic [ref=e1493]:
+      - button "Decline All" [ref=e1494] [cursor=pointer]
+      - button "Customize" [ref=e1495] [cursor=pointer]
+      - button "Accept All" [ref=e1496] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  431 | 
+  432 |       // Take screenshot whether replay loaded or not (for debugging)
+  433 |       await page.screenshot({
+  434 |         path: `test-results/nightly-regression-replay-${reportId}-${fightId}.png`,
+  435 |         fullPage: true,
+  436 |         timeout: TEST_TIMEOUTS.screenshot,
+  437 |       });
+  438 | 
+  439 |       if (hasReplayInterface) {
+  440 |         // Test play/pause functionality
+  441 |         const playButton = replayControls.first();
+  442 |         await playButton.click();
+  443 | 
+  444 |         // Wait for replay to start
+  445 |         await page.waitForTimeout(3000);
+  446 | 
+  447 |         await page.screenshot({
+  448 |           path: `test-results/nightly-regression-replay-playing-${reportId}.png`,
+  449 |           fullPage: true,
+  450 |           timeout: TEST_TIMEOUTS.screenshot,
+  451 |         });
+  452 | 
+  453 |         // Test pause
+  454 |         const pauseButton = page.locator('button[aria-label*="pause"], .pause-button').first();
+  455 | 
+  456 |         if (await pauseButton.isVisible({ timeout: 3000 })) {
+  457 |           await pauseButton.click();
+  458 |           await page.waitForTimeout(1000);
+  459 |         }
+  460 | 
+  461 |         // Test timeline scrubbing if available
+  462 |         const timeline = page.locator('input[type="range"], .timeline-slider, .scrubber');
+  463 |         if (await timeline.first().isVisible({ timeout: 3000 })) {
+  464 |           // For sliders, force click is often needed due to overlay elements
+  465 |           await timeline.first().click({ force: true });
+  466 |           await page.waitForTimeout(2000);
+  467 | 
+  468 |           await page.screenshot({
+  469 |             path: `test-results/nightly-regression-replay-scrubbed-${reportId}.png`,
+  470 |             fullPage: true,
+  471 |             timeout: TEST_TIMEOUTS.screenshot,
+  472 |           });
+  473 |         }
+  474 |       }
+  475 | 
+  476 |       // Verify no critical errors occurred
+  477 |       const errors = await page.evaluate(() => (window as any).testErrors || []);
+  478 |       const criticalErrors = errors.filter(
+  479 |         (error: string) => !error.includes('ResizeObserver') && !error.includes('Not implemented'),
+  480 |       );
+  481 | 
+  482 |       // Only fail on critical errors, not minor ones that don't affect functionality
+  483 |       if (criticalErrors.length > 0) {
+  484 |         console.warn('Replay errors detected:', criticalErrors);
+  485 |       }
+  486 |     });
+  487 |   });
+  488 | 
+  489 |   test.describe('Live Logging Functionality', () => {
+  490 |     test('should load live logging interface', async ({ page }) => {
+  491 |       const reportId = REPORT_WITH_FIGHTS;
+  492 | 
+  493 |       // Navigate to live logging
+  494 |       await page.goto(`/report/${reportId}/live`, {
+  495 |         waitUntil: 'domcontentloaded',
+  496 |         timeout: TEST_TIMEOUTS.navigation,
+  497 |       });
+  498 | 
+  499 |       await page.waitForTimeout(5000);
+  500 | 
+  501 |       // Look for live logging interface elements
+  502 |       const hasLiveCssElements = await page
+  503 |         .locator('.live-log, .live-logging, .real-time, [data-testid*="live"]')
+  504 |         .isVisible()
+  505 |         .catch(() => false);
+  506 |       const hasLiveText = await page
+  507 |         .getByText(/live/i)
+  508 |         .isVisible()
+  509 |         .catch(() => false);
+  510 | 
+  511 |       const hasLiveInterface = hasLiveCssElements || hasLiveText;
+  512 | 
+  513 |       // Take screenshot with error handling
+  514 |       try {
+  515 |         await page.screenshot({
+  516 |           path: `test-results/nightly-regression-live-logging-${reportId}.png`,
+  517 |           fullPage: true,
+  518 |           timeout: 15000, // Increased timeout
+  519 |         });
+  520 |       } catch (screenshotError) {
+  521 |         console.log('Screenshot failed but continuing test:', (screenshotError as Error).message);
+  522 |       }
+  523 | 
+  524 |       if (hasLiveInterface) {
+  525 |         // Test live logging controls if available
+  526 |         const controls = page.locator(
+  527 |           'button:has-text("Start"), button:has-text("Stop"), button:has-text("Connect")',
+  528 |         );
+  529 | 
+  530 |         if (await controls.first().isVisible({ timeout: 3000 })) {
+> 531 |           await controls.first().click();
+      |                                  ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
+  532 |           await page.waitForTimeout(2000);
+  533 | 
+  534 |           await page.screenshot({
+  535 |             path: `test-results/nightly-regression-live-active-${reportId}.png`,
+  536 |             fullPage: true,
+  537 |             timeout: TEST_TIMEOUTS.screenshot,
+  538 |           });
+  539 |         }
+  540 |       }
+  541 |     });
+  542 |   });
+  543 | 
+  544 |   test.describe('Advanced Visualizations', () => {
+  545 |     test('should test location heatmap visualization', async ({ page }) => {
+  546 |       const reportId = REPORT_WITH_FIGHTS;
+  547 | 
+  548 |       // Use known fight ID directly — avoids an extra landing-page API round-trip
+  549 |       const fightId = TEST_DATA.KNOWN_FIGHT_ID;
+  550 | 
+  551 |       console.log(`ℹ️  Using fight ${fightId} for heatmap visualization test`);
+  552 | 
+  553 |       // Navigate to location heatmap (experimental tab)
+  554 |       await withBrowserStability(async () => {
+  555 |         await page.goto(`/report/${reportId}/fight/${fightId}/location-heatmap`, {
+  556 |           waitUntil: 'domcontentloaded',
+  557 |           timeout: TEST_TIMEOUTS.navigation,
+  558 |         });
+  559 |       }, 'heatmap navigation');
+  560 | 
+  561 |       // Wait longer for heatmaps to render with stability protection
+  562 |       await withBrowserStability(async () => {
+  563 |         await page.waitForTimeout(15000); // Increased timeout for heatmap rendering
+  564 |       }, 'heatmap rendering wait');
+  565 | 
+  566 |       // Look for heatmap visualization - be more specific about what we're looking for
+  567 |       const heatmapElements = page.locator('canvas, .heatmap, .visualization, .map-container');
+  568 |       const heatmapSVG = page.locator('svg[width][height]').filter({ hasText: '' }); // Empty SVG likely to be visualization
+  569 | 
+  570 |       // Check for actual heatmap content
+  571 |       const hasHeatmap = await heatmapElements
+  572 |         .first()
+  573 |         .isVisible({ timeout: 5000 })
+  574 |         .catch(() => false);
+  575 |       const hasHeatmapSVG = await heatmapSVG
+  576 |         .first()
+  577 |         .isVisible({ timeout: 5000 })
+  578 |         .catch(() => false);
+  579 | 
+  580 |       // Take screenshot with error handling
+  581 |       try {
+  582 |         await page.screenshot({
+  583 |           path: `test-results/nightly-regression-heatmap-${reportId}-${fightId}.png`,
+  584 |           fullPage: true,
+  585 |           timeout: 15000, // Increased timeout
+  586 |         });
+  587 |       } catch (screenshotError) {
+  588 |         console.log('Screenshot failed but continuing test:', (screenshotError as Error).message);
+  589 |       }
+  590 | 
+  591 |       if (hasHeatmap) {
+  592 |         // Test interaction with heatmap if possible - use the main heatmap element
+  593 |         const heatmapElement = heatmapElements.first();
+  594 |         const boundingBox = await heatmapElement.boundingBox();
+  595 | 
+  596 |         // Only try to click if the element is reasonably large (not a small icon)
+  597 |         if (boundingBox && boundingBox.width > 50 && boundingBox.height > 50) {
+  598 |           await heatmapElement.click({ position: { x: 100, y: 100 } });
+  599 |           await page.waitForTimeout(1000);
+  600 | 
+  601 |           await page.screenshot({
+  602 |             path: `test-results/nightly-regression-heatmap-clicked-${reportId}.png`,
+  603 |             fullPage: true,
+  604 |             timeout: TEST_TIMEOUTS.screenshot,
+  605 |           });
+  606 |         } else {
+  607 |           console.log('ℹ️  Heatmap element too small for interaction testing');
+  608 |         }
+  609 |       } else if (hasHeatmapSVG) {
+  610 |         // If we found an SVG that might be a heatmap, check its size
+  611 |         const svgElement = heatmapSVG.first();
+  612 |         const boundingBox = await svgElement.boundingBox();
+  613 | 
+  614 |         if (boundingBox && boundingBox.width > 50 && boundingBox.height > 50) {
+  615 |           await svgElement.click({
+  616 |             position: { x: boundingBox.width / 2, y: boundingBox.height / 2 },
+  617 |           });
+  618 |           await page.waitForTimeout(1000);
+  619 | 
+  620 |           await page.screenshot({
+  621 |             path: `test-results/nightly-regression-heatmap-clicked-${reportId}.png`,
+  622 |             fullPage: true,
+  623 |             timeout: TEST_TIMEOUTS.screenshot,
+  624 |           });
+  625 |         } else {
+  626 |           console.log('ℹ️  SVG element too small for interaction testing');
+  627 |         }
+  628 |       } else {
+  629 |         console.log('ℹ️  No heatmap visualization found - this may be expected for some fights');
+  630 |       }
+  631 |     });
+```
