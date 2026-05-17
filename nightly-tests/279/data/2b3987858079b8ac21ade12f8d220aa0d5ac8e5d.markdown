@@ -1,0 +1,792 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression.spec.ts >> Nightly Regression Tests - Real Data >> Fight Detail Pages - Main Tabs >> should load fight details for report VTqBNRdzCfp36gtL
+- Location: tests/nightly-regression.spec.ts:149:11
+
+# Error details
+
+```
+TimeoutError: page.waitForLoadState: Timeout 60000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - button "ESO Helpers ESO Toolkit" [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img "ESO Helpers" [ref=e11]
+            - text: ESO Toolkit
+        - button "toggle navigation" [ref=e13] [cursor=pointer]
+    - generic [ref=e18]:
+      - button "U Profile View profile" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: U
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Profile
+          - paragraph [ref=e26]: View profile
+        - img [ref=e27]
+      - paragraph [ref=e29]: Navigate
+      - generic [ref=e30]:
+        - button "👥 Roster Hub" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: 👥
+          - paragraph [ref=e33]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: 🏗️
+          - paragraph [ref=e36]: Build Hub
+        - button "🧩 Pack Hub" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: 🧩
+          - paragraph [ref=e39]: Pack Hub
+      - paragraph [ref=e40]: Reports
+      - generic [ref=e41]:
+        - button "📁 My Reports Your uploaded logs" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 📁
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: My Reports
+            - paragraph [ref=e46]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: 🎲
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: Sample Report
+            - paragraph [ref=e51]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 📊
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Latest Reports
+            - paragraph [ref=e56]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: 🏆
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: Leaderboards
+            - paragraph [ref=e61]: Top parse rankings
+      - paragraph [ref=e62]: Tools
+      - generic [ref=e63]:
+        - button "📝 Text Editor Format guild announcements" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📝
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: Text Editor
+            - paragraph [ref=e68]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e69] [cursor=pointer]:
+          - img [ref=e71]
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Calculator
+            - paragraph [ref=e81]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 📈
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Parse Analysis
+            - paragraph [ref=e86]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]: ⚔️
+          - generic [ref=e89]:
+            - paragraph [ref=e90]: Loadout Manager
+            - paragraph [ref=e91]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e92] [cursor=pointer]:
+          - generic [ref=e93]: 👥
+          - generic [ref=e94]:
+            - paragraph [ref=e95]: Roster Builder
+            - paragraph [ref=e96]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e97] [cursor=pointer]:
+          - generic [ref=e98]: 🔧
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: Build Editor
+            - paragraph [ref=e101]: Create & share builds
+      - paragraph [ref=e102]: Appearance
+      - generic [ref=e103]:
+        - button "Switch to light mode" [ref=e104] [cursor=pointer]:
+          - img [ref=e106]
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Theme
+            - paragraph [ref=e110]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e111] [cursor=pointer]':
+          - img [ref=e113]
+          - generic [ref=e115]:
+            - paragraph [ref=e116]: Performance
+            - paragraph [ref=e117]: Auto · Low
+          - img [ref=e118]
+      - button "Log out" [ref=e121] [cursor=pointer]:
+        - img [ref=e123]
+        - text: Log out
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - heading "Eclipse vDSR - Day 23 - Harpy Side" [level=1] [ref=e129]
+        - generic [ref=e130]:
+          - button "Fights" [ref=e131] [cursor=pointer]:
+            - img [ref=e132]
+            - text: Fights
+          - button "Dashboard" [ref=e134] [cursor=pointer]:
+            - img [ref=e135]
+            - text: Dashboard
+          - button "Summary" [ref=e137] [cursor=pointer]:
+            - img [ref=e138]
+            - text: Summary
+          - link "ESO Logs" [ref=e141] [cursor=pointer]:
+            - /url: https://www.esologs.com/reports/VTqBNRdzCfp36gtL
+            - text: ESO Logs
+            - img [ref=e142]
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - heading "Dreadsail Reef Partial Veteran HM" [level=6] [ref=e150]:
+              - generic [ref=e151]: Dreadsail Reef
+              - generic [ref=e152]: Partial Veteran HM
+            - generic [ref=e154]: "6"
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]:
+                - img "Lylanar and Turlassil" [ref=e159]
+                - heading "Lylanar and Turlassil (Veteran HM) (10)" [level=6] [ref=e160]:
+                  - text: Lylanar and Turlassil
+                  - generic [ref=e161]: (Veteran HM)
+                  - generic [ref=e162]: (10)
+              - generic [ref=e163] [cursor=pointer]:
+                - switch "🗑️ 19" [ref=e166]
+                - generic [ref=e169]: 🗑️ 19
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - button "#1 27% 1:58 12:03 AM" [ref=e172] [cursor=pointer]:
+                  - generic [ref=e175]:
+                    - generic [ref=e176]:
+                      - paragraph [ref=e177]: "#1"
+                      - paragraph [ref=e179]: 27%
+                    - generic [ref=e180]: 1:58
+                    - paragraph [ref=e182]: 12:03 AM
+              - listitem [ref=e185]:
+                - button "#2 1% 2:25 12:06 AM" [ref=e186] [cursor=pointer]:
+                  - generic [ref=e189]:
+                    - generic [ref=e190]:
+                      - paragraph [ref=e191]: "#2"
+                      - paragraph [ref=e193]: 1%
+                    - generic [ref=e194]: 2:25
+                    - paragraph [ref=e196]: 12:06 AM
+              - listitem [ref=e199]:
+                - button "#3 26% 2:10 12:10 AM" [ref=e200] [cursor=pointer]:
+                  - generic [ref=e203]:
+                    - generic [ref=e204]:
+                      - paragraph [ref=e205]: "#3"
+                      - paragraph [ref=e207]: 26%
+                    - generic [ref=e208]: 2:10
+                    - paragraph [ref=e210]: 12:10 AM
+              - listitem [ref=e213]:
+                - button "#4 30% 1:04 12:14 AM" [ref=e214] [cursor=pointer]:
+                  - generic [ref=e217]:
+                    - generic [ref=e218]:
+                      - paragraph [ref=e219]: "#4"
+                      - paragraph [ref=e221]: 30%
+                    - generic [ref=e222]: 1:04
+                    - paragraph [ref=e224]: 12:14 AM
+              - listitem [ref=e227]:
+                - button "#5 ✓ 2:18 12:16 AM" [ref=e228] [cursor=pointer]:
+                  - generic [ref=e231]:
+                    - generic [ref=e232]:
+                      - paragraph [ref=e233]: "#5"
+                      - paragraph [ref=e235]: ✓
+                    - generic [ref=e236]: 2:18
+                    - paragraph [ref=e238]: 12:16 AM
+              - listitem [ref=e239]:
+                - button "#6 ✓ 2:16 12:50 AM" [ref=e240] [cursor=pointer]:
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - paragraph [ref=e245]: "#6"
+                      - paragraph [ref=e247]: ✓
+                    - generic [ref=e248]: 2:16
+                    - paragraph [ref=e250]: 12:50 AM
+              - listitem [ref=e251]:
+                - button "#7 23s 1:33 AM" [ref=e252] [cursor=pointer]:
+                  - generic [ref=e255]:
+                    - paragraph [ref=e257]: "#7"
+                    - generic [ref=e258]: 23s
+                    - paragraph [ref=e260]: 1:33 AM
+              - listitem [ref=e261]:
+                - button "#8 30% 1:11 1:34 AM" [ref=e262] [cursor=pointer]:
+                  - generic [ref=e265]:
+                    - generic [ref=e266]:
+                      - paragraph [ref=e267]: "#8"
+                      - paragraph [ref=e269]: 30%
+                    - generic [ref=e270]: 1:11
+                    - paragraph [ref=e272]: 1:34 AM
+              - listitem [ref=e275]:
+                - button "#9 38% 1:39 1:36 AM" [ref=e276] [cursor=pointer]:
+                  - generic [ref=e279]:
+                    - generic [ref=e280]:
+                      - paragraph [ref=e281]: "#9"
+                      - paragraph [ref=e283]: 38%
+                    - generic [ref=e284]: 1:39
+                    - paragraph [ref=e286]: 1:36 AM
+              - listitem [ref=e289]:
+                - button "#10 ✓ 2:16 1:38 AM" [ref=e290] [cursor=pointer]:
+                  - generic [ref=e293]:
+                    - generic [ref=e294]:
+                      - paragraph [ref=e295]: "#10"
+                      - paragraph [ref=e297]: ✓
+                    - generic [ref=e298]: 2:16
+                    - paragraph [ref=e300]: 1:38 AM
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]:
+                - img "Sail Ripper" [ref=e305]
+                - heading "Sail Ripper (Veteran) (2)" [level=6] [ref=e306]:
+                  - text: Sail Ripper
+                  - generic [ref=e307]: (Veteran)
+                  - generic [ref=e308]: (2)
+              - generic [ref=e309] [cursor=pointer]:
+                - switch "🗑️ 7" [ref=e312]
+                - generic [ref=e315]: 🗑️ 7
+            - list [ref=e316]:
+              - listitem [ref=e317]:
+                - button "#1 ✓ 2:56 12:18 AM" [ref=e318] [cursor=pointer]:
+                  - generic [ref=e321]:
+                    - generic [ref=e322]:
+                      - paragraph [ref=e323]: "#1"
+                      - paragraph [ref=e325]: ✓
+                    - generic [ref=e326]: 2:56
+                    - paragraph [ref=e328]: 12:18 AM
+              - listitem [ref=e329]:
+                - button "#2 ✓ 3:29 1:41 AM" [ref=e330] [cursor=pointer]:
+                  - generic [ref=e333]:
+                    - generic [ref=e334]:
+                      - paragraph [ref=e335]: "#2"
+                      - paragraph [ref=e337]: ✓
+                    - generic [ref=e338]: 3:29
+                    - paragraph [ref=e340]: 1:41 AM
+          - generic [ref=e341]:
+            - generic [ref=e343]:
+              - img "Bow Breaker" [ref=e345]
+              - heading "Bow Breaker (Veteran) (1)" [level=6] [ref=e346]:
+                - text: Bow Breaker
+                - generic [ref=e347]: (Veteran)
+                - generic [ref=e348]: (1)
+            - list [ref=e349]:
+              - listitem [ref=e350]:
+                - button "#1 ✓ 41s 12:26 AM" [ref=e351] [cursor=pointer]:
+                  - generic [ref=e354]:
+                    - generic [ref=e355]:
+                      - paragraph [ref=e356]: "#1"
+                      - paragraph [ref=e358]: ✓
+                    - generic [ref=e359]: 41s
+                    - paragraph [ref=e361]: 12:26 AM
+          - generic [ref=e362]:
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - img "Reef Guardian" [ref=e366]
+                - heading "Reef Guardian (Veteran HM) (8)" [level=6] [ref=e367]:
+                  - text: Reef Guardian
+                  - generic [ref=e368]: (Veteran HM)
+                  - generic [ref=e369]: (8)
+              - generic [ref=e370] [cursor=pointer]:
+                - switch "🗑️ 14" [ref=e373]
+                - generic [ref=e376]: 🗑️ 14
+            - list [ref=e377]:
+              - listitem [ref=e378]:
+                - button "#1 29s 12:28 AM" [ref=e379] [cursor=pointer]:
+                  - generic [ref=e382]:
+                    - paragraph [ref=e384]: "#1"
+                    - generic [ref=e385]: 29s
+                    - paragraph [ref=e387]: 12:28 AM
+              - listitem [ref=e388]:
+                - button "#2 9% 2:04 12:29 AM" [ref=e389] [cursor=pointer]:
+                  - generic [ref=e392]:
+                    - generic [ref=e393]:
+                      - paragraph [ref=e394]: "#2"
+                      - paragraph [ref=e396]: 9%
+                    - generic [ref=e397]: 2:04
+                    - paragraph [ref=e399]: 12:29 AM
+              - listitem [ref=e402]:
+                - button "#3 ✓ 2:13 12:32 AM" [ref=e403] [cursor=pointer]:
+                  - generic [ref=e406]:
+                    - generic [ref=e407]:
+                      - paragraph [ref=e408]: "#3"
+                      - paragraph [ref=e410]: ✓
+                    - generic [ref=e411]: 2:13
+                    - paragraph [ref=e413]: 12:32 AM
+              - listitem [ref=e414]:
+                - button "#4 48% 1:17 12:58 AM" [ref=e415] [cursor=pointer]:
+                  - generic [ref=e418]:
+                    - generic [ref=e419]:
+                      - paragraph [ref=e420]: "#4"
+                      - paragraph [ref=e422]: 48%
+                    - generic [ref=e423]: 1:17
+                    - paragraph [ref=e425]: 12:58 AM
+              - listitem [ref=e428]:
+                - button "#5 ✓ 2:34 1:05 AM" [ref=e429] [cursor=pointer]:
+                  - generic [ref=e432]:
+                    - generic [ref=e433]:
+                      - paragraph [ref=e434]: "#5"
+                      - paragraph [ref=e436]: ✓
+                    - generic [ref=e437]: 2:34
+                    - paragraph [ref=e439]: 1:05 AM
+              - listitem [ref=e440]:
+                - button "#6 35% 1:44 1:48 AM" [ref=e441] [cursor=pointer]:
+                  - generic [ref=e444]:
+                    - generic [ref=e445]:
+                      - paragraph [ref=e446]: "#6"
+                      - paragraph [ref=e448]: 35%
+                    - generic [ref=e449]: 1:44
+                    - paragraph [ref=e451]: 1:48 AM
+              - listitem [ref=e454]:
+                - button "#7 10% 2:12 1:51 AM" [ref=e455] [cursor=pointer]:
+                  - generic [ref=e458]:
+                    - generic [ref=e459]:
+                      - paragraph [ref=e460]: "#7"
+                      - paragraph [ref=e462]: 10%
+                    - generic [ref=e463]: 2:12
+                    - paragraph [ref=e465]: 1:51 AM
+              - listitem [ref=e468]:
+                - button "#8 ✓ 2:14 1:54 AM" [ref=e469] [cursor=pointer]:
+                  - generic [ref=e472]:
+                    - generic [ref=e473]:
+                      - paragraph [ref=e474]: "#8"
+                      - paragraph [ref=e476]: ✓
+                    - generic [ref=e477]: 2:14
+                    - paragraph [ref=e479]: 1:54 AM
+          - generic [ref=e480]:
+            - generic [ref=e481]:
+              - generic [ref=e482]:
+                - img "Tideborn Taleria" [ref=e484]
+                - heading "Tideborn Taleria (Veteran HM) (12)" [level=6] [ref=e485]:
+                  - text: Tideborn Taleria
+                  - generic [ref=e486]: (Veteran HM)
+                  - generic [ref=e487]: (12)
+              - generic [ref=e488] [cursor=pointer]:
+                - switch "🗑️ 19" [ref=e491]
+                - generic [ref=e494]: 🗑️ 19
+            - list [ref=e495]:
+              - listitem [ref=e496]:
+                - button "#1 80% 27s 12:38 AM" [ref=e497] [cursor=pointer]:
+                  - generic [ref=e500]:
+                    - generic [ref=e501]:
+                      - paragraph [ref=e502]: "#1"
+                      - paragraph [ref=e504]: 80%
+                    - generic [ref=e505]: 27s
+                    - paragraph [ref=e507]: 12:38 AM
+              - listitem [ref=e510]:
+                - button "#2 99% 32s 12:39 AM" [ref=e511] [cursor=pointer]:
+                  - generic [ref=e514]:
+                    - generic [ref=e515]:
+                      - paragraph [ref=e516]: "#2"
+                      - paragraph [ref=e518]: 99%
+                    - generic [ref=e519]: 32s
+                    - paragraph [ref=e521]: 12:39 AM
+              - listitem [ref=e524]:
+                - button "#3 ✓ 2:09 12:40 AM" [ref=e525] [cursor=pointer]:
+                  - generic [ref=e528]:
+                    - generic [ref=e529]:
+                      - paragraph [ref=e530]: "#3"
+                      - paragraph [ref=e532]: ✓
+                    - generic [ref=e533]: 2:09
+                    - paragraph [ref=e535]: 12:40 AM
+              - listitem [ref=e536]:
+                - button "#4 2:15 1:11 AM" [ref=e537] [cursor=pointer]:
+                  - generic [ref=e540]:
+                    - paragraph [ref=e542]: "#4"
+                    - generic [ref=e543]: 2:15
+                    - paragraph [ref=e545]: 1:11 AM
+              - listitem [ref=e546]:
+                - button "#5 98% 32s 1:13 AM" [ref=e547] [cursor=pointer]:
+                  - generic [ref=e550]:
+                    - generic [ref=e551]:
+                      - paragraph [ref=e552]: "#5"
+                      - paragraph [ref=e554]: 98%
+                    - generic [ref=e555]: 32s
+                    - paragraph [ref=e557]: 1:13 AM
+              - listitem [ref=e560]:
+                - button "#6 47% 1:27 1:15 AM" [ref=e561] [cursor=pointer]:
+                  - generic [ref=e564]:
+                    - generic [ref=e565]:
+                      - paragraph [ref=e566]: "#6"
+                      - paragraph [ref=e568]: 47%
+                    - generic [ref=e569]: 1:27
+                    - paragraph [ref=e571]: 1:15 AM
+              - listitem [ref=e574]:
+                - button "#7 2% 2:20 1:17 AM" [ref=e575] [cursor=pointer]:
+                  - generic [ref=e578]:
+                    - generic [ref=e579]:
+                      - paragraph [ref=e580]: "#7"
+                      - paragraph [ref=e582]: 2%
+                    - generic [ref=e583]: 2:20
+                    - paragraph [ref=e585]: 1:17 AM
+              - listitem [ref=e588]:
+                - button "#8 98% 41s 1:20 AM" [ref=e589] [cursor=pointer]:
+                  - generic [ref=e592]:
+                    - generic [ref=e593]:
+                      - paragraph [ref=e594]: "#8"
+                      - paragraph [ref=e596]: 98%
+                    - generic [ref=e597]: 41s
+                    - paragraph [ref=e599]: 1:20 AM
+              - listitem [ref=e602]:
+                - button "#9 50% 1:12 1:21 AM" [ref=e603] [cursor=pointer]:
+                  - generic [ref=e606]:
+                    - generic [ref=e607]:
+                      - paragraph [ref=e608]: "#9"
+                      - paragraph [ref=e610]: 50%
+                    - generic [ref=e611]: 1:12
+                    - paragraph [ref=e613]: 1:21 AM
+              - listitem [ref=e616]:
+                - button "#10 28s 1:24 AM" [ref=e617] [cursor=pointer]:
+                  - generic [ref=e620]:
+                    - paragraph [ref=e622]: "#10"
+                    - generic [ref=e623]: 28s
+                    - paragraph [ref=e625]: 1:24 AM
+              - listitem [ref=e626]:
+                - button "#11 99% 27s 1:25 AM" [ref=e627] [cursor=pointer]:
+                  - generic [ref=e630]:
+                    - generic [ref=e631]:
+                      - paragraph [ref=e632]: "#11"
+                      - paragraph [ref=e634]: 99%
+                    - generic [ref=e635]: 27s
+                    - paragraph [ref=e637]: 1:25 AM
+              - listitem [ref=e640]:
+                - button "#12 ✓ 2:16 1:26 AM" [ref=e641] [cursor=pointer]:
+                  - generic [ref=e644]:
+                    - generic [ref=e645]:
+                      - paragraph [ref=e646]: "#12"
+                      - paragraph [ref=e648]: ✓
+                    - generic [ref=e649]: 2:16
+                    - paragraph [ref=e651]: 1:26 AM
+          - generic [ref=e652]:
+            - generic [ref=e653]:
+              - heading "Sail Ripper / Bow Breaker (Veteran) (1)" [level=6] [ref=e655]:
+                - text: Sail Ripper / Bow Breaker
+                - generic [ref=e656]: (Veteran)
+                - generic [ref=e657]: (1)
+              - generic [ref=e658] [cursor=pointer]:
+                - switch "🗑️ 3" [ref=e661]
+                - generic [ref=e664]: 🗑️ 3
+            - list [ref=e665]:
+              - listitem [ref=e666]:
+                - button "#1 ✓ 3:26 12:53 AM" [ref=e667] [cursor=pointer]:
+                  - generic [ref=e670]:
+                    - generic [ref=e671]:
+                      - paragraph [ref=e672]: "#1"
+                      - paragraph [ref=e674]: ✓
+                    - generic [ref=e675]: 3:26
+                    - paragraph [ref=e677]: 12:53 AM
+        - generic [ref=e678]:
+          - generic [ref=e679]:
+            - heading "Miscellaneous Trash Veteran" [level=6] [ref=e681]:
+              - generic [ref=e682]: Miscellaneous Trash
+              - generic [ref=e683]: Veteran
+            - generic [ref=e685]: "0"
+          - generic [ref=e686]:
+            - generic [ref=e687]:
+              - heading "Miscellaneous Trash (0)" [level=6] [ref=e689]:
+                - text: Miscellaneous Trash
+                - generic [ref=e690]: (0)
+              - generic [ref=e691] [cursor=pointer]:
+                - switch "🗑️ 1" [ref=e694]
+                - generic [ref=e697]: 🗑️ 1
+            - list [ref=e698]
+    - contentinfo [ref=e699]:
+      - generic [ref=e700]:
+        - generic [ref=e701]:
+          - generic [ref=e702]:
+            - generic [ref=e703]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e704]
+            - paragraph [ref=e705]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e706]:
+            - link "Join Discord" [ref=e707] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e709] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e710]:
+          - generic [ref=e711]:
+            - generic [ref=e712]:
+              - img "ESO Helpers" [ref=e714]
+              - generic [ref=e715]:
+                - heading "ESO Helper Tools" [level=3] [ref=e716]
+                - paragraph [ref=e717]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e718]:
+              - generic [ref=e719]: Real-time analytics
+              - generic [ref=e721]: Player-built insights
+              - generic [ref=e723]: Free beta access
+              - generic [ref=e725]: Community-driven support
+          - generic [ref=e728]:
+            - generic [ref=e729]:
+              - paragraph [ref=e730]: Tools
+              - generic [ref=e731]:
+                - link "Build Calculator" [ref=e732] [cursor=pointer]:
+                  - /url: /calculator
+                  - generic [ref=e733]: Build Calculator
+                  - img [ref=e734]
+                - link "Text Editor" [ref=e736] [cursor=pointer]:
+                  - /url: /text-editor
+                  - generic [ref=e737]: Text Editor
+                  - img [ref=e738]
+                - link "Log Analyzer" [ref=e740] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e741]: Log Analyzer
+                  - img [ref=e742]
+                - link "Roster Builder" [ref=e744] [cursor=pointer]:
+                  - /url: /roster-builder
+                  - generic [ref=e745]: Roster Builder
+                  - img [ref=e746]
+                - link "My Reports" [ref=e748] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e749]: My Reports
+                  - img [ref=e750]
+                - link "Gear Sets" [ref=e752] [cursor=pointer]:
+                  - /url: /gear-sets
+                  - generic [ref=e753]: Gear Sets
+                  - img [ref=e754]
+            - generic [ref=e756]:
+              - paragraph [ref=e757]: Quick Links
+              - generic [ref=e758]:
+                - link "Home" [ref=e759] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e760]: Home
+                  - img [ref=e761]
+                - link "Privacy Settings" [ref=e763] [cursor=pointer]:
+                  - /url: /privacy-settings
+                  - generic [ref=e764]: Privacy Settings
+                  - img [ref=e765]
+                - link "Calculation Knowledge Base" [ref=e767] [cursor=pointer]:
+                  - /url: /docs/calculations
+                  - generic [ref=e768]: Calculation Knowledge Base
+                  - img [ref=e769]
+                - link "What's New" [ref=e771] [cursor=pointer]:
+                  - /url: /whats-new
+                  - generic [ref=e772]: What's New
+                  - img [ref=e773]
+                - link "About" [ref=e775] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e776]: About
+                  - img [ref=e777]
+        - generic [ref=e780]:
+          - paragraph [ref=e781]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e782]:
+            - link "Privacy Policy" [ref=e783] [cursor=pointer]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e784] [cursor=pointer]:
+              - img [ref=e786]
+              - text: Report a Bug
+  - generic [ref=e790]:
+    - button "close" [ref=e791] [cursor=pointer]:
+      - img [ref=e792]
+    - generic [ref=e794]:
+      - img [ref=e796]
+      - heading "Privacy & Cookies" [level=6] [ref=e798]
+    - paragraph [ref=e799]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e800] [cursor=pointer]:
+        - /url: /privacy
+    - generic [ref=e801]:
+      - button "Decline All" [ref=e802] [cursor=pointer]
+      - button "Customize" [ref=e803] [cursor=pointer]
+      - button "Accept All" [ref=e804] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  133 | 
+  134 |         // Verify no critical JavaScript errors
+  135 |         const errors = await page.evaluate(() => (window as any).testErrors || []);
+  136 |         const criticalErrors = errors.filter(
+  137 |           (error: string) =>
+  138 |             !error.includes('ResizeObserver') &&
+  139 |             !error.includes('Not implemented') &&
+  140 |             !error.includes('Non-Error promise rejection'),
+  141 |         );
+  142 |         expect(criticalErrors).toHaveLength(0);
+  143 |       });
+  144 |     });
+  145 |   });
+  146 | 
+  147 |   test.describe('Fight Detail Pages - Main Tabs', () => {
+  148 |     REAL_REPORT_IDS.forEach((reportId) => {
+  149 |       test(`should load fight details for report ${reportId}`, async ({ page }) => {
+  150 |         // Navigate to report first to get fight list
+  151 |         await page.goto(`/report/${reportId}`, {
+  152 |           waitUntil: 'domcontentloaded',
+  153 |           timeout: TEST_TIMEOUTS.navigation,
+  154 |         });
+  155 | 
+  156 |         // Wait for fights to load and get the first fight
+  157 |         await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  158 | 
+  159 |         // Wait for either fight list, loading state, or any content to appear - be more flexible
+  160 |         try {
+  161 |           await expect(page.locator(SELECTORS.FIGHT_LIST_OR_LOADING).first()).toBeVisible({
+  162 |             timeout: 15000, // Shorter timeout for first attempt
+  163 |           });
+  164 |         } catch (error) {
+  165 |           console.log('ℹ️ Standard loading selectors not found, checking for any content...');
+  166 |           // Fallback: wait for any visible content that indicates the page loaded
+  167 |           const hasAnyContent = await page
+  168 |             .locator('main, .MuiContainer-root, .content, body > div')
+  169 |             .first()
+  170 |             .isVisible({ timeout: 10000 });
+  171 |           if (!hasAnyContent) {
+  172 |             console.log('⚠️ No visible content found, but continuing with test...');
+  173 |           }
+  174 |         }
+  175 | 
+  176 |         // Check if accordion is collapsed and expand it if needed
+  177 |         const accordion = page.locator('[data-testid*="trial-accordion"]').first();
+  178 |         if (await accordion.isVisible()) {
+  179 |           const isExpanded = await accordion.getAttribute('aria-expanded');
+  180 |           if (isExpanded === 'false') {
+  181 |             const accordionSummary = accordion.locator('.MuiAccordionSummary-root');
+  182 |             await accordionSummary.click();
+  183 |             // Wait a moment for the accordion to expand
+  184 |             await page.waitForTimeout(1000);
+  185 |           }
+  186 |         }
+  187 | 
+  188 |         // Look for a specific fight button by ID (fight-button-1 should usually exist)
+  189 |         const specificFightButton = page.locator('[data-testid="fight-button-1"]');
+  190 | 
+  191 |         // Check if any fight buttons exist
+  192 |         const anyFightButtonCount = await page.locator(SELECTORS.ANY_FIGHT_BUTTON).count();
+  193 |         
+  194 |         let fightButton;
+  195 |         let fightId = '1'; // Default fight ID
+  196 |         
+  197 |         if (anyFightButtonCount > 0) {
+  198 |           // Check if fight-button-1 exists, otherwise fall back to first available
+  199 |           fightButton = (await specificFightButton.count()) > 0
+  200 |             ? specificFightButton
+  201 |             : page.locator(SELECTORS.ANY_FIGHT_BUTTON).first();
+  202 |             
+  203 |           try {
+  204 |             // Wait for the fight button to be attached to DOM
+  205 |             await fightButton.waitFor({ state: 'attached', timeout: 10000 });
+  206 |           } catch (e) {
+  207 |             console.log('ℹ️ Fight button wait failed, proceeding with fallback navigation');
+  208 |             fightButton = null;
+  209 |           }
+  210 |         } else {
+  211 |           console.log('ℹ️ No fight buttons found in UI - using direct navigation to known fight');
+  212 |           fightButton = null;
+  213 |         }
+  214 | 
+  215 |         if (fightButton) {
+  216 |           // Log some debug info before clicking
+  217 |           const buttonText = await fightButton.textContent();
+  218 |           const buttonId = await fightButton.getAttribute('data-testid');
+  219 |           console.log('Clicking button with text:', buttonText, 'and id:', buttonId);
+  220 | 
+  221 |           // Listen for console errors
+  222 |           page.on('console', (msg) => {
+  223 |             if (msg.type() === 'error') {
+  224 |               console.log('Browser console error:', msg.text());
+  225 |             }
+  226 |           });
+  227 | 
+  228 |           // Force the click even if Playwright thinks it's "hidden"
+  229 |           await fightButton.scrollIntoViewIfNeeded();
+  230 |           await page.waitForTimeout(500); // Small delay after scroll
+  231 | 
+  232 |           // Wait for the component to be fully interactive
+> 233 |           await page.waitForLoadState('networkidle');
+      |                      ^ TimeoutError: page.waitForLoadState: Timeout 60000ms exceeded.
+  234 | 
+  235 |           // Try force click first since the element might be overlapped or has visibility issues
+  236 |           await fightButton.click({ force: true });
+  237 | 
+  238 |           // Give some time and check URL
+  239 |           await page.waitForTimeout(3000);
+  240 |         } else {
+  241 |           // Use direct navigation as fallback when no fight buttons are found
+  242 |           console.log('ℹ️ Using direct navigation fallback to fight:', fightId);
+  243 |           fightId = '5'; // Use known fight ID that exists in test data
+  244 |         }
+  245 |         
+  246 |         let urlAfterClick = page.url();
+  247 |         
+  248 |         if (fightButton) {
+  249 |           console.log('URL after click:', urlAfterClick);
+  250 |         }
+  251 | 
+  252 |         // If we used button click but it didn't work, or if we didn't have a button, use direct navigation
+  253 |         if (!urlAfterClick.includes('/fight/') || !fightButton) {
+  254 |           if (fightButton) {
+  255 |             console.log('First click failed, trying direct navigation...');
+  256 |             // Extract fight ID from button if available
+  257 |             const buttonId = await fightButton.getAttribute('data-testid');
+  258 |             fightId = buttonId?.replace('fight-button-', '') || '5';
+  259 |           } else {
+  260 |             console.log('Using direct navigation with fallback fight ID...');
+  261 |           }
+  262 | 
+  263 |           const directNavigationUrl = `/report/${reportId}/fight/${fightId}/insights`;
+  264 | 
+  265 |           console.log('Navigating directly to:', directNavigationUrl);
+  266 |           await page.goto(`${getBaseUrl()}${directNavigationUrl}`, {
+  267 |             waitUntil: 'domcontentloaded',
+  268 |             timeout: TEST_TIMEOUTS.navigation,
+  269 |           });
+  270 |         }
+  271 | 
+  272 |         // Wait for React Router navigation - check for URL change
+  273 |         try {
+  274 |           await page.waitForFunction(
+  275 |             () => {
+  276 |               // Check both pathname (browser routing) and hash (hash routing)
+  277 |               const pathname = window.location.pathname;
+  278 |               const hash = window.location.hash;
+  279 |               return pathname.includes('/fight/') || hash.includes('/fight/');
+  280 |             },
+  281 |             { timeout: 10000 }, // Reduced timeout since if it doesn't work quickly, it won't work
+  282 |           );
+  283 |         } catch (timeoutError) {
+  284 |           console.log(
+  285 |             `⚠️ Navigation to fight page timed out - this may indicate a production issue with fight navigation`,
+  286 |           );
+  287 |           console.log(`Current URL: ${page.url()}`);
+  288 |           console.log(
+  289 |             `Expected URL to contain: /fight/ but it doesn't - skipping this test scenario`,
+  290 |           );
+  291 |           // Skip the rest of this test iteration
+  292 |           return;
+  293 |         }
+  294 | 
+  295 |         // Extract fight ID from the URL (try both pathname and hash)
+  296 |         const currentUrl = page.url();
+  297 |         let fightIdMatch = currentUrl.match(/\/fight\/(\d+)/);
+  298 |         
+  299 |         // If not in pathname, try hash
+  300 |         if (!fightIdMatch) {
+  301 |           fightIdMatch = currentUrl.match(/#\/report\/[^\/]+\/fight\/(\d+)/);
+  302 |         }
+  303 | 
+  304 |         if (!fightIdMatch) {
+  305 |           throw new Error(`Could not find fight ID in URL: ${currentUrl}`);
+  306 |         }
+  307 | 
+  308 |         fightId = fightIdMatch[1]; // Update the existing fightId variable
+  309 | 
+  310 |         console.log('Successfully navigated to fight page. Fight ID:', fightId);
+  311 | 
+  312 |         // Test each main tab without using test.step to avoid context issues
+  313 |         for (const tabId of MAIN_TABS) {
+  314 |           console.log(`\nTesting tab: ${tabId}`);
+  315 | 
+  316 |           try {
+  317 |             await page.goto(`/report/${reportId}/fight/${fightId}/${tabId}`, {
+  318 |               waitUntil: 'domcontentloaded',
+  319 |               timeout: TEST_TIMEOUTS.navigation,
+  320 |             });
+  321 | 
+  322 |             // Wait for tab content to load with shorter timeout to avoid hanging
+  323 |             await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {
+  324 |               console.log('Network idle timeout - proceeding anyway');
+  325 |             });
+  326 | 
+  327 |             // Debug: log what tabs are available
+  328 |             const availableTabs = await page
+  329 |               .locator('[role="tab"]')
+  330 |               .allTextContents()
+  331 |               .catch(() => []);
+  332 |             console.log('Available tabs on page:', availableTabs);
+  333 | 
+```
