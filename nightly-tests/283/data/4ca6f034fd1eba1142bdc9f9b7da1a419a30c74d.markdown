@@ -1,0 +1,630 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-interactive.spec.ts >> Nightly Regression - Interactive Features >> Live Logging Functionality >> should load live logging interface
+- Location: tests/nightly-regression-interactive.spec.ts:490:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Start"), button:has-text("Stop"), button:has-text("Connect")').first()
+    - locator resolved to <button tabindex="0" type="button" class="MuiButtonBase-root css-t7ok65">…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - element is outside of the viewport
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - button "ESO Helpers ESO Toolkit" [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img "ESO Helpers" [ref=e11]
+            - text: ESO Toolkit
+        - generic [ref=e12]:
+          - button "roster hub Roster Hub" [ref=e13] [cursor=pointer]:
+            - img "roster hub" [ref=e15]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e16] [cursor=pointer]:
+            - img "build hub" [ref=e18]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e19] [cursor=pointer]:
+            - img "pack hub" [ref=e21]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e22] [cursor=pointer]:
+            - img [ref=e24]
+            - text: Reports
+            - img [ref=e27]
+          - button "Tools" [ref=e29] [cursor=pointer]:
+            - img [ref=e31]
+            - text: Tools
+            - img [ref=e34]
+          - button "Profile" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]: U
+            - paragraph [ref=e39]: Profile
+            - img [ref=e40]
+    - generic [ref=e42]:
+      - button "U Profile View profile" [ref=e45] [cursor=pointer]:
+        - generic [ref=e46]: U
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Profile
+          - paragraph [ref=e50]: View profile
+        - img [ref=e51]
+      - paragraph [ref=e53]: Navigate
+      - generic [ref=e54]:
+        - button "👥 Roster Hub" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 👥
+          - paragraph [ref=e57]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 🏗️
+          - paragraph [ref=e60]: Build Hub
+        - button "🧩 Pack Hub" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]: 🧩
+          - paragraph [ref=e63]: Pack Hub
+      - paragraph [ref=e64]: Reports
+      - generic [ref=e65]:
+        - button "📁 My Reports Your uploaded logs" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📁
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: My Reports
+            - paragraph [ref=e70]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: 🎲
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Sample Report
+            - paragraph [ref=e75]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 📊
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: Latest Reports
+            - paragraph [ref=e80]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: 🏆
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Leaderboards
+            - paragraph [ref=e85]: Top parse rankings
+      - paragraph [ref=e86]: Tools
+      - generic [ref=e87]:
+        - button "📝 Text Editor Format guild announcements" [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: 📝
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Text Editor
+            - paragraph [ref=e92]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e93] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: Calculator
+            - paragraph [ref=e105]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e106] [cursor=pointer]:
+          - generic [ref=e107]: 📈
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Parse Analysis
+            - paragraph [ref=e110]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e111] [cursor=pointer]:
+          - generic [ref=e112]: ⚔️
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: Loadout Manager
+            - paragraph [ref=e115]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: 👥
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: Roster Builder
+            - paragraph [ref=e120]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e121] [cursor=pointer]:
+          - generic [ref=e122]: 🔧
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: Build Editor
+            - paragraph [ref=e125]: Create & share builds
+      - paragraph [ref=e126]: Appearance
+      - generic [ref=e127]:
+        - button "Switch to light mode" [ref=e128] [cursor=pointer]:
+          - img [ref=e130]
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: Theme
+            - paragraph [ref=e134]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e135] [cursor=pointer]':
+          - img [ref=e137]
+          - generic [ref=e139]:
+            - paragraph [ref=e140]: Performance
+            - paragraph [ref=e141]: Auto · Low
+          - img [ref=e142]
+      - button "Log out" [ref=e145] [cursor=pointer]:
+        - img [ref=e147]
+        - text: Log out
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - button "Back to Fight List" [ref=e153] [cursor=pointer]:
+          - img [ref=e155]
+          - text: Fight List
+        - button "Interactive Fight Replay" [ref=e157] [cursor=pointer]:
+          - img [ref=e159]
+          - text: Replay
+        - link "View full report on ESO Logs" [ref=e161] [cursor=pointer]:
+          - /url: https://www.esologs.com/reports/VTqBNRdzCfp36gtL?fight=67
+          - img [ref=e163]
+          - text: ESO Logs
+        - button "Create a roster from this fight's players" [ref=e165] [cursor=pointer]:
+          - img [ref=e167]
+          - text: Roster
+      - heading "Reef Guardian (✓)" [level=4] [ref=e170]
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: Target
+              - generic [ref=e179]:
+                - combobox "Target" [ref=e180] [cursor=pointer]:
+                  - generic [ref=e182]: All Bosses
+                - textbox: "-1"
+                - img
+                - group:
+                  - generic: Target
+            - generic [ref=e184]:
+              - generic [ref=e185]: Player
+              - generic [ref=e186]:
+                - combobox "Player" [ref=e187] [cursor=pointer]: All Players
+                - textbox: all
+                - img
+                - group:
+                  - generic: Player
+          - generic [ref=e188]:
+            - button "Previous fight" [ref=e189] [cursor=pointer]:
+              - img [ref=e190]
+            - group [ref=e192]:
+              - button "All" [pressed] [ref=e193] [cursor=pointer]
+              - button "Bosses" [ref=e194] [cursor=pointer]
+            - paragraph [ref=e196]: 67/67
+            - button "Next fight" [disabled]:
+              - img
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic:
+              - img
+            - tablist [ref=e201]:
+              - tab [selected] [ref=e202] [cursor=pointer]:
+                - img [ref=e203]
+              - tab [ref=e206] [cursor=pointer]:
+                - img [ref=e207]
+              - tab [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: swords
+              - tab [ref=e211] [cursor=pointer]:
+                - img [ref=e212]
+              - tab [ref=e214] [cursor=pointer]:
+                - generic [ref=e215]: skull
+              - tab [ref=e216] [cursor=pointer]:
+                - img [ref=e217]
+              - tab [ref=e219] [cursor=pointer]:
+                - img [ref=e220]
+              - tab [ref=e222] [cursor=pointer]:
+                - img [ref=e223]
+              - tab [ref=e225] [cursor=pointer]:
+                - img [ref=e226]
+            - img [ref=e229] [cursor=pointer]
+          - generic [ref=e231] [cursor=pointer]:
+            - switch "🧪" [ref=e234]
+            - generic [ref=e238]: 🧪
+        - generic [ref=e241]:
+          - generic [ref=e243]:
+            - heading "Fight Insights" [level=6] [ref=e244]
+            - generic [ref=e245]:
+              - generic [ref=e246]: ⏱️
+              - paragraph [ref=e247]:
+                - strong [ref=e248]: "Duration:"
+                - text: 0.0s
+            - generic [ref=e249]:
+              - generic [ref=e250]: 🎯
+              - paragraph [ref=e251]:
+                - strong [ref=e252]: "Fight initiator:"
+                - text: "@Brassmoose"
+            - generic [ref=e253]:
+              - heading "Abilities Equipped:" [level=6] [ref=e254]
+              - generic [ref=e255]:
+                - generic [ref=e256]:
+                  - img "Glacial Colossus" [ref=e259]
+                  - generic [ref=e260]:
+                    - paragraph [ref=e261]: Colossus
+                    - generic [ref=e262]: Not equipped
+                - generic [ref=e263]:
+                  - img "Summon Charged Atronach" [ref=e266]
+                  - generic [ref=e267]:
+                    - paragraph [ref=e268]: Atronach
+                    - generic [ref=e269]: Not equipped
+                - generic [ref=e270]:
+                  - img "Reviving Barrier" [ref=e273]
+                  - generic [ref=e274]:
+                    - paragraph [ref=e275]: Barrier
+                    - generic [ref=e276]: Not equipped
+                - generic [ref=e277]:
+                  - img "Aggressive Horn" [ref=e280]
+                  - generic [ref=e281]:
+                    - paragraph [ref=e282]: Horn
+                    - generic [ref=e283]: Not equipped
+            - generic [ref=e284]:
+              - heading "Champion Points Equipped:" [level=6] [ref=e285]
+              - list [ref=e286]:
+                - listitem [ref=e287]:
+                  - generic [ref=e288]: ⚡
+                  - generic [ref=e289]:
+                    - generic [ref=e290]: Enlivening Overflow
+                    - paragraph [ref=e291]: None
+                - listitem [ref=e292]:
+                  - generic [ref=e293]: 🛡️
+                  - generic [ref=e294]:
+                    - generic [ref=e295]: From the Brink
+                    - paragraph [ref=e296]: None
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - heading "Status Effect Uptimes" [level=6] [ref=e301]
+              - generic "View status effect uptimes timeline" [ref=e302]:
+                - button "Open status effect uptimes timeline" [disabled]:
+                  - img
+            - paragraph [ref=e303]: Shows status effects applied to the selected target. Click on a status effect to view in ESO Logs.
+            - paragraph [ref=e304]: No status effects found for the selected target.
+          - generic [ref=e307]:
+            - generic [ref=e308]:
+              - heading "Buff Uptimes" [level=6] [ref=e309]
+              - generic [ref=e310]:
+                - button "Show All Buffs" [ref=e311] [cursor=pointer]
+                - generic "View buff uptimes timeline" [ref=e312]:
+                  - button "Open buff uptimes timeline" [disabled]:
+                    - img
+            - paragraph [ref=e313]: Shows average buff uptimes across friendly players (filtered to important buffs only). Click on a buff to view in ESO Logs.
+            - paragraph [ref=e314]: No important buff events found. Try showing all buffs.
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - heading "Debuff Uptimes" [level=6] [ref=e319]
+              - generic [ref=e320]:
+                - button "Show All Debuffs" [ref=e321] [cursor=pointer]
+                - generic "View debuff uptimes timeline" [ref=e322]:
+                  - button "Open debuff uptimes timeline" [disabled]:
+                    - img
+            - paragraph [ref=e323]: Shows debuffs applied by friendly players to all targets (filtered to important debuffs only). Click on a debuff to view in ESO Logs.
+            - paragraph [ref=e324]: No important debuff events found. Try showing all debuffs.
+          - generic [ref=e327]:
+            - heading "Damage Breakdown" [level=6] [ref=e328]
+            - paragraph [ref=e329]: "Total damage dealt by friendly players: 0"
+            - paragraph [ref=e330]: No damage events found for friendly players.
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - heading "Damage by Type" [level=6] [ref=e335]
+              - button "Open damage type help" [ref=e336] [cursor=pointer]:
+                - img [ref=e337]
+            - paragraph [ref=e339]: "Damage breakdown by damage type from friendly players: 0"
+            - paragraph [ref=e340]: No damage events found for friendly players.
+    - contentinfo [ref=e341]:
+      - generic [ref=e342]:
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e346]
+            - paragraph [ref=e347]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e348]:
+            - link "Join Discord" [ref=e349] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e351] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e352]:
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - img "ESO Helpers" [ref=e356]
+              - generic [ref=e357]:
+                - heading "ESO Helper Tools" [level=3] [ref=e358]
+                - paragraph [ref=e359]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e360]:
+              - generic [ref=e361]: Real-time analytics
+              - generic [ref=e363]: Player-built insights
+              - generic [ref=e365]: Free beta access
+              - generic [ref=e367]: Community-driven support
+          - generic [ref=e370]:
+            - generic [ref=e371]:
+              - paragraph [ref=e372]: Tools
+              - generic [ref=e373]:
+                - link "Build Calculator" [ref=e374] [cursor=pointer]:
+                  - /url: /calculator
+                  - generic [ref=e375]: Build Calculator
+                  - img [ref=e376]
+                - link "Text Editor" [ref=e378] [cursor=pointer]:
+                  - /url: /text-editor
+                  - generic [ref=e379]: Text Editor
+                  - img [ref=e380]
+                - link "Log Analyzer" [ref=e382] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e383]: Log Analyzer
+                  - img [ref=e384]
+                - link "Roster Builder" [ref=e386] [cursor=pointer]:
+                  - /url: /roster-builder
+                  - generic [ref=e387]: Roster Builder
+                  - img [ref=e388]
+                - link "My Reports" [ref=e390] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e391]: My Reports
+                  - img [ref=e392]
+                - link "Gear Sets" [ref=e394] [cursor=pointer]:
+                  - /url: /gear-sets
+                  - generic [ref=e395]: Gear Sets
+                  - img [ref=e396]
+            - generic [ref=e398]:
+              - paragraph [ref=e399]: Quick Links
+              - generic [ref=e400]:
+                - link "Home" [ref=e401] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e402]: Home
+                  - img [ref=e403]
+                - link "Privacy Settings" [ref=e405] [cursor=pointer]:
+                  - /url: /privacy-settings
+                  - generic [ref=e406]: Privacy Settings
+                  - img [ref=e407]
+                - link "Calculation Knowledge Base" [ref=e409] [cursor=pointer]:
+                  - /url: /docs/calculations
+                  - generic [ref=e410]: Calculation Knowledge Base
+                  - img [ref=e411]
+                - link "What's New" [ref=e413] [cursor=pointer]:
+                  - /url: /whats-new
+                  - generic [ref=e414]: What's New
+                  - img [ref=e415]
+                - link "About" [ref=e417] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e418]: About
+                  - img [ref=e419]
+        - generic [ref=e422]:
+          - paragraph [ref=e423]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e424]:
+            - link "Privacy Policy" [ref=e425] [cursor=pointer]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e426] [cursor=pointer]:
+              - img [ref=e428]
+              - text: Report a Bug
+  - generic [ref=e432]:
+    - button "close" [ref=e433] [cursor=pointer]:
+      - img [ref=e434]
+    - generic [ref=e436]:
+      - img [ref=e438]
+      - heading "Privacy & Cookies" [level=6] [ref=e440]
+    - paragraph [ref=e441]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e442] [cursor=pointer]:
+        - /url: /privacy
+    - generic [ref=e443]:
+      - button "Decline All" [ref=e444] [cursor=pointer]
+      - button "Customize" [ref=e445] [cursor=pointer]
+      - button "Accept All" [ref=e446] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  431 | 
+  432 |       // Take screenshot whether replay loaded or not (for debugging)
+  433 |       await page.screenshot({
+  434 |         path: `test-results/nightly-regression-replay-${reportId}-${fightId}.png`,
+  435 |         fullPage: true,
+  436 |         timeout: TEST_TIMEOUTS.screenshot,
+  437 |       });
+  438 | 
+  439 |       if (hasReplayInterface) {
+  440 |         // Test play/pause functionality
+  441 |         const playButton = replayControls.first();
+  442 |         await playButton.click();
+  443 | 
+  444 |         // Wait for replay to start
+  445 |         await page.waitForTimeout(3000);
+  446 | 
+  447 |         await page.screenshot({
+  448 |           path: `test-results/nightly-regression-replay-playing-${reportId}.png`,
+  449 |           fullPage: true,
+  450 |           timeout: TEST_TIMEOUTS.screenshot,
+  451 |         });
+  452 | 
+  453 |         // Test pause
+  454 |         const pauseButton = page.locator('button[aria-label*="pause"], .pause-button').first();
+  455 | 
+  456 |         if (await pauseButton.isVisible({ timeout: 3000 })) {
+  457 |           await pauseButton.click();
+  458 |           await page.waitForTimeout(1000);
+  459 |         }
+  460 | 
+  461 |         // Test timeline scrubbing if available
+  462 |         const timeline = page.locator('input[type="range"], .timeline-slider, .scrubber');
+  463 |         if (await timeline.first().isVisible({ timeout: 3000 })) {
+  464 |           // For sliders, force click is often needed due to overlay elements
+  465 |           await timeline.first().click({ force: true });
+  466 |           await page.waitForTimeout(2000);
+  467 | 
+  468 |           await page.screenshot({
+  469 |             path: `test-results/nightly-regression-replay-scrubbed-${reportId}.png`,
+  470 |             fullPage: true,
+  471 |             timeout: TEST_TIMEOUTS.screenshot,
+  472 |           });
+  473 |         }
+  474 |       }
+  475 | 
+  476 |       // Verify no critical errors occurred
+  477 |       const errors = await page.evaluate(() => (window as any).testErrors || []);
+  478 |       const criticalErrors = errors.filter(
+  479 |         (error: string) => !error.includes('ResizeObserver') && !error.includes('Not implemented'),
+  480 |       );
+  481 | 
+  482 |       // Only fail on critical errors, not minor ones that don't affect functionality
+  483 |       if (criticalErrors.length > 0) {
+  484 |         console.warn('Replay errors detected:', criticalErrors);
+  485 |       }
+  486 |     });
+  487 |   });
+  488 | 
+  489 |   test.describe('Live Logging Functionality', () => {
+  490 |     test('should load live logging interface', async ({ page }) => {
+  491 |       const reportId = REPORT_WITH_FIGHTS;
+  492 | 
+  493 |       // Navigate to live logging
+  494 |       await page.goto(`/report/${reportId}/live`, {
+  495 |         waitUntil: 'domcontentloaded',
+  496 |         timeout: TEST_TIMEOUTS.navigation,
+  497 |       });
+  498 | 
+  499 |       await page.waitForTimeout(5000);
+  500 | 
+  501 |       // Look for live logging interface elements
+  502 |       const hasLiveCssElements = await page
+  503 |         .locator('.live-log, .live-logging, .real-time, [data-testid*="live"]')
+  504 |         .isVisible()
+  505 |         .catch(() => false);
+  506 |       const hasLiveText = await page
+  507 |         .getByText(/live/i)
+  508 |         .isVisible()
+  509 |         .catch(() => false);
+  510 | 
+  511 |       const hasLiveInterface = hasLiveCssElements || hasLiveText;
+  512 | 
+  513 |       // Take screenshot with error handling
+  514 |       try {
+  515 |         await page.screenshot({
+  516 |           path: `test-results/nightly-regression-live-logging-${reportId}.png`,
+  517 |           fullPage: true,
+  518 |           timeout: 15000, // Increased timeout
+  519 |         });
+  520 |       } catch (screenshotError) {
+  521 |         console.log('Screenshot failed but continuing test:', (screenshotError as Error).message);
+  522 |       }
+  523 | 
+  524 |       if (hasLiveInterface) {
+  525 |         // Test live logging controls if available
+  526 |         const controls = page.locator(
+  527 |           'button:has-text("Start"), button:has-text("Stop"), button:has-text("Connect")',
+  528 |         );
+  529 | 
+  530 |         if (await controls.first().isVisible({ timeout: 3000 })) {
+> 531 |           await controls.first().click();
+      |                                  ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
+  532 |           await page.waitForTimeout(2000);
+  533 | 
+  534 |           await page.screenshot({
+  535 |             path: `test-results/nightly-regression-live-active-${reportId}.png`,
+  536 |             fullPage: true,
+  537 |             timeout: TEST_TIMEOUTS.screenshot,
+  538 |           });
+  539 |         }
+  540 |       }
+  541 |     });
+  542 |   });
+  543 | 
+  544 |   test.describe('Advanced Visualizations', () => {
+  545 |     test('should test location heatmap visualization', async ({ page }) => {
+  546 |       const reportId = REPORT_WITH_FIGHTS;
+  547 | 
+  548 |       // Use known fight ID directly — avoids an extra landing-page API round-trip
+  549 |       const fightId = TEST_DATA.KNOWN_FIGHT_ID;
+  550 | 
+  551 |       console.log(`ℹ️  Using fight ${fightId} for heatmap visualization test`);
+  552 | 
+  553 |       // Navigate to location heatmap (experimental tab)
+  554 |       await withBrowserStability(async () => {
+  555 |         await page.goto(`/report/${reportId}/fight/${fightId}/location-heatmap`, {
+  556 |           waitUntil: 'domcontentloaded',
+  557 |           timeout: TEST_TIMEOUTS.navigation,
+  558 |         });
+  559 |       }, 'heatmap navigation');
+  560 | 
+  561 |       // Wait longer for heatmaps to render with stability protection
+  562 |       await withBrowserStability(async () => {
+  563 |         await page.waitForTimeout(15000); // Increased timeout for heatmap rendering
+  564 |       }, 'heatmap rendering wait');
+  565 | 
+  566 |       // Look for heatmap visualization - be more specific about what we're looking for
+  567 |       const heatmapElements = page.locator('canvas, .heatmap, .visualization, .map-container');
+  568 |       const heatmapSVG = page.locator('svg[width][height]').filter({ hasText: '' }); // Empty SVG likely to be visualization
+  569 | 
+  570 |       // Check for actual heatmap content
+  571 |       const hasHeatmap = await heatmapElements
+  572 |         .first()
+  573 |         .isVisible({ timeout: 5000 })
+  574 |         .catch(() => false);
+  575 |       const hasHeatmapSVG = await heatmapSVG
+  576 |         .first()
+  577 |         .isVisible({ timeout: 5000 })
+  578 |         .catch(() => false);
+  579 | 
+  580 |       // Take screenshot with error handling
+  581 |       try {
+  582 |         await page.screenshot({
+  583 |           path: `test-results/nightly-regression-heatmap-${reportId}-${fightId}.png`,
+  584 |           fullPage: true,
+  585 |           timeout: 15000, // Increased timeout
+  586 |         });
+  587 |       } catch (screenshotError) {
+  588 |         console.log('Screenshot failed but continuing test:', (screenshotError as Error).message);
+  589 |       }
+  590 | 
+  591 |       if (hasHeatmap) {
+  592 |         // Test interaction with heatmap if possible - use the main heatmap element
+  593 |         const heatmapElement = heatmapElements.first();
+  594 |         const boundingBox = await heatmapElement.boundingBox();
+  595 | 
+  596 |         // Only try to click if the element is reasonably large (not a small icon)
+  597 |         if (boundingBox && boundingBox.width > 50 && boundingBox.height > 50) {
+  598 |           await heatmapElement.click({ position: { x: 100, y: 100 } });
+  599 |           await page.waitForTimeout(1000);
+  600 | 
+  601 |           await page.screenshot({
+  602 |             path: `test-results/nightly-regression-heatmap-clicked-${reportId}.png`,
+  603 |             fullPage: true,
+  604 |             timeout: TEST_TIMEOUTS.screenshot,
+  605 |           });
+  606 |         } else {
+  607 |           console.log('ℹ️  Heatmap element too small for interaction testing');
+  608 |         }
+  609 |       } else if (hasHeatmapSVG) {
+  610 |         // If we found an SVG that might be a heatmap, check its size
+  611 |         const svgElement = heatmapSVG.first();
+  612 |         const boundingBox = await svgElement.boundingBox();
+  613 | 
+  614 |         if (boundingBox && boundingBox.width > 50 && boundingBox.height > 50) {
+  615 |           await svgElement.click({
+  616 |             position: { x: boundingBox.width / 2, y: boundingBox.height / 2 },
+  617 |           });
+  618 |           await page.waitForTimeout(1000);
+  619 | 
+  620 |           await page.screenshot({
+  621 |             path: `test-results/nightly-regression-heatmap-clicked-${reportId}.png`,
+  622 |             fullPage: true,
+  623 |             timeout: TEST_TIMEOUTS.screenshot,
+  624 |           });
+  625 |         } else {
+  626 |           console.log('ℹ️  SVG element too small for interaction testing');
+  627 |         }
+  628 |       } else {
+  629 |         console.log('ℹ️  No heatmap visualization found - this may be expected for some fights');
+  630 |       }
+  631 |     });
+```
