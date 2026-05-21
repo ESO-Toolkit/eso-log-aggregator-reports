@@ -1,0 +1,1 @@
+import{h as r,H as p,O as m}from"./Box-C_XPbAjY.js";const c=r();function u(n){const{theme:e,name:o,props:s}=n;return!e||!e.components||!e.components[o]||!e.components[o].defaultProps?s:p(e.components[o].defaultProps,s)}function f({props:n,name:e,defaultTheme:o,themeId:s}){let t=m(o);return s&&(t=t[s]||t),u({theme:t,name:e,props:n})}export{c as s,f as u};
