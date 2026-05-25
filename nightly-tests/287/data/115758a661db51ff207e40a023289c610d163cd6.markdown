@@ -1,0 +1,792 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-pages.spec.ts >> Nightly Regression - Pages & Features >> Home & Informational Pages >> home page should load with visible content
+- Location: tests/nightly-regression-pages.spec.ts:96:9
+
+# Error details
+
+```
+Error: Home page should render navigable content
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]: New
+    - paragraph [ref=e6]:
+      - text: Introducing
+      - strong [ref=e7]: Kalpa
+      - text: — a fast, open-source addon manager for ESO. Currently in alpha.
+    - link "Learn more →" [ref=e8]:
+      - /url: https://github.com/ESO-Toolkit/kalpa
+    - button "Dismiss banner" [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+  - banner [ref=e12]:
+    - generic [ref=e14]:
+      - button "ESO Toolkit logo ESO Toolkit" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]:
+          - img "ESO Toolkit logo" [ref=e18]
+          - text: ESO Toolkit
+      - navigation "Main navigation" [ref=e19]:
+        - button "roster hub Roster Hub" [ref=e20] [cursor=pointer]:
+          - img "roster hub" [ref=e22]: 👥
+          - text: Roster Hub
+        - button "build hub Build Hub" [ref=e23] [cursor=pointer]:
+          - img "build hub" [ref=e25]: 🏗️
+          - text: Build Hub
+        - button "pack hub Pack Hub" [ref=e26] [cursor=pointer]:
+          - img "pack hub" [ref=e28]: 🧩
+          - text: Pack Hub
+        - button "Reports" [ref=e29] [cursor=pointer]:
+          - img [ref=e31]
+          - text: Reports
+          - img [ref=e34]
+        - button "Tools" [ref=e36] [cursor=pointer]:
+          - img [ref=e38]
+          - text: Tools
+          - img [ref=e41]
+        - button "Profile" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: U
+          - paragraph [ref=e46]: Profile
+          - img [ref=e47]
+  - dialog "Navigation menu" [ref=e49]:
+    - button "U Profile View profile" [ref=e52] [cursor=pointer]:
+      - generic [ref=e53]: U
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: Profile
+        - paragraph [ref=e57]: View profile
+      - img [ref=e58]
+    - paragraph [ref=e60]: Navigate
+    - generic [ref=e61]:
+      - button "👥 Roster Hub" [ref=e62] [cursor=pointer]:
+        - generic [ref=e63]: 👥
+        - paragraph [ref=e64]: Roster Hub
+      - button "🏗️ Build Hub" [ref=e65] [cursor=pointer]:
+        - generic [ref=e66]: 🏗️
+        - paragraph [ref=e67]: Build Hub
+      - button "🧩 Pack Hub" [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]: 🧩
+        - paragraph [ref=e70]: Pack Hub
+    - paragraph [ref=e71]: Reports
+    - generic [ref=e72]:
+      - button "📁 My Reports Your uploaded logs" [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]: 📁
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: My Reports
+          - paragraph [ref=e77]: Your uploaded logs
+      - button "🎲 Sample Report Explore a demo log" [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]: 🎲
+        - generic [ref=e80]:
+          - paragraph [ref=e81]: Sample Report
+          - paragraph [ref=e82]: Explore a demo log
+      - button "📊 Latest Reports Recently uploaded" [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]: 📊
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: Latest Reports
+          - paragraph [ref=e87]: Recently uploaded
+      - button "🏆 Leaderboards Top parse rankings" [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]: 🏆
+        - generic [ref=e90]:
+          - paragraph [ref=e91]: Leaderboards
+          - paragraph [ref=e92]: Top parse rankings
+    - paragraph [ref=e93]: Tools
+    - generic [ref=e94]:
+      - button "📝 Text Editor Format guild announcements" [ref=e95] [cursor=pointer]:
+        - generic [ref=e96]: 📝
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: Text Editor
+          - paragraph [ref=e99]: Format guild announcements
+      - button "Calculator Stat & damage math" [ref=e100] [cursor=pointer]:
+        - img [ref=e102]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Calculator
+          - paragraph [ref=e112]: Stat & damage math
+      - button "📈 Parse Analysis Break down your parses" [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]: 📈
+        - generic [ref=e115]:
+          - paragraph [ref=e116]: Parse Analysis
+          - paragraph [ref=e117]: Break down your parses
+      - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]: ⚔️
+        - generic [ref=e120]:
+          - paragraph [ref=e121]: Loadout Manager
+          - paragraph [ref=e122]: Manage gear loadouts
+      - button "👥 Roster Builder Plan trial compositions" [ref=e123] [cursor=pointer]:
+        - generic [ref=e124]: 👥
+        - generic [ref=e125]:
+          - paragraph [ref=e126]: Roster Builder
+          - paragraph [ref=e127]: Plan trial compositions
+      - button "🔧 Build Editor Create & share builds" [ref=e128] [cursor=pointer]:
+        - generic [ref=e129]: 🔧
+        - generic [ref=e130]:
+          - paragraph [ref=e131]: Build Editor
+          - paragraph [ref=e132]: Create & share builds
+    - paragraph [ref=e133]: Appearance
+    - generic [ref=e134]:
+      - button "Switch to light mode" [ref=e135] [cursor=pointer]:
+        - img [ref=e137]
+        - generic [ref=e139]:
+          - paragraph [ref=e140]: Theme
+          - paragraph [ref=e141]: Dark · tap to switch
+      - 'button "Performance: Auto · Low — change" [ref=e142] [cursor=pointer]':
+        - img [ref=e144]
+        - generic [ref=e146]:
+          - paragraph [ref=e147]: Performance
+          - paragraph [ref=e148]: Auto · Low
+        - img [ref=e149]
+    - button "Log out" [ref=e152] [cursor=pointer]:
+      - img [ref=e154]
+      - text: Log out
+  - main [ref=e156]:
+    - generic [ref=e157]:
+      - generic:
+        - generic: ⟐
+        - generic: ⟐
+        - generic: ⟐
+        - generic: ⟐
+        - generic: ⟐
+      - generic [ref=e158]:
+        - heading "Essential Tools For Your ESO Journey" [level=1] [ref=e159]:
+          - generic [ref=e160]: Essential Tools
+          - generic [ref=e161]:
+            - text: For
+            - generic [ref=e162]: Your ESO Journey
+        - paragraph [ref=e163]: Optimize your builds, create stunning messages, and manage your guild with powerful, easy-to-use tools designed for Elder Scrolls Online players.
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: ESOLogs.com Log URL
+              - generic [ref=e168]:
+                - img [ref=e169]
+                - textbox "ESOLogs.com Log URL" [ref=e171]
+                - group:
+                  - generic: ESOLogs.com Log URL
+            - button "Analyze Log" [ref=e172] [cursor=pointer]
+          - generic [ref=e173]:
+            - paragraph [ref=e175]: 📝 No reports yet
+            - button "View my reports" [ref=e178] [cursor=pointer]:
+              - img [ref=e180]
+              - text: View my reports
+    - generic [ref=e182]:
+      - generic [ref=e184]:
+        - generic [ref=e185]: The
+        - generic [ref=e186]: Arsenal
+      - generic [ref=e187]: Craft · Optimize · Dominate
+    - generic [ref=e190]:
+      - generic [ref=e192]:
+        - img [ref=e194]
+        - heading "Text-Editor" [level=3] [ref=e202]
+        - paragraph [ref=e203]: Create eye-catching MOTD and group finder posts with our visual editor. Design messages that stand out with custom styles and formatting.
+        - list [ref=e204]:
+          - listitem [ref=e205]: ✓ Visual interface for easy formatting
+          - listitem [ref=e206]: ✓ Custom styles and colors
+          - listitem [ref=e207]: ✓ Preview before posting
+          - listitem [ref=e208]: ✓ Save templates for reuse
+        - button "Launch Editor" [ref=e209] [cursor=pointer]
+      - generic [ref=e211]:
+        - img [ref=e213]
+        - heading "Build Calculator" [level=3] [ref=e218]
+        - paragraph [ref=e219]: Optimize your character's stats with our comprehensive calculator. Track penetration, critical damage, and armor to hit those crucial caps.
+        - list [ref=e220]:
+          - listitem [ref=e221]: ✓ Penetration optimizer (18,200 cap)
+          - listitem [ref=e222]: ✓ Critical damage calculator (125% cap)
+          - listitem [ref=e223]: ✓ Armor resistance planner
+          - listitem [ref=e224]: ✓ Real-time cap status indicators
+        - button "Launch Calculator" [ref=e225] [cursor=pointer]
+      - generic [ref=e227]:
+        - img [ref=e229]
+        - heading "Log Analyzer" [level=3] [ref=e238]
+        - paragraph [ref=e239]: Deep dive into your ESO combat logs with advanced analytics. Analyze player performance, damage patterns, and raid insights with detailed breakdowns.
+        - list [ref=e240]:
+          - listitem [ref=e241]: ✓ Combat performance analysis
+          - listitem [ref=e242]: ✓ Player damage breakdowns
+          - listitem [ref=e243]: ✓ Skill usage tracking
+          - listitem [ref=e244]: ✓ Real-time fight insights
+        - button "Open Log Analyzer" [ref=e245] [cursor=pointer]
+      - generic [ref=e247]:
+        - img [ref=e249]
+        - heading "Roster Builder" [level=3] [ref=e267]
+        - paragraph [ref=e268]: Build and manage your guild rosters with our web tools and Discord bot. Organize members, assign roles, and track raid signups across platforms.
+        - list [ref=e269]:
+          - listitem [ref=e270]: ✓ Visual roster builder
+          - listitem [ref=e271]: ✓ Discord bot integration
+          - listitem [ref=e272]: ✓ Raid signup tracking
+          - listitem [ref=e273]: ✓ Role assignment system
+        - button "Open Roster Builder" [ref=e274] [cursor=pointer]
+    - generic [ref=e275]:
+      - paragraph: "01"
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - paragraph [ref=e279]: Desktop App
+          - heading "Meet Kalpa" [level=2] [ref=e281]
+          - paragraph [ref=e282]: A fast, open-source addon manager for ESO. Built with Rust and Tauri for native performance — just 15 MB, no Java runtime required.
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: "01"
+              - generic [ref=e286]: One-click installs
+              - generic [ref=e287]: Install and update addons instantly
+            - generic [ref=e288]:
+              - generic [ref=e289]: "02"
+              - generic [ref=e290]: Dependency resolution
+              - generic [ref=e291]: Automatically handles required libraries
+            - generic [ref=e292]:
+              - generic [ref=e293]: "03"
+              - generic [ref=e294]: Addon profiles
+              - generic [ref=e295]: Switch loadouts per character or role
+            - generic [ref=e296]:
+              - generic [ref=e297]: "04"
+              - generic [ref=e298]: Pack Hub
+              - generic [ref=e299]: Share and discover addon collections
+            - generic [ref=e300]:
+              - generic [ref=e301]: "05"
+              - generic [ref=e302]: SavedVariables backup
+              - generic [ref=e303]: Never lose your addon settings again
+            - generic [ref=e304]:
+              - generic [ref=e305]: "06"
+              - generic [ref=e306]: Minion migration
+              - generic [ref=e307]: One-click import from your old manager
+          - generic [ref=e308]:
+            - link "Get Kalpa" [ref=e309] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/kalpa
+            - link "View on GitHub" [ref=e310] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/kalpa
+        - generic [ref=e311]:
+          - paragraph [ref=e317]: Kalpa — Addon Manager
+          - generic [ref=e318]:
+            - paragraph [ref=e319]: 🔍
+            - paragraph [ref=e320]: Search addons...
+          - generic [ref=e321]:
+            - generic [ref=e322]:
+              - generic [ref=e323]:
+                - paragraph [ref=e325]: 📦
+                - generic [ref=e326]:
+                  - paragraph [ref=e327]: Dressing Room Reborn
+                  - paragraph [ref=e328]: v3.8.1
+              - generic [ref=e329]: Updated
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - paragraph [ref=e333]: 📦
+                - generic [ref=e334]:
+                  - paragraph [ref=e335]: Combat Metrics
+                  - paragraph [ref=e336]: v2.5.0
+              - generic [ref=e337]: Update
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - paragraph [ref=e341]: 📦
+                - generic [ref=e342]:
+                  - paragraph [ref=e343]: Azurah - Interface Enhanced
+                  - paragraph [ref=e344]: v4.1.2
+              - generic [ref=e345]: Updated
+            - generic [ref=e346]:
+              - generic [ref=e347]:
+                - paragraph [ref=e349]: 📦
+                - generic [ref=e350]:
+                  - paragraph [ref=e351]: Inventory Insight
+                  - paragraph [ref=e352]: v1.9.4
+              - generic [ref=e353]: Updated
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - paragraph [ref=e357]: 📦
+                - generic [ref=e358]:
+                  - paragraph [ref=e359]: RaidNotifier
+                  - paragraph [ref=e360]: v3.2.1
+              - generic [ref=e361]: Update
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - paragraph [ref=e365]: 📦
+                - generic [ref=e366]:
+                  - paragraph [ref=e367]: Srendarr - Aura Tracker
+                  - paragraph [ref=e368]: v2.7.3
+              - generic [ref=e369]: Updated
+            - generic [ref=e370]:
+              - generic [ref=e371]:
+                - paragraph [ref=e373]: 📦
+                - generic [ref=e374]:
+                  - paragraph [ref=e375]: Beam Me Up
+                  - paragraph [ref=e376]: v1.4.0
+              - generic [ref=e377]: Updated
+            - generic [ref=e378]:
+              - generic [ref=e379]:
+                - paragraph [ref=e381]: 📦
+                - generic [ref=e382]:
+                  - paragraph [ref=e383]: Harvest Map
+                  - paragraph [ref=e384]: v5.1.6
+              - generic [ref=e385]: Update
+          - generic [ref=e386]:
+            - paragraph [ref=e387]: 8 addons installed
+            - paragraph [ref=e390]: All synced
+    - generic [ref=e391]:
+      - paragraph: "02"
+      - generic [ref=e392]:
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - paragraph [ref=e395]: In-Game Addon
+            - generic [ref=e396]: COMING SOON
+          - heading "The ESOTK Addon" [level=2] [ref=e397]
+          - paragraph [ref=e398]: We're building a companion addon that bridges the gap between web and game. Roster validation, group management, and gear inspection — all directly inside your ESO client. Currently in development.
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401]: "01"
+              - generic [ref=e402]: Roster import
+              - generic [ref=e403]: Validate and sync rosters from the web
+            - generic [ref=e404]:
+              - generic [ref=e405]: "02"
+              - generic [ref=e406]: Group management
+              - generic [ref=e407]: View and organize your trial group in-game
+            - generic [ref=e408]:
+              - generic [ref=e409]: "03"
+              - generic [ref=e410]: Gear inspection
+              - generic [ref=e411]: Check builds and equipment at a glance
+            - generic [ref=e412]:
+              - generic [ref=e413]: "04"
+              - generic [ref=e414]: Slash commands
+              - generic [ref=e415]: Quick access via /esotk in chat
+            - generic [ref=e416]:
+              - generic [ref=e417]: "05"
+              - generic [ref=e418]: Web toolkit sync
+              - generic [ref=e419]: Live connection to your ESOTK dashboard
+            - generic [ref=e420]:
+              - generic [ref=e421]: "06"
+              - generic [ref=e422]: Real-time stats
+              - generic [ref=e423]: Group performance data as it happens
+          - generic [ref=e424]:
+            - link "Follow on GitHub" [ref=e425] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/esotk-addon
+            - paragraph [ref=e426]: Not yet available for download
+        - generic [ref=e428]:
+          - generic [ref=e429]:
+            - text: ◆
+            - paragraph [ref=e430]: ESOTK — Group Panel
+            - text: ◆
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - generic [ref=e434]:
+                - paragraph [ref=e435]: Aethon Dragonguard
+                - paragraph [ref=e436]: Dragonknight · Tank
+              - paragraph [ref=e437]: 42,800
+            - generic [ref=e438]:
+              - generic [ref=e440]:
+                - paragraph [ref=e441]: Selene Moonweaver
+                - paragraph [ref=e442]: Templar · Healer
+              - paragraph [ref=e443]: 28,200
+            - generic [ref=e444]:
+              - generic [ref=e446]:
+                - paragraph [ref=e447]: Razum-dar Jr
+                - paragraph [ref=e448]: Nightblade · DPS
+              - paragraph [ref=e449]: 25,600
+            - generic [ref=e450]:
+              - generic [ref=e452]:
+                - paragraph [ref=e453]: Valkyn Stormborn
+                - paragraph [ref=e454]: Sorcerer · DPS
+              - paragraph [ref=e455]: 26,100
+            - generic [ref=e456]:
+              - generic [ref=e458]:
+                - paragraph [ref=e459]: Khajiit Has-Wares
+                - paragraph [ref=e460]: Necromancer · DPS
+              - paragraph [ref=e461]: 24,900
+            - generic [ref=e462]:
+              - generic [ref=e464]:
+                - paragraph [ref=e465]: Tharn the Unbroken
+                - paragraph [ref=e466]: Warden · Tank
+              - paragraph [ref=e467]: 44,200
+            - generic [ref=e468]:
+              - generic [ref=e470]:
+                - paragraph [ref=e471]: Mirri Elendis
+                - paragraph [ref=e472]: Arcanist · Healer
+              - paragraph [ref=e473]: 27,800
+            - generic [ref=e474]:
+              - generic [ref=e476]:
+                - paragraph [ref=e477]: Fennorian Ravenwatch
+                - paragraph [ref=e478]: Dragonknight · DPS
+              - paragraph [ref=e479]: 25,300
+          - generic [ref=e480]:
+            - paragraph [ref=e481]: 8/12 members
+            - paragraph [ref=e482]: /esotk roster
+    - generic [ref=e484]:
+      - generic [ref=e485]:
+        - generic [ref=e486]: Built by players, for players.
+        - generic [ref=e487]: Always updated · Always free · Elder Scrolls Online
+      - generic [ref=e489]:
+        - generic [ref=e490]:
+          - generic [ref=e491]:
+            - img [ref=e492]
+            - text: Build Calculator
+          - generic [ref=e497]:
+            - img [ref=e498]
+            - text: Text-Editor
+          - generic [ref=e506]:
+            - img [ref=e507]
+            - text: Log Analyzer
+          - generic [ref=e516]:
+            - img [ref=e517]
+            - text: Kalpa
+          - generic [ref=e524]:
+            - img [ref=e525]
+            - text: ESOTK Addon
+          - generic [ref=e528]:
+            - img [ref=e529]
+            - text: Roster-Bot
+        - generic [ref=e547]:
+          - generic [ref=e548]:
+            - img [ref=e549]
+            - text: Build Calculator
+          - generic [ref=e554]:
+            - img [ref=e555]
+            - text: Text-Editor
+          - generic [ref=e563]:
+            - img [ref=e564]
+            - text: Log Analyzer
+          - generic [ref=e573]:
+            - img [ref=e574]
+            - text: Kalpa
+          - generic [ref=e581]:
+            - img [ref=e582]
+            - text: ESOTK Addon
+          - generic [ref=e585]:
+            - img [ref=e586]
+            - text: Roster-Bot
+      - generic [ref=e604]:
+        - generic [ref=e605]:
+          - text: "01"
+          - generic [ref=e606]:
+            - generic [ref=e607]: 🎮
+            - heading "Built from Real Gameplay" [level=3] [ref=e608]
+            - paragraph [ref=e609]: Every tool is shaped by hundreds of hours of actual gameplay across all content types — not guesswork.
+            - generic [ref=e610]:
+              - generic [ref=e611]: Trials
+              - generic [ref=e612]: PvP
+              - generic [ref=e613]: Dungeons
+              - generic [ref=e614]: Overland
+        - generic [ref=e615]:
+          - text: "02"
+          - generic [ref=e616]:
+            - generic [ref=e617]: 🔄
+            - heading "Always Current" [level=3] [ref=e618]: Always Current
+            - paragraph [ref=e620]: Updated with every patch, balance change, and meta shift so you're never behind.
+            - paragraph [ref=e621]: Tracking latest patches
+        - generic [ref=e622]:
+          - text: "03"
+          - generic [ref=e623]:
+            - generic [ref=e624]: 💬
+            - generic [ref=e625]:
+              - heading "Community Driven" [level=3] [ref=e626]
+              - paragraph [ref=e627]: Your feedback shapes development. Join Discord to suggest features and connect with players.
+            - link "Join Discord →" [ref=e628]:
+              - /url: https://discord.gg/esotk
+    - generic [ref=e630]:
+      - generic [ref=e631]:
+        - generic [ref=e632]:
+          - generic [ref=e633]: Stay ahead of the meta
+          - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e634]
+          - paragraph [ref=e635]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+        - generic [ref=e636]:
+          - link "Join Discord" [ref=e637] [cursor=pointer]:
+            - /url: https://discord.gg/mMjwcQYFdc
+            - text: Join Discord
+          - link "View on GitHub" [ref=e639] [cursor=pointer]:
+            - /url: https://github.com/ESO-Toolkit/eso-toolkit
+      - generic [ref=e640]:
+        - generic [ref=e641]:
+          - generic [ref=e642]:
+            - img "ESO Toolkit logo" [ref=e644]
+            - generic [ref=e645]:
+              - heading "ESO Helper Tools" [level=3] [ref=e646]
+              - paragraph [ref=e647]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+          - generic [ref=e648]:
+            - generic [ref=e649]: Real-time analytics
+            - generic [ref=e651]: Player-built insights
+            - generic [ref=e653]: Free beta access
+            - generic [ref=e655]: Community-driven support
+        - generic [ref=e658]:
+          - generic [ref=e659]:
+            - paragraph [ref=e660]: Tools
+            - generic [ref=e661]:
+              - link "Build Calculator" [ref=e662]:
+                - /url: /calculator
+                - generic [ref=e663]: Build Calculator
+                - img [ref=e664]
+              - link "Text Editor" [ref=e666]:
+                - /url: /text-editor
+                - generic [ref=e667]: Text Editor
+                - img [ref=e668]
+              - link "Log Analyzer" [ref=e670]:
+                - /url: /my-reports
+                - generic [ref=e671]: Log Analyzer
+                - img [ref=e672]
+              - link "Roster Builder" [ref=e674]:
+                - /url: /roster-builder
+                - generic [ref=e675]: Roster Builder
+                - img [ref=e676]
+              - link "My Reports" [ref=e678]:
+                - /url: /my-reports
+                - generic [ref=e679]: My Reports
+                - img [ref=e680]
+              - link "Gear Sets" [ref=e682]:
+                - /url: /gear-sets
+                - generic [ref=e683]: Gear Sets
+                - img [ref=e684]
+          - generic [ref=e686]:
+            - paragraph [ref=e687]: Quick Links
+            - generic [ref=e688]:
+              - link "Home" [ref=e689]:
+                - /url: /
+                - generic [ref=e690]: Home
+                - img [ref=e691]
+              - link "Privacy Settings" [ref=e693]:
+                - /url: /privacy-settings
+                - generic [ref=e694]: Privacy Settings
+                - img [ref=e695]
+              - link "Calculation Knowledge Base" [ref=e697]:
+                - /url: /docs/calculations
+                - generic [ref=e698]: Calculation Knowledge Base
+                - img [ref=e699]
+              - link "What's New" [ref=e701]:
+                - /url: /whats-new
+                - generic [ref=e702]: What's New
+                - img [ref=e703]
+              - link "About" [ref=e705]:
+                - /url: /about
+                - generic [ref=e706]: About
+                - img [ref=e707]
+      - generic [ref=e710]:
+        - paragraph [ref=e711]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+        - generic [ref=e712]:
+          - link "Privacy Policy" [ref=e713]:
+            - /url: /privacy
+          - button "Report a Bug" [ref=e714] [cursor=pointer]:
+            - img [ref=e716]
+            - text: Report a Bug
+  - generic [ref=e720]:
+    - button "Close" [ref=e721] [cursor=pointer]:
+      - img [ref=e722]
+    - generic [ref=e724]:
+      - img [ref=e726]
+      - heading "Privacy & Cookies" [level=6] [ref=e728]
+    - paragraph [ref=e729]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e730]:
+        - /url: /privacy
+    - generic [ref=e731]:
+      - button "Decline All" [ref=e732] [cursor=pointer]
+      - button "Customize" [ref=e733] [cursor=pointer]
+      - button "Accept All" [ref=e734] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  11  |  *           ESO-749 (gear-sets, logs, parse-analysis), ESO-751 (docs)
+  12  |  *
+  13  |  * Auth: These tests do NOT require credentials. They work with or without
+  14  |  * stored auth state. Auth-gated page tests live in nightly-regression-auth.spec.ts.
+  15  |  */
+  16  | 
+  17  | const TEST_TIMEOUTS = {
+  18  |   navigation: 30000,
+  19  |   dataLoad: 45000,
+  20  |   // Increased from 10 000 ms: WebKit can be slow to settle before a screenshot,
+  21  |   // especially when fullPage capture requires a full-page scroll pass.
+  22  |   screenshot: 20000,
+  23  | };
+  24  | 
+  25  | /**
+  26  |  * Shared helper: navigate to a page and assert it loaded meaningful content.
+  27  |  * Returns false (and logs) instead of throwing if the page is missing, so the
+  28  |  * test can fail with a useful assertion message rather than an unhandled error.
+  29  |  */
+  30  | async function expectPageLoads(
+  31  |   page: Parameters<Parameters<typeof test>[1]>[0],
+  32  |   path: string,
+  33  |   screenshotName: string,
+  34  | ): Promise<void> {
+  35  |   await page.goto(path, {
+  36  |     waitUntil: 'domcontentloaded',
+  37  |     timeout: TEST_TIMEOUTS.navigation,
+  38  |   });
+  39  | 
+  40  |   await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {
+  41  |     // networkidle can time out on data-heavy pages — not a failure on its own
+  42  |   });
+  43  | 
+  44  |   await page.waitForTimeout(2000);
+  45  | 
+  46  |   const bodyText = await page.locator('body').textContent().catch(() => '');
+  47  |   const contentLength = bodyText?.length ?? 0;
+  48  | 
+  49  |   if (contentLength < 50) {
+  50  |     console.log(`🔍 ${path} body content too short (${contentLength} chars)`);
+  51  |     console.log(`🔍 URL: ${page.url()}`);
+  52  |     console.log(`🔍 Title: ${await page.title()}`);
+  53  |   }
+  54  | 
+  55  |   expect(contentLength, `${path} should render meaningful content`).toBeGreaterThan(50);
+  56  | 
+  57  |   // No uncaught JS errors
+  58  |   const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  59  |   const criticalErrors = errors.filter(
+  60  |     (e) =>
+  61  |       !e.includes('ResizeObserver') &&
+  62  |       !e.includes('Not implemented') &&
+  63  |       !e.includes('Non-Error promise rejection') &&
+  64  |       !e.includes('ChunkLoadError'),
+  65  |   );
+  66  |   expect(criticalErrors, `${path} should have no critical JS errors`).toHaveLength(0);
+  67  | 
+  68  |   await page.screenshot({
+  69  |     path: `test-results/nightly-regression-pages-${screenshotName}.png`,
+  70  |     // fullPage removed: WebKit hangs scrolling through long pages under CI load,
+  71  |     // causing 10-20 s screenshot timeouts. Viewport capture is sufficient for
+  72  |     // smoke-level evidence that the page rendered correctly.
+  73  |     timeout: TEST_TIMEOUTS.screenshot,
+  74  |   });
+  75  | }
+  76  | 
+  77  | test.describe('Nightly Regression - Pages & Features', () => {
+  78  |   test.beforeEach(async ({ page }) => {
+  79  |     test.setTimeout(120000);
+  80  | 
+  81  |     await page.addInitScript(() => {
+  82  |       (window as any).testErrors = [];
+  83  |       window.addEventListener('error', (ev) => {
+  84  |         (window as any).testErrors.push(ev.error?.message ?? ev.message);
+  85  |       });
+  86  |       window.addEventListener('unhandledrejection', (ev) => {
+  87  |         (window as any).testErrors.push(`Unhandled rejection: ${ev.reason}`);
+  88  |       });
+  89  |     });
+  90  |   });
+  91  | 
+  92  |   // ---------------------------------------------------------------------------
+  93  |   // ESO-743: Home / landing / informational pages
+  94  |   // ---------------------------------------------------------------------------
+  95  |   test.describe('Home & Informational Pages', () => {
+  96  |     test('home page should load with visible content', async ({ page }) => {
+  97  |       await page.goto('/', {
+  98  |         waitUntil: 'domcontentloaded',
+  99  |         timeout: TEST_TIMEOUTS.navigation,
+  100 |       });
+  101 |       await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  102 |       await page.waitForTimeout(2000);
+  103 | 
+  104 |       const hasNav = await page.locator('nav, header').isVisible().catch(() => false);
+  105 |       const hasMain = await page.locator('main, #root, .app').isVisible().catch(() => false);
+  106 |       const hasText = await page
+  107 |         .getByText(/eso|toolkit|log|report/i)
+  108 |         .isVisible()
+  109 |         .catch(() => false);
+  110 | 
+> 111 |       expect(hasNav || hasMain || hasText, 'Home page should render navigable content').toBeTruthy();
+      |                                                                                         ^ Error: Home page should render navigable content
+  112 | 
+  113 |       await page.screenshot({
+  114 |         path: 'test-results/nightly-regression-pages-home.png',
+  115 |         timeout: TEST_TIMEOUTS.screenshot,
+  116 |       });
+  117 |     });
+  118 | 
+  119 |     test("what's new page should load changelog content", async ({ page }) => {
+  120 |       await expectPageLoads(page, '/whats-new', 'whats-new');
+  121 | 
+  122 |       // Should have some release notes / changelog entries
+  123 |       const hasContent = await page
+  124 |         .locator('h1, h2, h3, li, p')
+  125 |         .first()
+  126 |         .isVisible({ timeout: 8000 })
+  127 |         .catch(() => false);
+  128 |       expect(hasContent, "/whats-new should display changelog entries").toBeTruthy();
+  129 |     });
+  130 | 
+  131 |     test('about page should load with content', async ({ page }) => {
+  132 |       await expectPageLoads(page, '/about', 'about');
+  133 |     });
+  134 | 
+  135 |     test('sample report page should redirect to or display a report', async ({ page }) => {
+  136 |       await page.goto('/sample-report', {
+  137 |         waitUntil: 'domcontentloaded',
+  138 |         timeout: TEST_TIMEOUTS.navigation,
+  139 |       });
+  140 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  141 |       await page.waitForTimeout(3000);
+  142 | 
+  143 |       // Either redirects to a real report URL or renders inline
+  144 |       const url = page.url();
+  145 |       const isOnReport = url.includes('/report/');
+  146 |       const hasReportContent = await page
+  147 |         .locator('.MuiAccordion-root, [data-testid="fight-list"], main')
+  148 |         .isVisible({ timeout: 5000 })
+  149 |         .catch(() => false);
+  150 | 
+  151 |       expect(isOnReport || hasReportContent, '/sample-report should load or redirect to a report').toBeTruthy();
+  152 | 
+  153 |       await page.screenshot({
+  154 |         path: 'test-results/nightly-regression-pages-sample-report.png',
+  155 |         timeout: TEST_TIMEOUTS.screenshot,
+  156 |       });
+  157 |     });
+  158 |   });
+  159 | 
+  160 |   // ---------------------------------------------------------------------------
+  161 |   // ESO-741: Build system pages (public views only — editor is auth-gated)
+  162 |   // ---------------------------------------------------------------------------
+  163 |   test.describe('Build System', () => {
+  164 |     test('build hub should load and display builds', async ({ page }) => {
+  165 |       await page.goto('/build-hub', {
+  166 |         waitUntil: 'domcontentloaded',
+  167 |         timeout: TEST_TIMEOUTS.navigation,
+  168 |       });
+  169 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  170 |       await page.waitForTimeout(3000);
+  171 | 
+  172 |       // Should show a list of builds or a loading/empty state — not a blank crash
+  173 |       const hasContent = await page
+  174 |         .locator(
+  175 |           'main, .MuiContainer-root, .build-list, .build-card, [data-testid*="build"], a[href*="/b/"], .MuiCard-root',
+  176 |         )
+  177 |         .first()
+  178 |         .isVisible({ timeout: 10000 })
+  179 |         .catch(() => false);
+  180 | 
+  181 |       const bodyText = await page.locator('body').textContent().catch(() => '');
+  182 |       expect(
+  183 |         hasContent || (bodyText?.length ?? 0) > 100,
+  184 |         '/build-hub should render content',
+  185 |       ).toBeTruthy();
+  186 | 
+  187 |       await page.screenshot({
+  188 |         path: 'test-results/nightly-regression-pages-build-hub.png',
+  189 |         timeout: TEST_TIMEOUTS.screenshot,
+  190 |       });
+  191 |     });
+  192 | 
+  193 |     test('pack hub should load', async ({ page }) => {
+  194 |       await expectPageLoads(page, '/pack-hub', 'pack-hub');
+  195 |     });
+  196 | 
+  197 |     test('first available shared build should load', async ({ page }) => {
+  198 |       // Navigate to build hub and click through to the first visible build
+  199 |       await page.goto('/build-hub', {
+  200 |         waitUntil: 'domcontentloaded',
+  201 |         timeout: TEST_TIMEOUTS.navigation,
+  202 |       });
+  203 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  204 |       await page.waitForTimeout(3000);
+  205 | 
+  206 |       const buildLink = page.locator('a[href*="/b/"], a[href*="/build-view"]').first();
+  207 | 
+  208 |       if (!(await buildLink.isVisible({ timeout: 5000 }).catch(() => false))) {
+  209 |         console.log('ℹ️ No build links found on /build-hub — skipping shared build test');
+  210 |         return;
+  211 |       }
+```

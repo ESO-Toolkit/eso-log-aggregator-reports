@@ -1,0 +1,453 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-auth.spec.ts >> Nightly Regression - Authentication and Reports >> Negative Scenarios >> invalid fight ID within a valid report should fallback gracefully
+- Location: tests/nightly-regression-auth.spec.ts:496:9
+
+# Error details
+
+```
+Error: Invalid fight ID should be handled gracefully
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]:
+            - img "ESO Toolkit logo" [ref=e12]
+            - text: ESO Toolkit
+        - navigation "Main navigation" [ref=e13]:
+          - button "roster hub Roster Hub" [ref=e14] [cursor=pointer]:
+            - img "roster hub" [ref=e16]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e17] [cursor=pointer]:
+            - img "build hub" [ref=e19]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e20] [cursor=pointer]:
+            - img "pack hub" [ref=e22]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - text: Reports
+            - img [ref=e28]
+          - button "Tools" [ref=e30] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Tools
+            - img [ref=e35]
+          - button "Profile" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: U
+            - paragraph [ref=e40]: Profile
+            - img [ref=e41]
+    - dialog "Navigation menu" [ref=e43]:
+      - button "U Profile View profile" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]: U
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Profile
+          - paragraph [ref=e51]: View profile
+        - img [ref=e52]
+      - paragraph [ref=e54]: Navigate
+      - generic [ref=e55]:
+        - button "👥 Roster Hub" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: 👥
+          - paragraph [ref=e58]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: 🏗️
+          - paragraph [ref=e61]: Build Hub
+        - button "🧩 Pack Hub" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🧩
+          - paragraph [ref=e64]: Pack Hub
+      - paragraph [ref=e65]: Reports
+      - generic [ref=e66]:
+        - button "📁 My Reports Your uploaded logs" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: 📁
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: My Reports
+            - paragraph [ref=e71]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🎲
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: Sample Report
+            - paragraph [ref=e76]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 📊
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Latest Reports
+            - paragraph [ref=e81]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🏆
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Leaderboards
+            - paragraph [ref=e86]: Top parse rankings
+      - paragraph [ref=e87]: Tools
+      - generic [ref=e88]:
+        - button "📝 Text Editor Format guild announcements" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: 📝
+          - generic [ref=e91]:
+            - paragraph [ref=e92]: Text Editor
+            - paragraph [ref=e93]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e94] [cursor=pointer]:
+          - img [ref=e96]
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: Calculator
+            - paragraph [ref=e106]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 📈
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Parse Analysis
+            - paragraph [ref=e111]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: ⚔️
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: Loadout Manager
+            - paragraph [ref=e116]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: 👥
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Roster Builder
+            - paragraph [ref=e121]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]: 🔧
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Build Editor
+            - paragraph [ref=e126]: Create & share builds
+      - paragraph [ref=e127]: Appearance
+      - generic [ref=e128]:
+        - button "Switch to light mode" [ref=e129] [cursor=pointer]:
+          - img [ref=e131]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Theme
+            - paragraph [ref=e135]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e136] [cursor=pointer]':
+          - img [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Performance
+            - paragraph [ref=e142]: Auto · Low
+          - img [ref=e143]
+      - button "Log out" [ref=e146] [cursor=pointer]:
+        - img [ref=e148]
+        - text: Log out
+    - main [active] [ref=e150]:
+      - heading "Fight (99999) not found." [level=6] [ref=e153]
+    - generic [ref=e154]: Navigated to Page
+    - contentinfo [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - generic [ref=e159]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e160]
+            - paragraph [ref=e161]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e162]:
+            - link "Join Discord" [ref=e163] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e165] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - img "ESO Toolkit logo" [ref=e170]
+              - generic [ref=e171]:
+                - heading "ESO Helper Tools" [level=3] [ref=e172]
+                - paragraph [ref=e173]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e174]:
+              - generic [ref=e175]: Real-time analytics
+              - generic [ref=e177]: Player-built insights
+              - generic [ref=e179]: Free beta access
+              - generic [ref=e181]: Community-driven support
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - paragraph [ref=e186]: Tools
+              - generic [ref=e187]:
+                - link "Build Calculator" [ref=e188] [cursor=pointer]:
+                  - /url: /calculator
+                  - generic [ref=e189]: Build Calculator
+                  - img [ref=e190]
+                - link "Text Editor" [ref=e192] [cursor=pointer]:
+                  - /url: /text-editor
+                  - generic [ref=e193]: Text Editor
+                  - img [ref=e194]
+                - link "Log Analyzer" [ref=e196] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e197]: Log Analyzer
+                  - img [ref=e198]
+                - link "Roster Builder" [ref=e200] [cursor=pointer]:
+                  - /url: /roster-builder
+                  - generic [ref=e201]: Roster Builder
+                  - img [ref=e202]
+                - link "My Reports" [ref=e204] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e205]: My Reports
+                  - img [ref=e206]
+                - link "Gear Sets" [ref=e208] [cursor=pointer]:
+                  - /url: /gear-sets
+                  - generic [ref=e209]: Gear Sets
+                  - img [ref=e210]
+            - generic [ref=e212]:
+              - paragraph [ref=e213]: Quick Links
+              - generic [ref=e214]:
+                - link "Home" [ref=e215] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e216]: Home
+                  - img [ref=e217]
+                - link "Privacy Settings" [ref=e219] [cursor=pointer]:
+                  - /url: /privacy-settings
+                  - generic [ref=e220]: Privacy Settings
+                  - img [ref=e221]
+                - link "Calculation Knowledge Base" [ref=e223] [cursor=pointer]:
+                  - /url: /docs/calculations
+                  - generic [ref=e224]: Calculation Knowledge Base
+                  - img [ref=e225]
+                - link "What's New" [ref=e227] [cursor=pointer]:
+                  - /url: /whats-new
+                  - generic [ref=e228]: What's New
+                  - img [ref=e229]
+                - link "About" [ref=e231] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e232]: About
+                  - img [ref=e233]
+        - generic [ref=e236]:
+          - paragraph [ref=e237]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e238]:
+            - link "Privacy Policy" [ref=e239] [cursor=pointer]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e240] [cursor=pointer]:
+              - img [ref=e242]
+              - text: Report a Bug
+  - generic [ref=e246]:
+    - button "Close" [ref=e247] [cursor=pointer]:
+      - img [ref=e248]
+    - generic [ref=e250]:
+      - img [ref=e252]
+      - heading "Privacy & Cookies" [level=6] [ref=e254]
+    - paragraph [ref=e255]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e256] [cursor=pointer]:
+        - /url: /privacy
+    - generic [ref=e257]:
+      - button "Decline All" [ref=e258] [cursor=pointer]
+      - button "Customize" [ref=e259] [cursor=pointer]
+      - button "Accept All" [ref=e260] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  414 | 
+  415 |       expect(
+  416 |         hasContent || hasLoginPrompt || isOnLogin,
+  417 |         '/my-rosters should either render or redirect to login',
+  418 |       ).toBeTruthy();
+  419 | 
+  420 |       await page.screenshot({
+  421 |         path: 'test-results/nightly-regression-my-rosters.png',
+  422 |         fullPage: true,
+  423 |         timeout: TEST_TIMEOUTS.screenshot,
+  424 |       });
+  425 |     });
+  426 | 
+  427 |     test('build editor should load or redirect gracefully', async ({ page }) => {
+  428 |       await page.goto('/build-editor', {
+  429 |         waitUntil: 'domcontentloaded',
+  430 |         timeout: TEST_TIMEOUTS.navigation,
+  431 |       });
+  432 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  433 |       await page.waitForTimeout(3000);
+  434 | 
+  435 |       const url = page.url();
+  436 |       const hasEditor = await page
+  437 |         .locator('main, [data-testid*="build"], [data-testid*="editor"], .MuiContainer-root')
+  438 |         .first()
+  439 |         .isVisible({ timeout: 5000 })
+  440 |         .catch(() => false);
+  441 |       const hasLoginPrompt = await page
+  442 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  443 |         .isVisible({ timeout: 3000 })
+  444 |         .catch(() => false);
+  445 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  446 | 
+  447 |       expect(
+  448 |         hasEditor || hasLoginPrompt || isOnLogin,
+  449 |         '/build-editor should either render or redirect to login',
+  450 |       ).toBeTruthy();
+  451 | 
+  452 |       await page.screenshot({
+  453 |         path: 'test-results/nightly-regression-build-editor.png',
+  454 |         fullPage: true,
+  455 |         timeout: TEST_TIMEOUTS.screenshot,
+  456 |       });
+  457 |     });
+  458 | 
+  459 |     test('roster builder should load or redirect gracefully', async ({ page }) => {
+  460 |       await page.goto('/roster-builder', {
+  461 |         waitUntil: 'domcontentloaded',
+  462 |         timeout: TEST_TIMEOUTS.navigation,
+  463 |       });
+  464 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  465 |       await page.waitForTimeout(3000);
+  466 | 
+  467 |       const url = page.url();
+  468 |       const hasBuilder = await page
+  469 |         .locator('main, [data-testid*="roster"], .MuiContainer-root')
+  470 |         .first()
+  471 |         .isVisible({ timeout: 5000 })
+  472 |         .catch(() => false);
+  473 |       const hasLoginPrompt = await page
+  474 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  475 |         .isVisible({ timeout: 3000 })
+  476 |         .catch(() => false);
+  477 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  478 | 
+  479 |       expect(
+  480 |         hasBuilder || hasLoginPrompt || isOnLogin,
+  481 |         '/roster-builder should either render or redirect to login',
+  482 |       ).toBeTruthy();
+  483 | 
+  484 |       await page.screenshot({
+  485 |         path: 'test-results/nightly-regression-roster-builder.png',
+  486 |         fullPage: true,
+  487 |         timeout: TEST_TIMEOUTS.screenshot,
+  488 |       });
+  489 |     });
+  490 |   });
+  491 | 
+  492 |   // ---------------------------------------------------------------------------
+  493 |   // ESO-750: Expanded negative / error scenario testing
+  494 |   // ---------------------------------------------------------------------------
+  495 |   test.describe('Negative Scenarios', () => {
+  496 |     test('invalid fight ID within a valid report should fallback gracefully', async ({ page }) => {
+  497 |       const reportId = '3gjVGWB2dxCL8XAw';
+  498 |       await page.goto(`/report/${reportId}/fight/99999/insights`, {
+  499 |         waitUntil: 'domcontentloaded',
+  500 |         timeout: TEST_TIMEOUTS.navigation,
+  501 |       });
+  502 |       await page.waitForTimeout(5000);
+  503 | 
+  504 |       const hasError = await page
+  505 |         .getByText(/not found|invalid|error|fight.*not.*exist/i)
+  506 |         .isVisible()
+  507 |         .catch(() => false);
+  508 |       const redirected = !page.url().includes('99999');
+  509 |       const hasContent = await page.locator('main, #root').isVisible().catch(() => false);
+  510 | 
+  511 |       expect(
+  512 |         hasError || redirected || hasContent,
+  513 |         'Invalid fight ID should be handled gracefully',
+> 514 |       ).toBeTruthy();
+      |         ^ Error: Invalid fight ID should be handled gracefully
+  515 | 
+  516 |       // Page must remain navigable — no uncaught exceptions
+  517 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  518 |       const criticalErrors = errors.filter(
+  519 |         (e) =>
+  520 |           !e.includes('ResizeObserver') &&
+  521 |           !e.includes('Not implemented') &&
+  522 |           !e.includes('Non-Error promise rejection') &&
+  523 |           !e.includes('ChunkLoadError'),
+  524 |       );
+  525 |       expect(criticalErrors, 'Invalid fight ID should not cause JS exceptions').toHaveLength(0);
+  526 |     });
+  527 | 
+  528 |     test('simulated API timeout should show loading or error state', async ({ page }) => {
+  529 |       // Intercept esologs API requests and force a 504 to simulate a timeout
+  530 |       await page.route('**/esologs.com/**', async (route) => {
+  531 |         await route.fulfill({
+  532 |           status: 504,
+  533 |           contentType: 'application/json',
+  534 |           body: JSON.stringify({ error: 'Gateway Timeout' }),
+  535 |         });
+  536 |       });
+  537 | 
+  538 |       await page.goto('/report/prV8jWb1NqFJc97Z', {
+  539 |         waitUntil: 'domcontentloaded',
+  540 |         timeout: TEST_TIMEOUTS.navigation,
+  541 |       });
+  542 |       await page.waitForTimeout(6000);
+  543 | 
+  544 |       // Should show a loading state, error message, or at minimum not crash
+  545 |       const hasLoadingOrError = await page
+  546 |         .locator(
+  547 |           '.loading, .MuiCircularProgress-root, .MuiAlert-root, .error, .skeleton, .MuiSkeleton-root',
+  548 |         )
+  549 |         .first()
+  550 |         .isVisible({ timeout: 5000 })
+  551 |         .catch(() => false);
+  552 |       const hasText = await page
+  553 |         .getByText(/loading|error|failed|timeout|try again/i)
+  554 |         .isVisible({ timeout: 3000 })
+  555 |         .catch(() => false);
+  556 |       const hasContent = await page.locator('main, #root').isVisible().catch(() => false);
+  557 | 
+  558 |       expect(
+  559 |         hasLoadingOrError || hasText || hasContent,
+  560 |         'API timeout should show a loading/error state rather than crash',
+  561 |       ).toBeTruthy();
+  562 | 
+  563 |       await page.screenshot({
+  564 |         path: 'test-results/nightly-regression-api-timeout.png',
+  565 |         fullPage: true,
+  566 |         timeout: TEST_TIMEOUTS.screenshot,
+  567 |       });
+  568 | 
+  569 |       // Unroute so it doesn't affect subsequent tests
+  570 |       await page.unrouteAll();
+  571 |     });
+  572 | 
+  573 |     test('rate-limited API response (429) should show a user-facing message', async ({ page }) => {
+  574 |       await page.route('**/esologs.com/**', async (route) => {
+  575 |         await route.fulfill({
+  576 |           status: 429,
+  577 |           contentType: 'application/json',
+  578 |           body: JSON.stringify({ error: 'Too Many Requests' }),
+  579 |         });
+  580 |       });
+  581 | 
+  582 |       await page.goto('/report/prV8jWb1NqFJc97Z', {
+  583 |         waitUntil: 'domcontentloaded',
+  584 |         timeout: TEST_TIMEOUTS.navigation,
+  585 |       });
+  586 |       await page.waitForTimeout(6000);
+  587 | 
+  588 |       // App should not crash — any visible content is acceptable
+  589 |       const hasContent = await page.locator('main, #root, body').first().isVisible().catch(() => false);
+  590 |       expect(hasContent, 'A 429 response should not crash the page').toBeTruthy();
+  591 | 
+  592 |       // No uncaught JS exceptions from the rate-limit scenario
+  593 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  594 |       const criticalErrors = errors.filter(
+  595 |         (e) =>
+  596 |           !e.includes('ResizeObserver') &&
+  597 |           !e.includes('Not implemented') &&
+  598 |           !e.includes('Non-Error promise rejection') &&
+  599 |           !e.includes('ChunkLoadError'),
+  600 |       );
+  601 |       expect(criticalErrors, '429 response should not cause uncaught JS exceptions').toHaveLength(0);
+  602 | 
+  603 |       await page.unrouteAll();
+  604 |     });
+  605 |   });
+  606 | 
+  607 |   test.describe('Cross-browser Compatibility Checks', () => {
+  608 |     test('should verify key functionality works across browsers', async ({ page, browserName }) => {
+  609 |       // Test basic navigation in different browsers
+  610 |       await page.goto('/calculator', {
+  611 |         waitUntil: 'domcontentloaded',
+  612 |         timeout: TEST_TIMEOUTS.navigation,
+  613 |       });
+  614 | 
+```

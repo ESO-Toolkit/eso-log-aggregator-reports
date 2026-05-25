@@ -1,0 +1,468 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-pages.spec.ts >> Nightly Regression - Pages & Features >> Home & Informational Pages >> sample report page should redirect to or display a report
+- Location: tests/nightly-regression-pages.spec.ts:135:9
+
+# Error details
+
+```
+Error: /sample-report should load or redirect to a report
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5]:
+      - /url: "#main-content"
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]:
+            - img "ESO Toolkit logo" [ref=e12]
+            - text: ESO Toolkit
+        - navigation "Main navigation" [ref=e13]:
+          - button "roster hub Roster Hub" [ref=e14] [cursor=pointer]:
+            - img "roster hub" [ref=e16]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e17] [cursor=pointer]:
+            - img "build hub" [ref=e19]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e20] [cursor=pointer]:
+            - img "pack hub" [ref=e22]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - text: Reports
+            - img [ref=e28]
+          - button "Tools" [ref=e30] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Tools
+            - img [ref=e35]
+          - button "Profile" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: U
+            - paragraph [ref=e40]: Profile
+            - img [ref=e41]
+    - dialog "Navigation menu" [ref=e43]:
+      - button "U Profile View profile" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]: U
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Profile
+          - paragraph [ref=e51]: View profile
+        - img [ref=e52]
+      - paragraph [ref=e54]: Navigate
+      - generic [ref=e55]:
+        - button "👥 Roster Hub" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: 👥
+          - paragraph [ref=e58]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: 🏗️
+          - paragraph [ref=e61]: Build Hub
+        - button "🧩 Pack Hub" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🧩
+          - paragraph [ref=e64]: Pack Hub
+      - paragraph [ref=e65]: Reports
+      - generic [ref=e66]:
+        - button "📁 My Reports Your uploaded logs" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: 📁
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: My Reports
+            - paragraph [ref=e71]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🎲
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: Sample Report
+            - paragraph [ref=e76]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 📊
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Latest Reports
+            - paragraph [ref=e81]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🏆
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Leaderboards
+            - paragraph [ref=e86]: Top parse rankings
+      - paragraph [ref=e87]: Tools
+      - generic [ref=e88]:
+        - button "📝 Text Editor Format guild announcements" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: 📝
+          - generic [ref=e91]:
+            - paragraph [ref=e92]: Text Editor
+            - paragraph [ref=e93]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e94] [cursor=pointer]:
+          - img [ref=e96]
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: Calculator
+            - paragraph [ref=e106]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 📈
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Parse Analysis
+            - paragraph [ref=e111]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: ⚔️
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: Loadout Manager
+            - paragraph [ref=e116]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: 👥
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Roster Builder
+            - paragraph [ref=e121]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]: 🔧
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Build Editor
+            - paragraph [ref=e126]: Create & share builds
+      - paragraph [ref=e127]: Appearance
+      - generic [ref=e128]:
+        - button "Switch to light mode" [ref=e129] [cursor=pointer]:
+          - img [ref=e131]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Theme
+            - paragraph [ref=e135]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e136] [cursor=pointer]':
+          - img [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Performance
+            - paragraph [ref=e142]: Auto · Low
+          - img [ref=e143]
+      - button "Log out" [ref=e146] [cursor=pointer]:
+        - img [ref=e148]
+        - text: Log out
+    - main [active] [ref=e150]:
+      - generic [ref=e153]:
+        - heading "Loading Report..." [level=1] [ref=e155]
+        - generic [ref=e156]:
+          - button "Fights" [ref=e157] [cursor=pointer]:
+            - img [ref=e158]
+            - text: Fights
+          - button "Dashboard" [ref=e160] [cursor=pointer]:
+            - img [ref=e161]
+            - text: Dashboard
+          - button "Summary" [ref=e163] [cursor=pointer]:
+            - img [ref=e164]
+            - text: Summary
+          - link "ESO Logs" [ref=e167] [cursor=pointer]:
+            - /url: https://www.esologs.com/reports/
+            - text: ESO Logs
+            - img [ref=e168]
+    - generic [ref=e366]: Navigated to Page
+    - contentinfo [ref=e367]:
+      - generic [ref=e368]:
+        - generic [ref=e369]:
+          - generic [ref=e370]:
+            - generic [ref=e371]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e372]
+            - paragraph [ref=e373]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e374]:
+            - link "Join Discord" [ref=e375] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e377] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e378]:
+          - generic [ref=e379]:
+            - generic [ref=e380]:
+              - img "ESO Toolkit logo" [ref=e382]
+              - generic [ref=e383]:
+                - heading "ESO Helper Tools" [level=3] [ref=e384]
+                - paragraph [ref=e385]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e386]:
+              - generic [ref=e387]: Real-time analytics
+              - generic [ref=e389]: Player-built insights
+              - generic [ref=e391]: Free beta access
+              - generic [ref=e393]: Community-driven support
+          - generic [ref=e396]:
+            - generic [ref=e397]:
+              - paragraph [ref=e398]: Tools
+              - generic [ref=e399]:
+                - link "Build Calculator" [ref=e400]:
+                  - /url: /calculator
+                  - generic [ref=e401]: Build Calculator
+                  - img [ref=e402]
+                - link "Text Editor" [ref=e404]:
+                  - /url: /text-editor
+                  - generic [ref=e405]: Text Editor
+                  - img [ref=e406]
+                - link "Log Analyzer" [ref=e408]:
+                  - /url: /my-reports
+                  - generic [ref=e409]: Log Analyzer
+                  - img [ref=e410]
+                - link "Roster Builder" [ref=e412]:
+                  - /url: /roster-builder
+                  - generic [ref=e413]: Roster Builder
+                  - img [ref=e414]
+                - link "My Reports" [ref=e416]:
+                  - /url: /my-reports
+                  - generic [ref=e417]: My Reports
+                  - img [ref=e418]
+                - link "Gear Sets" [ref=e420]:
+                  - /url: /gear-sets
+                  - generic [ref=e421]: Gear Sets
+                  - img [ref=e422]
+            - generic [ref=e424]:
+              - paragraph [ref=e425]: Quick Links
+              - generic [ref=e426]:
+                - link "Home" [ref=e427]:
+                  - /url: /
+                  - generic [ref=e428]: Home
+                  - img [ref=e429]
+                - link "Privacy Settings" [ref=e431]:
+                  - /url: /privacy-settings
+                  - generic [ref=e432]: Privacy Settings
+                  - img [ref=e433]
+                - link "Calculation Knowledge Base" [ref=e435]:
+                  - /url: /docs/calculations
+                  - generic [ref=e436]: Calculation Knowledge Base
+                  - img [ref=e437]
+                - link "What's New" [ref=e439]:
+                  - /url: /whats-new
+                  - generic [ref=e440]: What's New
+                  - img [ref=e441]
+                - link "About" [ref=e443]:
+                  - /url: /about
+                  - generic [ref=e444]: About
+                  - img [ref=e445]
+        - generic [ref=e448]:
+          - paragraph [ref=e449]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e450]:
+            - link "Privacy Policy" [ref=e451]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e452] [cursor=pointer]:
+              - img [ref=e454]
+              - text: Report a Bug
+  - generic [ref=e458]:
+    - button "Close" [ref=e459] [cursor=pointer]:
+      - img [ref=e460]
+    - generic [ref=e462]:
+      - img [ref=e464]
+      - heading "Privacy & Cookies" [level=6] [ref=e466]
+    - paragraph [ref=e467]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e468]:
+        - /url: /privacy
+    - generic [ref=e469]:
+      - button "Decline All" [ref=e470] [cursor=pointer]
+      - button "Customize" [ref=e471] [cursor=pointer]
+      - button "Accept All" [ref=e472] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  51  |     console.log(`🔍 URL: ${page.url()}`);
+  52  |     console.log(`🔍 Title: ${await page.title()}`);
+  53  |   }
+  54  | 
+  55  |   expect(contentLength, `${path} should render meaningful content`).toBeGreaterThan(50);
+  56  | 
+  57  |   // No uncaught JS errors
+  58  |   const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  59  |   const criticalErrors = errors.filter(
+  60  |     (e) =>
+  61  |       !e.includes('ResizeObserver') &&
+  62  |       !e.includes('Not implemented') &&
+  63  |       !e.includes('Non-Error promise rejection') &&
+  64  |       !e.includes('ChunkLoadError'),
+  65  |   );
+  66  |   expect(criticalErrors, `${path} should have no critical JS errors`).toHaveLength(0);
+  67  | 
+  68  |   await page.screenshot({
+  69  |     path: `test-results/nightly-regression-pages-${screenshotName}.png`,
+  70  |     // fullPage removed: WebKit hangs scrolling through long pages under CI load,
+  71  |     // causing 10-20 s screenshot timeouts. Viewport capture is sufficient for
+  72  |     // smoke-level evidence that the page rendered correctly.
+  73  |     timeout: TEST_TIMEOUTS.screenshot,
+  74  |   });
+  75  | }
+  76  | 
+  77  | test.describe('Nightly Regression - Pages & Features', () => {
+  78  |   test.beforeEach(async ({ page }) => {
+  79  |     test.setTimeout(120000);
+  80  | 
+  81  |     await page.addInitScript(() => {
+  82  |       (window as any).testErrors = [];
+  83  |       window.addEventListener('error', (ev) => {
+  84  |         (window as any).testErrors.push(ev.error?.message ?? ev.message);
+  85  |       });
+  86  |       window.addEventListener('unhandledrejection', (ev) => {
+  87  |         (window as any).testErrors.push(`Unhandled rejection: ${ev.reason}`);
+  88  |       });
+  89  |     });
+  90  |   });
+  91  | 
+  92  |   // ---------------------------------------------------------------------------
+  93  |   // ESO-743: Home / landing / informational pages
+  94  |   // ---------------------------------------------------------------------------
+  95  |   test.describe('Home & Informational Pages', () => {
+  96  |     test('home page should load with visible content', async ({ page }) => {
+  97  |       await page.goto('/', {
+  98  |         waitUntil: 'domcontentloaded',
+  99  |         timeout: TEST_TIMEOUTS.navigation,
+  100 |       });
+  101 |       await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  102 |       await page.waitForTimeout(2000);
+  103 | 
+  104 |       const hasNav = await page.locator('nav, header').isVisible().catch(() => false);
+  105 |       const hasMain = await page.locator('main, #root, .app').isVisible().catch(() => false);
+  106 |       const hasText = await page
+  107 |         .getByText(/eso|toolkit|log|report/i)
+  108 |         .isVisible()
+  109 |         .catch(() => false);
+  110 | 
+  111 |       expect(hasNav || hasMain || hasText, 'Home page should render navigable content').toBeTruthy();
+  112 | 
+  113 |       await page.screenshot({
+  114 |         path: 'test-results/nightly-regression-pages-home.png',
+  115 |         timeout: TEST_TIMEOUTS.screenshot,
+  116 |       });
+  117 |     });
+  118 | 
+  119 |     test("what's new page should load changelog content", async ({ page }) => {
+  120 |       await expectPageLoads(page, '/whats-new', 'whats-new');
+  121 | 
+  122 |       // Should have some release notes / changelog entries
+  123 |       const hasContent = await page
+  124 |         .locator('h1, h2, h3, li, p')
+  125 |         .first()
+  126 |         .isVisible({ timeout: 8000 })
+  127 |         .catch(() => false);
+  128 |       expect(hasContent, "/whats-new should display changelog entries").toBeTruthy();
+  129 |     });
+  130 | 
+  131 |     test('about page should load with content', async ({ page }) => {
+  132 |       await expectPageLoads(page, '/about', 'about');
+  133 |     });
+  134 | 
+  135 |     test('sample report page should redirect to or display a report', async ({ page }) => {
+  136 |       await page.goto('/sample-report', {
+  137 |         waitUntil: 'domcontentloaded',
+  138 |         timeout: TEST_TIMEOUTS.navigation,
+  139 |       });
+  140 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  141 |       await page.waitForTimeout(3000);
+  142 | 
+  143 |       // Either redirects to a real report URL or renders inline
+  144 |       const url = page.url();
+  145 |       const isOnReport = url.includes('/report/');
+  146 |       const hasReportContent = await page
+  147 |         .locator('.MuiAccordion-root, [data-testid="fight-list"], main')
+  148 |         .isVisible({ timeout: 5000 })
+  149 |         .catch(() => false);
+  150 | 
+> 151 |       expect(isOnReport || hasReportContent, '/sample-report should load or redirect to a report').toBeTruthy();
+      |                                                                                                    ^ Error: /sample-report should load or redirect to a report
+  152 | 
+  153 |       await page.screenshot({
+  154 |         path: 'test-results/nightly-regression-pages-sample-report.png',
+  155 |         timeout: TEST_TIMEOUTS.screenshot,
+  156 |       });
+  157 |     });
+  158 |   });
+  159 | 
+  160 |   // ---------------------------------------------------------------------------
+  161 |   // ESO-741: Build system pages (public views only — editor is auth-gated)
+  162 |   // ---------------------------------------------------------------------------
+  163 |   test.describe('Build System', () => {
+  164 |     test('build hub should load and display builds', async ({ page }) => {
+  165 |       await page.goto('/build-hub', {
+  166 |         waitUntil: 'domcontentloaded',
+  167 |         timeout: TEST_TIMEOUTS.navigation,
+  168 |       });
+  169 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  170 |       await page.waitForTimeout(3000);
+  171 | 
+  172 |       // Should show a list of builds or a loading/empty state — not a blank crash
+  173 |       const hasContent = await page
+  174 |         .locator(
+  175 |           'main, .MuiContainer-root, .build-list, .build-card, [data-testid*="build"], a[href*="/b/"], .MuiCard-root',
+  176 |         )
+  177 |         .first()
+  178 |         .isVisible({ timeout: 10000 })
+  179 |         .catch(() => false);
+  180 | 
+  181 |       const bodyText = await page.locator('body').textContent().catch(() => '');
+  182 |       expect(
+  183 |         hasContent || (bodyText?.length ?? 0) > 100,
+  184 |         '/build-hub should render content',
+  185 |       ).toBeTruthy();
+  186 | 
+  187 |       await page.screenshot({
+  188 |         path: 'test-results/nightly-regression-pages-build-hub.png',
+  189 |         timeout: TEST_TIMEOUTS.screenshot,
+  190 |       });
+  191 |     });
+  192 | 
+  193 |     test('pack hub should load', async ({ page }) => {
+  194 |       await expectPageLoads(page, '/pack-hub', 'pack-hub');
+  195 |     });
+  196 | 
+  197 |     test('first available shared build should load', async ({ page }) => {
+  198 |       // Navigate to build hub and click through to the first visible build
+  199 |       await page.goto('/build-hub', {
+  200 |         waitUntil: 'domcontentloaded',
+  201 |         timeout: TEST_TIMEOUTS.navigation,
+  202 |       });
+  203 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  204 |       await page.waitForTimeout(3000);
+  205 | 
+  206 |       const buildLink = page.locator('a[href*="/b/"], a[href*="/build-view"]').first();
+  207 | 
+  208 |       if (!(await buildLink.isVisible({ timeout: 5000 }).catch(() => false))) {
+  209 |         console.log('ℹ️ No build links found on /build-hub — skipping shared build test');
+  210 |         return;
+  211 |       }
+  212 | 
+  213 |       const href = await buildLink.getAttribute('href');
+  214 |       console.log(`🔍 Testing shared build at: ${href}`);
+  215 | 
+  216 |       await buildLink.click();
+  217 |       await page.waitForLoadState('domcontentloaded', { timeout: TEST_TIMEOUTS.navigation });
+  218 |       await page.waitForTimeout(3000);
+  219 | 
+  220 |       const hasContent = await page
+  221 |         .locator('main, .MuiContainer-root, [data-testid*="build"]')
+  222 |         .first()
+  223 |         .isVisible({ timeout: 8000 })
+  224 |         .catch(() => false);
+  225 | 
+  226 |       expect(hasContent, `Shared build ${href} should render content`).toBeTruthy();
+  227 | 
+  228 |       await page.screenshot({
+  229 |         path: 'test-results/nightly-regression-pages-shared-build.png',
+  230 |         timeout: TEST_TIMEOUTS.screenshot,
+  231 |       });
+  232 |     });
+  233 |   });
+  234 | 
+  235 |   // ---------------------------------------------------------------------------
+  236 |   // ESO-742: Roster system pages (public hub + viewer)
+  237 |   // ---------------------------------------------------------------------------
+  238 |   test.describe('Roster System', () => {
+  239 |     test('roster hub should load and display rosters', async ({ page }) => {
+  240 |       await page.goto('/roster-hub', {
+  241 |         waitUntil: 'domcontentloaded',
+  242 |         timeout: TEST_TIMEOUTS.navigation,
+  243 |       });
+  244 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  245 |       await page.waitForTimeout(3000);
+  246 | 
+  247 |       const hasContent = await page
+  248 |         .locator(
+  249 |           'main, .MuiContainer-root, .roster-list, .roster-card, [data-testid*="roster"], .MuiCard-root',
+  250 |         )
+  251 |         .first()
+```

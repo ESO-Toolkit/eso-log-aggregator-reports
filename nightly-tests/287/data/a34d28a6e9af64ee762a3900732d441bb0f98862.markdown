@@ -1,0 +1,872 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-auth.spec.ts >> Nightly Regression - Authentication and Reports >> Calculator Page >> should load calculator page without authentication
+- Location: tests/nightly-regression-auth.spec.ts:248:9
+
+# Error details
+
+```
+Error: expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]:
+            - img "ESO Toolkit logo" [ref=e12]
+            - text: ESO Toolkit
+        - navigation "Main navigation" [ref=e13]:
+          - button "roster hub Roster Hub" [ref=e14] [cursor=pointer]:
+            - img "roster hub" [ref=e16]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e17] [cursor=pointer]:
+            - img "build hub" [ref=e19]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e20] [cursor=pointer]:
+            - img "pack hub" [ref=e22]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - text: Reports
+            - img [ref=e28]
+          - button "Tools" [ref=e30] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Tools
+            - img [ref=e35]
+          - button "Profile" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: U
+            - paragraph [ref=e40]: Profile
+            - img [ref=e41]
+    - dialog "Navigation menu" [ref=e43]:
+      - button "U Profile View profile" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]: U
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Profile
+          - paragraph [ref=e51]: View profile
+        - img [ref=e52]
+      - paragraph [ref=e54]: Navigate
+      - generic [ref=e55]:
+        - button "👥 Roster Hub" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: 👥
+          - paragraph [ref=e58]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: 🏗️
+          - paragraph [ref=e61]: Build Hub
+        - button "🧩 Pack Hub" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🧩
+          - paragraph [ref=e64]: Pack Hub
+      - paragraph [ref=e65]: Reports
+      - generic [ref=e66]:
+        - button "📁 My Reports Your uploaded logs" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: 📁
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: My Reports
+            - paragraph [ref=e71]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🎲
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: Sample Report
+            - paragraph [ref=e76]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 📊
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Latest Reports
+            - paragraph [ref=e81]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🏆
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Leaderboards
+            - paragraph [ref=e86]: Top parse rankings
+      - paragraph [ref=e87]: Tools
+      - generic [ref=e88]:
+        - button "📝 Text Editor Format guild announcements" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: 📝
+          - generic [ref=e91]:
+            - paragraph [ref=e92]: Text Editor
+            - paragraph [ref=e93]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e94] [cursor=pointer]:
+          - img [ref=e96]
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: Calculator
+            - paragraph [ref=e106]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 📈
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Parse Analysis
+            - paragraph [ref=e111]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: ⚔️
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: Loadout Manager
+            - paragraph [ref=e116]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: 👥
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Roster Builder
+            - paragraph [ref=e121]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]: 🔧
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Build Editor
+            - paragraph [ref=e126]: Create & share builds
+      - paragraph [ref=e127]: Appearance
+      - generic [ref=e128]:
+        - button "Switch to light mode" [ref=e129] [cursor=pointer]:
+          - img [ref=e131]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Theme
+            - paragraph [ref=e135]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e136] [cursor=pointer]':
+          - img [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Performance
+            - paragraph [ref=e142]: Auto · Low
+          - img [ref=e143]
+      - button "Log out" [ref=e146] [cursor=pointer]:
+        - img [ref=e148]
+        - text: Log out
+    - main [active] [ref=e150]:
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e158] [cursor=pointer]:
+              - switch "Full Mode" [ref=e161]
+              - paragraph [ref=e164]: Full Mode
+            - group [ref=e167]:
+              - button "🗡️ PvE" [ref=e168] [cursor=pointer]:
+                - paragraph [ref=e170]: 🗡️
+                - text: PvE
+              - button "🛡️ PvP" [ref=e171] [cursor=pointer]:
+                - paragraph [ref=e173]: 🛡️
+                - text: PvP
+              - button "Both" [ref=e174] [cursor=pointer]
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - button "Penetration" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: Penetration
+              - button "Critical" [ref=e181] [cursor=pointer]:
+                - generic [ref=e182]: Critical
+              - button "Armor" [ref=e184] [cursor=pointer]:
+                - generic [ref=e185]: Armor
+            - group "Penetration bulk actions" [ref=e190]:
+              - generic "Select All penetration buffs" [ref=e191]:
+                - button "Select All penetration buffs" [ref=e192] [cursor=pointer]:
+                  - img [ref=e195]
+                  - text: Select All
+              - generic "Clear all penetration buffs" [ref=e197]:
+                - button "Clear all penetration buffs" [ref=e198] [cursor=pointer]:
+                  - img [ref=e201]
+                  - text: Clear all
+          - tabpanel [ref=e204]:
+            - generic [ref=e205]:
+              - generic [ref=e206]:
+                - heading "Group Buffs" [level=3] [ref=e207]:
+                  - button "Group Buffs" [expanded] [ref=e208] [cursor=pointer]:
+                    - heading "Group Buffs" [level=6] [ref=e210]
+                    - img [ref=e212]
+                - region [ref=e217]:
+                  - list [ref=e219]:
+                    - listitem [ref=e220] [cursor=pointer]:
+                      - generic [ref=e222]:
+                        - checkbox [checked] [ref=e223]
+                        - img [ref=e224]
+                      - generic [ref=e227]:
+                        - textbox "N/A" [disabled] [ref=e228]: "-"
+                        - group
+                      - generic [ref=e232]:
+                        - paragraph [ref=e233]: Major Breach
+                        - button "Item info" [ref=e234]:
+                          - img [ref=e235]
+                      - paragraph [ref=e238]: 5,948
+                    - listitem [ref=e239] [cursor=pointer]:
+                      - generic [ref=e241]:
+                        - checkbox [checked] [ref=e242]
+                        - img [ref=e243]
+                      - generic [ref=e246]:
+                        - textbox "N/A" [disabled] [ref=e247]: "-"
+                        - group
+                      - generic [ref=e251]:
+                        - paragraph [ref=e252]: Minor Breach
+                        - button "Item info" [ref=e253]:
+                          - img [ref=e254]
+                      - paragraph [ref=e257]: 2,974
+                    - listitem [ref=e258] [cursor=pointer]:
+                      - generic [ref=e260]:
+                        - checkbox [ref=e261]
+                        - img [ref=e262]
+                      - generic [ref=e265]:
+                        - textbox "N/A" [disabled] [ref=e266]: "-"
+                        - group
+                      - generic [ref=e270]:
+                        - paragraph [ref=e271]: Roar of Alkosh
+                        - button "Item info" [ref=e272]:
+                          - img [ref=e273]
+                      - paragraph [ref=e276]: 6,000
+                    - listitem [ref=e277] [cursor=pointer]:
+                      - generic [ref=e279]:
+                        - checkbox [ref=e280]
+                        - img [ref=e281]
+                      - generic [ref=e284]:
+                        - textbox "N/A" [disabled] [ref=e285]: "-"
+                        - group
+                      - generic [ref=e289]:
+                        - paragraph [ref=e290]: Crimson Oath's Rive
+                        - button "Item info" [ref=e291]:
+                          - img [ref=e292]
+                      - paragraph [ref=e295]: 3,541
+                    - listitem [ref=e296] [cursor=pointer]:
+                      - generic [ref=e298]:
+                        - checkbox [ref=e299]
+                        - img [ref=e300]
+                      - generic [ref=e303]:
+                        - textbox "N/A" [disabled] [ref=e304]: "-"
+                        - group
+                      - generic [ref=e308]:
+                        - paragraph [ref=e309]: Tremorscale
+                        - button "Item info" [ref=e310]:
+                          - img [ref=e311]
+                      - paragraph [ref=e314]: 2,640
+              - generic [ref=e315]:
+                - heading "Gear & Enchantments" [level=3] [ref=e316]:
+                  - button "Gear & Enchantments" [expanded] [ref=e317] [cursor=pointer]:
+                    - heading "Gear & Enchantments" [level=6] [ref=e319]
+                    - img [ref=e321]
+                - region [ref=e326]:
+                  - list [ref=e328]:
+                    - listitem [ref=e329] [cursor=pointer]:
+                      - generic [ref=e331]:
+                        - checkbox [checked] [ref=e332]
+                        - img [ref=e333]
+                      - generic [ref=e336]:
+                        - textbox "N/A" [disabled] [ref=e337]: "-"
+                        - group
+                      - generic [ref=e341]:
+                        - paragraph [ref=e342]: Legendary Infused Crusher Enchant
+                        - button "Item info" [ref=e343]:
+                          - img [ref=e344]
+                      - paragraph [ref=e347]: 2,108
+                    - listitem [ref=e348] [cursor=pointer]:
+                      - generic [ref=e350]:
+                        - checkbox [checked] [ref=e351]
+                        - img [ref=e352]
+                      - generic [ref=e355]:
+                        - textbox "N/A" [disabled] [ref=e356]: "-"
+                        - group
+                      - generic [ref=e360]:
+                        - paragraph [ref=e361]: Runic Sunder
+                        - button "Item info" [ref=e362]:
+                          - img [ref=e363]
+                      - paragraph [ref=e366]: 2,200
+                    - listitem [ref=e367] [cursor=pointer]:
+                      - generic [ref=e369]:
+                        - checkbox [ref=e370]
+                        - img [ref=e371]
+                      - generic [ref=e374]:
+                        - textbox "N/A" [disabled] [ref=e375]: "-"
+                        - group
+                      - generic [ref=e379]:
+                        - paragraph [ref=e380]: Crystal Weapon
+                        - button "Item info" [ref=e381]:
+                          - img [ref=e382]
+                      - paragraph [ref=e385]: 1,000
+                    - listitem [ref=e386] [cursor=pointer]:
+                      - generic [ref=e388]:
+                        - checkbox [checked] [ref=e389]
+                        - img [ref=e390]
+                      - generic [ref=e393]:
+                        - textbox "N/A" [disabled] [ref=e394]: "-"
+                        - group
+                      - generic [ref=e398]:
+                        - paragraph [ref=e399]: Velothi Ur-Mage's Amulet
+                        - button "Item info" [ref=e400]:
+                          - img [ref=e401]
+                      - paragraph [ref=e404]: 1,650
+                    - listitem [ref=e405] [cursor=pointer]:
+                      - generic [ref=e407]:
+                        - checkbox [ref=e408]
+                        - img [ref=e409]
+                      - generic [ref=e412]:
+                        - textbox "N/A" [disabled] [ref=e413]: "-"
+                        - group
+                      - generic [ref=e417]:
+                        - paragraph [ref=e418]: Shattered Fate
+                        - button "Item info" [ref=e419]:
+                          - img [ref=e420]
+                      - paragraph [ref=e423]: 7,918
+                    - listitem [ref=e424] [cursor=pointer]:
+                      - generic [ref=e426]:
+                        - checkbox [ref=e427]
+                        - img [ref=e428]
+                      - generic [ref=e431]:
+                        - button "Decrease quantity" [ref=e433]:
+                          - img [ref=e434]
+                        - spinbutton [ref=e436]: "1"
+                        - button "Increase quantity" [ref=e438]:
+                          - img [ref=e439]
+                        - group
+                      - generic [ref=e444]:
+                        - paragraph [ref=e445]: Armor Set Penetration Bonus
+                        - button "Item info" [ref=e446]:
+                          - img [ref=e447]
+                      - generic [ref=e449]:
+                        - generic [ref=e450]: "1487"
+                        - paragraph [ref=e451]: 1,487
+                    - listitem [ref=e452] [cursor=pointer]:
+                      - generic [ref=e454]:
+                        - checkbox [ref=e455]
+                        - img [ref=e456]
+                      - generic [ref=e459]:
+                        - textbox "N/A" [disabled] [ref=e460]: "-"
+                        - group
+                      - generic [ref=e464]:
+                        - paragraph [ref=e465]: Spriggan's Thorns
+                        - button "Item info" [ref=e466]:
+                          - img [ref=e467]
+                      - paragraph [ref=e470]: 3,460
+                    - listitem [ref=e471] [cursor=pointer]:
+                      - generic [ref=e473]:
+                        - checkbox [ref=e474]
+                        - img [ref=e475]
+                      - generic [ref=e478]:
+                        - textbox "N/A" [disabled] [ref=e479]: "-"
+                        - group
+                      - generic [ref=e483]:
+                        - paragraph [ref=e484]: Sharpened (1H Trait)
+                        - button "Item info" [ref=e485]:
+                          - img [ref=e486]
+                      - paragraph [ref=e489]: 1,638
+                    - listitem [ref=e490] [cursor=pointer]:
+                      - generic [ref=e492]:
+                        - checkbox [ref=e493]
+                        - img [ref=e494]
+                      - generic [ref=e497]:
+                        - textbox "N/A" [disabled] [ref=e498]: "-"
+                        - group
+                      - generic [ref=e502]:
+                        - paragraph [ref=e503]: Sharpened (2H Trait)
+                        - button "Item info" [ref=e504]:
+                          - img [ref=e505]
+                      - paragraph [ref=e508]: 3,276
+                    - listitem [ref=e509] [cursor=pointer]:
+                      - generic [ref=e511]:
+                        - checkbox [ref=e512]
+                        - img [ref=e513]
+                      - generic [ref=e516]:
+                        - textbox "N/A" [disabled] [ref=e517]: "-"
+                        - group
+                      - generic [ref=e521]:
+                        - paragraph [ref=e522]: Arena 1-piece Bonus
+                        - button "Item info" [ref=e523]:
+                          - img [ref=e524]
+                      - paragraph [ref=e527]: 1,190
+                    - listitem [ref=e528] [cursor=pointer]:
+                      - generic [ref=e530]:
+                        - checkbox [ref=e531]
+                        - img [ref=e532]
+                      - generic [ref=e535]:
+                        - button "Decrease quantity" [ref=e537]:
+                          - img [ref=e538]
+                        - spinbutton [ref=e540]: "5000"
+                        - button "Increase quantity" [ref=e542]:
+                          - img [ref=e543]
+                        - group
+                      - generic [ref=e548]:
+                        - paragraph [ref=e549]: Anthelmir
+                        - button "Item info" [ref=e550]:
+                          - img [ref=e551]
+                      - paragraph [ref=e554]: 2,000
+                    - listitem [ref=e555] [cursor=pointer]:
+                      - generic [ref=e557]:
+                        - checkbox [ref=e558]
+                        - img [ref=e559]
+                      - generic [ref=e562]:
+                        - button "Decrease quantity" [ref=e564]:
+                          - img [ref=e565]
+                        - spinbutton [ref=e567]: "70"
+                        - button "Increase quantity" [ref=e569]:
+                          - img [ref=e570]
+                        - group
+                      - generic [ref=e575]:
+                        - paragraph [ref=e576]: Balorgh
+                        - button "Item info" [ref=e577]:
+                          - img [ref=e578]
+                      - paragraph [ref=e581]: 1,610
+              - generic [ref=e582]:
+                - heading "Passives & Skills" [level=3] [ref=e583]:
+                  - button "Passives & Skills" [expanded] [ref=e584] [cursor=pointer]:
+                    - heading "Passives & Skills" [level=6] [ref=e586]
+                    - img [ref=e588]
+                - region [ref=e593]:
+                  - list [ref=e595]:
+                    - listitem [ref=e596] [cursor=pointer]:
+                      - generic [ref=e598]:
+                        - checkbox [ref=e599]
+                        - img [ref=e600]
+                      - generic [ref=e603]:
+                        - textbox "N/A" [disabled] [ref=e604]: "-"
+                        - group
+                      - generic [ref=e608]:
+                        - paragraph [ref=e609]: "Wood Elf Passive: Hunter's Eye"
+                        - button "Item info" [ref=e610]:
+                          - img [ref=e611]
+                      - paragraph [ref=e614]: "950"
+                    - listitem [ref=e615] [cursor=pointer]:
+                      - generic [ref=e617]:
+                        - checkbox [ref=e618]
+                        - img [ref=e619]
+                      - generic [ref=e622]:
+                        - textbox "N/A" [disabled] [ref=e623]: "-"
+                        - group
+                      - generic [ref=e627]:
+                        - paragraph [ref=e628]: "Grave Lord Passive: Dismember"
+                        - button "Item info" [ref=e629]:
+                          - img [ref=e630]
+                      - paragraph [ref=e633]: 3,271
+                    - listitem [ref=e634] [cursor=pointer]:
+                      - generic [ref=e636]:
+                        - checkbox [checked] [ref=e637]
+                        - img [ref=e638]
+                      - generic [ref=e641]:
+                        - button "Decrease quantity" [ref=e643]:
+                          - img [ref=e644]
+                        - spinbutton [ref=e646]: "2"
+                        - button "Increase quantity" [ref=e648]:
+                          - img [ref=e649]
+                        - group
+                      - generic [ref=e654]:
+                        - paragraph [ref=e655]: "Herald of the Tome: Splintered Secrets"
+                        - button "Item info" [ref=e656]:
+                          - img [ref=e657]
+                      - generic [ref=e659]:
+                        - generic [ref=e660]: "1240"
+                        - paragraph [ref=e661]: 2,480
+                    - listitem [ref=e662] [cursor=pointer]:
+                      - generic [ref=e664]:
+                        - checkbox [checked] [ref=e665]
+                        - img [ref=e666]
+                      - generic [ref=e669]:
+                        - button "Decrease quantity" [ref=e671]:
+                          - img [ref=e672]
+                        - spinbutton [ref=e674]: "1"
+                        - button "Increase quantity" [ref=e676]:
+                          - img [ref=e677]
+                        - group
+                      - generic [ref=e682]:
+                        - paragraph [ref=e683]: "Light Armor Passive: Concentration"
+                        - button "Item info" [ref=e684]:
+                          - img [ref=e685]
+                      - generic [ref=e687]:
+                        - generic [ref=e688]: "939"
+                        - paragraph [ref=e689]: "939"
+                    - listitem [ref=e690] [cursor=pointer]:
+                      - generic [ref=e692]:
+                        - checkbox [ref=e693]
+                        - img [ref=e694]
+                      - generic [ref=e697]:
+                        - button "Decrease quantity" [ref=e699]:
+                          - img [ref=e700]
+                        - spinbutton [ref=e702]: "1"
+                        - button "Increase quantity" [ref=e704]:
+                          - img [ref=e705]
+                        - group
+                      - generic [ref=e710]:
+                        - paragraph [ref=e711]: "Dual Wield: Twin Blade and Blunt (Mace)"
+                        - button "Item info" [ref=e712]:
+                          - img [ref=e713]
+                      - generic [ref=e715]:
+                        - generic [ref=e716]: "1487"
+                        - paragraph [ref=e717]: 1,487
+                    - listitem [ref=e718] [cursor=pointer]:
+                      - generic [ref=e720]:
+                        - checkbox [ref=e721]
+                        - img [ref=e722]
+                      - generic [ref=e725]:
+                        - textbox "N/A" [disabled] [ref=e726]: "-"
+                        - group
+                      - generic [ref=e730]:
+                        - paragraph [ref=e731]: "Two Handed: Heavy Weapons (Maul)"
+                        - button "Item info" [ref=e732]:
+                          - img [ref=e733]
+                      - paragraph [ref=e736]: 2,974
+              - generic [ref=e737]:
+                - heading "Champion Points" [level=3] [ref=e738]:
+                  - button "Champion Points" [expanded] [ref=e739] [cursor=pointer]:
+                    - heading "Champion Points" [level=6] [ref=e741]
+                    - img [ref=e743]
+                - region [ref=e748]:
+                  - list [ref=e750]:
+                    - listitem [ref=e751] [cursor=pointer]:
+                      - generic [ref=e753]:
+                        - checkbox [checked] [ref=e754]
+                        - img [ref=e755]
+                      - generic [ref=e758]:
+                        - button "Decrease quantity" [ref=e760]:
+                          - img [ref=e761]
+                        - spinbutton [ref=e763]: "2"
+                        - generic [ref=e764]:
+                          - button "Increase quantity" [disabled]:
+                            - img
+                        - group
+                      - generic [ref=e768]:
+                        - paragraph [ref=e769]: "Champion Point: Piercing"
+                        - button "Item info" [ref=e770]:
+                          - img [ref=e771]
+                      - generic [ref=e773]:
+                        - generic [ref=e774]: "350"
+                        - paragraph [ref=e775]: "700"
+                    - listitem [ref=e776] [cursor=pointer]:
+                      - generic [ref=e778]:
+                        - checkbox [ref=e779]
+                        - img [ref=e780]
+                      - generic [ref=e783]:
+                        - button "Decrease quantity" [ref=e785]:
+                          - img [ref=e786]
+                        - spinbutton [ref=e788]: "3"
+                        - button "Increase quantity" [ref=e790]:
+                          - img [ref=e791]
+                        - group
+                      - generic [ref=e796]:
+                        - paragraph [ref=e797]: "Champion Point: Force of Nature"
+                        - button "Item info" [ref=e798]:
+                          - img [ref=e799]
+                      - generic [ref=e801]:
+                        - generic [ref=e802]: "220"
+                        - paragraph [ref=e803]: "660"
+          - generic [ref=e807]:
+            - generic [ref=e808]:
+              - generic [ref=e809]: Total Penetration
+              - heading "18,999" [level=4] [ref=e810]
+            - generic [ref=e812]:
+              - img [ref=e813]
+              - paragraph [ref=e815]: Optimal
+            - paragraph [ref=e817]: "Underpen: 0 Damage Loss: 0%"
+            - paragraph [ref=e819]: "PvE: 18,200–18,999 PvP: 33,100–33,500"
+        - generic [ref=e820]:
+          - heading "Legend & Cap Information" [level=6] [ref=e821]
+          - generic [ref=e822]:
+            - paragraph [ref=e825]: Optimal Range
+            - paragraph [ref=e828]: Over Cap
+            - paragraph [ref=e831]: Below Cap
+          - paragraph [ref=e832]: Grey italic numbers show per-stack values for stackable buffs
+    - generic [ref=e833]: Navigated to Calculator
+    - contentinfo [ref=e834]:
+      - generic [ref=e835]:
+        - generic [ref=e836]:
+          - generic [ref=e837]:
+            - generic [ref=e838]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e839]
+            - paragraph [ref=e840]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e841]:
+            - link "Join Discord" [ref=e842] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e844] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e845]:
+          - generic [ref=e846]:
+            - generic [ref=e847]:
+              - img "ESO Toolkit logo" [ref=e849]
+              - generic [ref=e850]:
+                - heading "ESO Helper Tools" [level=3] [ref=e851]
+                - paragraph [ref=e852]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e853]:
+              - generic [ref=e854]: Real-time analytics
+              - generic [ref=e856]: Player-built insights
+              - generic [ref=e858]: Free beta access
+              - generic [ref=e860]: Community-driven support
+          - generic [ref=e863]:
+            - generic [ref=e864]:
+              - paragraph [ref=e865]: Tools
+              - generic [ref=e866]:
+                - link "Build Calculator" [ref=e867] [cursor=pointer]:
+                  - /url: /calculator
+                  - generic [ref=e868]: Build Calculator
+                  - img [ref=e869]
+                - link "Text Editor" [ref=e871] [cursor=pointer]:
+                  - /url: /text-editor
+                  - generic [ref=e872]: Text Editor
+                  - img [ref=e873]
+                - link "Log Analyzer" [ref=e875] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e876]: Log Analyzer
+                  - img [ref=e877]
+                - link "Roster Builder" [ref=e879] [cursor=pointer]:
+                  - /url: /roster-builder
+                  - generic [ref=e880]: Roster Builder
+                  - img [ref=e881]
+                - link "My Reports" [ref=e883] [cursor=pointer]:
+                  - /url: /my-reports
+                  - generic [ref=e884]: My Reports
+                  - img [ref=e885]
+                - link "Gear Sets" [ref=e887] [cursor=pointer]:
+                  - /url: /gear-sets
+                  - generic [ref=e888]: Gear Sets
+                  - img [ref=e889]
+            - generic [ref=e891]:
+              - paragraph [ref=e892]: Quick Links
+              - generic [ref=e893]:
+                - link "Home" [ref=e894] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e895]: Home
+                  - img [ref=e896]
+                - link "Privacy Settings" [ref=e898] [cursor=pointer]:
+                  - /url: /privacy-settings
+                  - generic [ref=e899]: Privacy Settings
+                  - img [ref=e900]
+                - link "Calculation Knowledge Base" [ref=e902] [cursor=pointer]:
+                  - /url: /docs/calculations
+                  - generic [ref=e903]: Calculation Knowledge Base
+                  - img [ref=e904]
+                - link "What's New" [ref=e906] [cursor=pointer]:
+                  - /url: /whats-new
+                  - generic [ref=e907]: What's New
+                  - img [ref=e908]
+                - link "About" [ref=e910] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e911]: About
+                  - img [ref=e912]
+        - generic [ref=e915]:
+          - paragraph [ref=e916]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e917]:
+            - link "Privacy Policy" [ref=e918] [cursor=pointer]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e919] [cursor=pointer]:
+              - img [ref=e921]
+              - text: Report a Bug
+  - generic [ref=e925]:
+    - button "Close" [ref=e926] [cursor=pointer]:
+      - img [ref=e927]
+    - generic [ref=e929]:
+      - img [ref=e931]
+      - heading "Privacy & Cookies" [level=6] [ref=e933]
+    - paragraph [ref=e934]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e935] [cursor=pointer]:
+        - /url: /privacy
+    - generic [ref=e936]:
+      - button "Decline All" [ref=e937] [cursor=pointer]
+      - button "Customize" [ref=e938] [cursor=pointer]
+      - button "Accept All" [ref=e939] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  212 | 
+  213 |       expect(hasAnyContent).toBeTruthy();
+  214 | 
+  215 |       await page.screenshot({
+  216 |         path: 'test-results/nightly-regression-latest-reports.png',
+  217 |         fullPage: true,
+  218 |         timeout: TEST_TIMEOUTS.screenshot,
+  219 |       });
+  220 | 
+  221 |       if (hasReports) {
+  222 |         // Test clicking on a report if available
+  223 |         const firstReportLink = page.locator('a[href*="/report/"]').first();
+  224 |         if (await firstReportLink.isVisible({ timeout: 3000 })) {
+  225 |           await firstReportLink.click();
+  226 | 
+  227 |           // Should navigate to report page
+  228 |           await page.waitForTimeout(3000);
+  229 |           expect(page.url()).toMatch(/\/report\/[A-Za-z0-9]+/);
+  230 | 
+  231 |           await page.screenshot({
+  232 |             path: 'test-results/nightly-regression-latest-to-report.png',
+  233 |             fullPage: true,
+  234 |             timeout: TEST_TIMEOUTS.screenshot,
+  235 |           });
+  236 |         }
+  237 |       }
+  238 |     });
+  239 |   });
+  240 | 
+  241 |   // Note: User Reports Page (/my-reports) tests removed
+  242 |   // The /my-reports page requires user authentication with a user subject in the token.
+  243 |   // Client credentials tokens (grant_type: client_credentials) don't have user subjects,
+  244 |   // so these tests would always fail with our current authentication setup.
+  245 |   // To test /my-reports, use browser-based OAuth flow (authorization code flow) instead.
+  246 | 
+  247 |   test.describe('Calculator Page', () => {
+  248 |     test('should load calculator page without authentication', async ({ page }) => {
+  249 |       await page.goto('/calculator', {
+  250 |         waitUntil: 'domcontentloaded',
+  251 |         timeout: TEST_TIMEOUTS.navigation,
+  252 |       });
+  253 | 
+  254 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  255 | 
+  256 |       // Wait for app to render
+  257 |       await page.waitForTimeout(3000);
+  258 | 
+  259 |       // Calculator should be accessible without login - check for various indicators
+  260 |       const hasNumberInput = await page
+  261 |         .locator('input[type=number]')
+  262 |         .isVisible()
+  263 |         .catch(() => false);
+  264 |       const hasTextInput = await page
+  265 |         .locator('input[type=text]')
+  266 |         .isVisible()
+  267 |         .catch(() => false);
+  268 |       const hasAnyInput = await page
+  269 |         .locator('input')
+  270 |         .isVisible()
+  271 |         .catch(() => false);
+  272 |       const hasCalculatorClass = await page
+  273 |         .locator('.calculator')
+  274 |         .isVisible()
+  275 |         .catch(() => false);
+  276 |       const hasCalculationClass = await page
+  277 |         .locator('.calculation')
+  278 |         .isVisible()
+  279 |         .catch(() => false);
+  280 |       const hasCalculatorText = await page
+  281 |         .getByText(/calculator/i)
+  282 |         .isVisible()
+  283 |         .catch(() => false);
+  284 |       const hasFormElements = await page
+  285 |         .locator('form, select, button')
+  286 |         .isVisible()
+  287 |         .catch(() => false);
+  288 |       const hasPageContent = await page
+  289 |         .locator('main, .content, .app, #root')
+  290 |         .isVisible()
+  291 |         .catch(() => false);
+  292 | 
+  293 |       const hasCalculatorContent =
+  294 |         hasNumberInput ||
+  295 |         hasTextInput ||
+  296 |         hasAnyInput ||
+  297 |         hasCalculatorClass ||
+  298 |         hasCalculationClass ||
+  299 |         hasCalculatorText ||
+  300 |         hasFormElements ||
+  301 |         hasPageContent;
+  302 | 
+  303 |       if (!hasCalculatorContent) {
+  304 |         console.log('🔍 Calculator page URL:', page.url());
+  305 |         console.log('🔍 Calculator page title:', await page.title());
+  306 |         console.log(
+  307 |           '🔍 Calculator body content preview:',
+  308 |           (await page.locator('body').textContent())?.slice(0, 200),
+  309 |         );
+  310 |       }
+  311 | 
+> 312 |       expect(hasCalculatorContent).toBeTruthy();
+      |                                    ^ Error: expect(received).toBeTruthy()
+  313 | 
+  314 |       await page.screenshot({
+  315 |         path: 'test-results/nightly-regression-calculator.png',
+  316 |         fullPage: true,
+  317 |         timeout: TEST_TIMEOUTS.screenshot,
+  318 |       });
+  319 | 
+  320 |       // Test basic calculator interaction if inputs are available
+  321 |       const numberInputs = page.locator('input[type="number"]');
+  322 |       const inputCount = await numberInputs.count();
+  323 | 
+  324 |       if (inputCount > 0) {
+  325 |         // Check if the first input is enabled before trying to fill it
+  326 |         const firstInput = numberInputs.first();
+  327 |         const isEnabled = await firstInput.isEnabled();
+  328 | 
+  329 |         if (isEnabled) {
+  330 |           // Fill in some test values
+  331 |           await firstInput.fill('1000');
+  332 | 
+  333 |           if (inputCount > 1) {
+  334 |             const secondInput = numberInputs.nth(1);
+  335 |             const isSecondEnabled = await secondInput.isEnabled();
+  336 |             if (isSecondEnabled) {
+  337 |               await secondInput.fill('500');
+  338 |             }
+  339 |           }
+  340 | 
+  341 |           await page.waitForTimeout(1000);
+  342 |         } else {
+  343 |           console.log(
+  344 |             'ℹ️ Calculator inputs are disabled - this may be expected behavior without authentication',
+  345 |           );
+  346 |         }
+  347 | 
+  348 |         await page.screenshot({
+  349 |           path: 'test-results/nightly-regression-calculator-filled.png',
+  350 |           fullPage: true,
+  351 |           timeout: TEST_TIMEOUTS.screenshot,
+  352 |         });
+  353 |       }
+  354 |     });
+  355 |   });
+  356 | 
+  357 |   // ---------------------------------------------------------------------------
+  358 |   // ESO-745: Authenticated management pages
+  359 |   // ---------------------------------------------------------------------------
+  360 |   test.describe('Authenticated Management Pages', () => {
+  361 |     test('my-builds page should load or redirect gracefully', async ({ page }) => {
+  362 |       await page.goto('/my-builds', {
+  363 |         waitUntil: 'domcontentloaded',
+  364 |         timeout: TEST_TIMEOUTS.navigation,
+  365 |       });
+  366 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  367 |       await page.waitForTimeout(3000);
+  368 | 
+  369 |       // Client credentials tokens don't carry a user subject, so /my-builds may
+  370 |       // redirect to login. Both outcomes (loaded content OR redirect to login) are valid.
+  371 |       const url = page.url();
+  372 |       const hasContent = await page
+  373 |         .locator('main, .MuiContainer-root, .build-list, [data-testid*="build"]')
+  374 |         .first()
+  375 |         .isVisible({ timeout: 5000 })
+  376 |         .catch(() => false);
+  377 |       const hasLoginPrompt = await page
+  378 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  379 |         .isVisible({ timeout: 3000 })
+  380 |         .catch(() => false);
+  381 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  382 | 
+  383 |       expect(
+  384 |         hasContent || hasLoginPrompt || isOnLogin,
+  385 |         '/my-builds should either render or redirect to login',
+  386 |       ).toBeTruthy();
+  387 | 
+  388 |       await page.screenshot({
+  389 |         path: 'test-results/nightly-regression-my-builds.png',
+  390 |         fullPage: true,
+  391 |         timeout: TEST_TIMEOUTS.screenshot,
+  392 |       });
+  393 |     });
+  394 | 
+  395 |     test('my-rosters page should load or redirect gracefully', async ({ page }) => {
+  396 |       await page.goto('/my-rosters', {
+  397 |         waitUntil: 'domcontentloaded',
+  398 |         timeout: TEST_TIMEOUTS.navigation,
+  399 |       });
+  400 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  401 |       await page.waitForTimeout(3000);
+  402 | 
+  403 |       const url = page.url();
+  404 |       const hasContent = await page
+  405 |         .locator('main, .MuiContainer-root, [data-testid*="roster"]')
+  406 |         .first()
+  407 |         .isVisible({ timeout: 5000 })
+  408 |         .catch(() => false);
+  409 |       const hasLoginPrompt = await page
+  410 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  411 |         .isVisible({ timeout: 3000 })
+  412 |         .catch(() => false);
+```

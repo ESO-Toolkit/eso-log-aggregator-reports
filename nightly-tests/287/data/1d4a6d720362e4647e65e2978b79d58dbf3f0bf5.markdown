@@ -1,0 +1,563 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-auth.spec.ts >> Nightly Regression - Authentication and Reports >> Negative Scenarios >> simulated API timeout should show loading or error state
+- Location: tests/nightly-regression-auth.spec.ts:528:9
+
+# Error details
+
+```
+Error: API timeout should show a loading/error state rather than crash
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5]:
+      - /url: "#main-content"
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]:
+            - img "ESO Toolkit logo" [ref=e12]
+            - text: ESO Toolkit
+        - navigation "Main navigation" [ref=e13]:
+          - button "roster hub Roster Hub" [ref=e14] [cursor=pointer]:
+            - img "roster hub" [ref=e16]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e17] [cursor=pointer]:
+            - img "build hub" [ref=e19]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e20] [cursor=pointer]:
+            - img "pack hub" [ref=e22]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - text: Reports
+            - img [ref=e28]
+          - button "Tools" [ref=e30] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Tools
+            - img [ref=e35]
+          - button "Profile" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: U
+            - paragraph [ref=e40]: Profile
+            - img [ref=e41]
+    - dialog "Navigation menu" [ref=e43]:
+      - button "U Profile View profile" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]: U
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Profile
+          - paragraph [ref=e51]: View profile
+        - img [ref=e52]
+      - paragraph [ref=e54]: Navigate
+      - generic [ref=e55]:
+        - button "👥 Roster Hub" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: 👥
+          - paragraph [ref=e58]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: 🏗️
+          - paragraph [ref=e61]: Build Hub
+        - button "🧩 Pack Hub" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🧩
+          - paragraph [ref=e64]: Pack Hub
+      - paragraph [ref=e65]: Reports
+      - generic [ref=e66]:
+        - button "📁 My Reports Your uploaded logs" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: 📁
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: My Reports
+            - paragraph [ref=e71]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🎲
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: Sample Report
+            - paragraph [ref=e76]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 📊
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Latest Reports
+            - paragraph [ref=e81]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🏆
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Leaderboards
+            - paragraph [ref=e86]: Top parse rankings
+      - paragraph [ref=e87]: Tools
+      - generic [ref=e88]:
+        - button "📝 Text Editor Format guild announcements" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: 📝
+          - generic [ref=e91]:
+            - paragraph [ref=e92]: Text Editor
+            - paragraph [ref=e93]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e94] [cursor=pointer]:
+          - img [ref=e96]
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: Calculator
+            - paragraph [ref=e106]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 📈
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Parse Analysis
+            - paragraph [ref=e111]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: ⚔️
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: Loadout Manager
+            - paragraph [ref=e116]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: 👥
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Roster Builder
+            - paragraph [ref=e121]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]: 🔧
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Build Editor
+            - paragraph [ref=e126]: Create & share builds
+      - paragraph [ref=e127]: Appearance
+      - generic [ref=e128]:
+        - button "Switch to light mode" [ref=e129] [cursor=pointer]:
+          - img [ref=e131]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Theme
+            - paragraph [ref=e135]: Dark · tap to switch
+        - 'button "Performance: Auto · Low — change" [ref=e136] [cursor=pointer]':
+          - img [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Performance
+            - paragraph [ref=e142]: Auto · Low
+          - img [ref=e143]
+      - button "Log out" [ref=e146] [cursor=pointer]:
+        - img [ref=e148]
+        - text: Log out
+    - main [active] [ref=e150]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - heading "Rockgrove" [level=1] [ref=e155]
+          - generic [ref=e156]:
+            - button "Fights" [ref=e157] [cursor=pointer]:
+              - img [ref=e158]
+              - text: Fights
+            - button "Dashboard" [ref=e160] [cursor=pointer]:
+              - img [ref=e161]
+              - text: Dashboard
+            - button "Summary" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]
+              - text: Summary
+            - link "ESO Logs" [ref=e167] [cursor=pointer]:
+              - /url: https://www.esologs.com/reports/prV8jWb1NqFJc97Z
+              - text: ESO Logs
+              - img [ref=e168]
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - heading "Rockgrove Veteran HM" [level=6] [ref=e176]:
+              - generic [ref=e177]: Rockgrove
+              - generic [ref=e178]: Veteran HM
+            - generic [ref=e180]: "1"
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - img "Oaxiltso" [ref=e185]
+                - heading "Oaxiltso (Veteran HM) (6)" [level=6] [ref=e186]:
+                  - text: Oaxiltso
+                  - generic [ref=e187]: (Veteran HM)
+                  - generic [ref=e188]: (6)
+              - generic [ref=e189] [cursor=pointer]:
+                - switch "🗑️ 8" [ref=e192]
+                - generic [ref=e195]: 🗑️ 8
+            - list [ref=e196]:
+              - listitem [ref=e197]:
+                - button "#1 79% 1:05 1:23 AM 12p" [ref=e198] [cursor=pointer]:
+                  - generic [ref=e201]:
+                    - generic [ref=e202]:
+                      - paragraph [ref=e203]: "#1"
+                      - paragraph [ref=e205]: 79%
+                    - generic [ref=e206]: 1:05
+                    - generic [ref=e207]:
+                      - paragraph [ref=e208]: 1:23 AM
+                      - paragraph [ref=e209]: 12p
+              - listitem [ref=e212]:
+                - button "#2 39% 3:48 1:25 AM 12p" [ref=e213] [cursor=pointer]:
+                  - generic [ref=e216]:
+                    - generic [ref=e217]:
+                      - paragraph [ref=e218]: "#2"
+                      - paragraph [ref=e220]: 39%
+                    - generic [ref=e221]: 3:48
+                    - generic [ref=e222]:
+                      - paragraph [ref=e223]: 1:25 AM
+                      - paragraph [ref=e224]: 12p
+              - listitem [ref=e227]:
+                - button "#3 40% 5:29 1:30 AM 12p" [ref=e228] [cursor=pointer]:
+                  - generic [ref=e231]:
+                    - generic [ref=e232]:
+                      - paragraph [ref=e233]: "#3"
+                      - paragraph [ref=e235]: 40%
+                    - generic [ref=e236]: 5:29
+                    - generic [ref=e237]:
+                      - paragraph [ref=e238]: 1:30 AM
+                      - paragraph [ref=e239]: 12p
+              - listitem [ref=e242]:
+                - button "#4 82% 47s 1:37 AM 12p" [ref=e243] [cursor=pointer]:
+                  - generic [ref=e246]:
+                    - generic [ref=e247]:
+                      - paragraph [ref=e248]: "#4"
+                      - paragraph [ref=e250]: 82%
+                    - generic [ref=e251]: 47s
+                    - generic [ref=e252]:
+                      - paragraph [ref=e253]: 1:37 AM
+                      - paragraph [ref=e254]: 12p
+              - listitem [ref=e257]:
+                - button "#5 83% 1:15 1:39 AM 12p" [ref=e258] [cursor=pointer]:
+                  - generic [ref=e261]:
+                    - generic [ref=e262]:
+                      - paragraph [ref=e263]: "#5"
+                      - paragraph [ref=e265]: 83%
+                    - generic [ref=e266]: 1:15
+                    - generic [ref=e267]:
+                      - paragraph [ref=e268]: 1:39 AM
+                      - paragraph [ref=e269]: 12p
+              - listitem [ref=e272]:
+                - button "#6 KILL 4:47 1:41 AM 12p" [ref=e273] [cursor=pointer]:
+                  - generic [ref=e276]:
+                    - generic [ref=e277]:
+                      - paragraph [ref=e278]: "#6"
+                      - paragraph [ref=e280]: KILL
+                    - generic [ref=e281]: 4:47
+                    - generic [ref=e282]:
+                      - paragraph [ref=e283]: 1:41 AM
+                      - paragraph [ref=e284]: 12p
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - img "Flame-Herald Bahsei" [ref=e289]
+                - heading "Flame-Herald Bahsei (Veteran HM) (3)" [level=6] [ref=e290]:
+                  - text: Flame-Herald Bahsei
+                  - generic [ref=e291]: (Veteran HM)
+                  - generic [ref=e292]: (3)
+              - generic [ref=e293] [cursor=pointer]:
+                - switch "🗑️ 5" [ref=e296]
+                - generic [ref=e299]: 🗑️ 5
+            - list [ref=e300]:
+              - listitem [ref=e301]:
+                - button "#1 86% 46s 1:52 AM 12p" [ref=e302] [cursor=pointer]:
+                  - generic [ref=e305]:
+                    - generic [ref=e306]:
+                      - paragraph [ref=e307]: "#1"
+                      - paragraph [ref=e309]: 86%
+                    - generic [ref=e310]: 46s
+                    - generic [ref=e311]:
+                      - paragraph [ref=e312]: 1:52 AM
+                      - paragraph [ref=e313]: 12p
+              - listitem [ref=e316]:
+                - button "#2 82% 1:13 1:55 AM 12p" [ref=e317] [cursor=pointer]:
+                  - generic [ref=e320]:
+                    - generic [ref=e321]:
+                      - paragraph [ref=e322]: "#2"
+                      - paragraph [ref=e324]: 82%
+                    - generic [ref=e325]: 1:13
+                    - generic [ref=e326]:
+                      - paragraph [ref=e327]: 1:55 AM
+                      - paragraph [ref=e328]: 12p
+              - listitem [ref=e331]:
+                - button "#3 84% 59s 1:57 AM 12p" [ref=e332] [cursor=pointer]:
+                  - generic [ref=e335]:
+                    - generic [ref=e336]:
+                      - paragraph [ref=e337]: "#3"
+                      - paragraph [ref=e339]: 84%
+                    - generic [ref=e340]: 59s
+                    - generic [ref=e341]:
+                      - paragraph [ref=e342]: 1:57 AM
+                      - paragraph [ref=e343]: 12p
+    - generic [ref=e346]: Navigated to Page
+    - contentinfo [ref=e347]:
+      - generic [ref=e348]:
+        - generic [ref=e349]:
+          - generic [ref=e350]:
+            - generic [ref=e351]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e352]
+            - paragraph [ref=e353]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e354]:
+            - link "Join Discord" [ref=e355] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e357] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - img "ESO Toolkit logo" [ref=e362]
+              - generic [ref=e363]:
+                - heading "ESO Helper Tools" [level=3] [ref=e364]
+                - paragraph [ref=e365]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e366]:
+              - generic [ref=e367]: Real-time analytics
+              - generic [ref=e369]: Player-built insights
+              - generic [ref=e371]: Free beta access
+              - generic [ref=e373]: Community-driven support
+          - generic [ref=e376]:
+            - generic [ref=e377]:
+              - paragraph [ref=e378]: Tools
+              - generic [ref=e379]:
+                - link "Build Calculator" [ref=e380]:
+                  - /url: /calculator
+                  - generic [ref=e381]: Build Calculator
+                  - img [ref=e382]
+                - link "Text Editor" [ref=e384]:
+                  - /url: /text-editor
+                  - generic [ref=e385]: Text Editor
+                  - img [ref=e386]
+                - link "Log Analyzer" [ref=e388]:
+                  - /url: /my-reports
+                  - generic [ref=e389]: Log Analyzer
+                  - img [ref=e390]
+                - link "Roster Builder" [ref=e392]:
+                  - /url: /roster-builder
+                  - generic [ref=e393]: Roster Builder
+                  - img [ref=e394]
+                - link "My Reports" [ref=e396]:
+                  - /url: /my-reports
+                  - generic [ref=e397]: My Reports
+                  - img [ref=e398]
+                - link "Gear Sets" [ref=e400]:
+                  - /url: /gear-sets
+                  - generic [ref=e401]: Gear Sets
+                  - img [ref=e402]
+            - generic [ref=e404]:
+              - paragraph [ref=e405]: Quick Links
+              - generic [ref=e406]:
+                - link "Home" [ref=e407]:
+                  - /url: /
+                  - generic [ref=e408]: Home
+                  - img [ref=e409]
+                - link "Privacy Settings" [ref=e411]:
+                  - /url: /privacy-settings
+                  - generic [ref=e412]: Privacy Settings
+                  - img [ref=e413]
+                - link "Calculation Knowledge Base" [ref=e415]:
+                  - /url: /docs/calculations
+                  - generic [ref=e416]: Calculation Knowledge Base
+                  - img [ref=e417]
+                - link "What's New" [ref=e419]:
+                  - /url: /whats-new
+                  - generic [ref=e420]: What's New
+                  - img [ref=e421]
+                - link "About" [ref=e423]:
+                  - /url: /about
+                  - generic [ref=e424]: About
+                  - img [ref=e425]
+        - generic [ref=e428]:
+          - paragraph [ref=e429]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e430]:
+            - link "Privacy Policy" [ref=e431]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e432] [cursor=pointer]:
+              - img [ref=e434]
+              - text: Report a Bug
+  - generic [ref=e438]:
+    - button "Close" [ref=e439] [cursor=pointer]:
+      - img [ref=e440]
+    - generic [ref=e442]:
+      - img [ref=e444]
+      - heading "Privacy & Cookies" [level=6] [ref=e446]
+    - paragraph [ref=e447]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e448]:
+        - /url: /privacy
+    - generic [ref=e449]:
+      - button "Decline All" [ref=e450] [cursor=pointer]
+      - button "Customize" [ref=e451] [cursor=pointer]
+      - button "Accept All" [ref=e452] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  461 |         waitUntil: 'domcontentloaded',
+  462 |         timeout: TEST_TIMEOUTS.navigation,
+  463 |       });
+  464 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad });
+  465 |       await page.waitForTimeout(3000);
+  466 | 
+  467 |       const url = page.url();
+  468 |       const hasBuilder = await page
+  469 |         .locator('main, [data-testid*="roster"], .MuiContainer-root')
+  470 |         .first()
+  471 |         .isVisible({ timeout: 5000 })
+  472 |         .catch(() => false);
+  473 |       const hasLoginPrompt = await page
+  474 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  475 |         .isVisible({ timeout: 3000 })
+  476 |         .catch(() => false);
+  477 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  478 | 
+  479 |       expect(
+  480 |         hasBuilder || hasLoginPrompt || isOnLogin,
+  481 |         '/roster-builder should either render or redirect to login',
+  482 |       ).toBeTruthy();
+  483 | 
+  484 |       await page.screenshot({
+  485 |         path: 'test-results/nightly-regression-roster-builder.png',
+  486 |         fullPage: true,
+  487 |         timeout: TEST_TIMEOUTS.screenshot,
+  488 |       });
+  489 |     });
+  490 |   });
+  491 | 
+  492 |   // ---------------------------------------------------------------------------
+  493 |   // ESO-750: Expanded negative / error scenario testing
+  494 |   // ---------------------------------------------------------------------------
+  495 |   test.describe('Negative Scenarios', () => {
+  496 |     test('invalid fight ID within a valid report should fallback gracefully', async ({ page }) => {
+  497 |       const reportId = '3gjVGWB2dxCL8XAw';
+  498 |       await page.goto(`/report/${reportId}/fight/99999/insights`, {
+  499 |         waitUntil: 'domcontentloaded',
+  500 |         timeout: TEST_TIMEOUTS.navigation,
+  501 |       });
+  502 |       await page.waitForTimeout(5000);
+  503 | 
+  504 |       const hasError = await page
+  505 |         .getByText(/not found|invalid|error|fight.*not.*exist/i)
+  506 |         .isVisible()
+  507 |         .catch(() => false);
+  508 |       const redirected = !page.url().includes('99999');
+  509 |       const hasContent = await page.locator('main, #root').isVisible().catch(() => false);
+  510 | 
+  511 |       expect(
+  512 |         hasError || redirected || hasContent,
+  513 |         'Invalid fight ID should be handled gracefully',
+  514 |       ).toBeTruthy();
+  515 | 
+  516 |       // Page must remain navigable — no uncaught exceptions
+  517 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  518 |       const criticalErrors = errors.filter(
+  519 |         (e) =>
+  520 |           !e.includes('ResizeObserver') &&
+  521 |           !e.includes('Not implemented') &&
+  522 |           !e.includes('Non-Error promise rejection') &&
+  523 |           !e.includes('ChunkLoadError'),
+  524 |       );
+  525 |       expect(criticalErrors, 'Invalid fight ID should not cause JS exceptions').toHaveLength(0);
+  526 |     });
+  527 | 
+  528 |     test('simulated API timeout should show loading or error state', async ({ page }) => {
+  529 |       // Intercept esologs API requests and force a 504 to simulate a timeout
+  530 |       await page.route('**/esologs.com/**', async (route) => {
+  531 |         await route.fulfill({
+  532 |           status: 504,
+  533 |           contentType: 'application/json',
+  534 |           body: JSON.stringify({ error: 'Gateway Timeout' }),
+  535 |         });
+  536 |       });
+  537 | 
+  538 |       await page.goto('/report/prV8jWb1NqFJc97Z', {
+  539 |         waitUntil: 'domcontentloaded',
+  540 |         timeout: TEST_TIMEOUTS.navigation,
+  541 |       });
+  542 |       await page.waitForTimeout(6000);
+  543 | 
+  544 |       // Should show a loading state, error message, or at minimum not crash
+  545 |       const hasLoadingOrError = await page
+  546 |         .locator(
+  547 |           '.loading, .MuiCircularProgress-root, .MuiAlert-root, .error, .skeleton, .MuiSkeleton-root',
+  548 |         )
+  549 |         .first()
+  550 |         .isVisible({ timeout: 5000 })
+  551 |         .catch(() => false);
+  552 |       const hasText = await page
+  553 |         .getByText(/loading|error|failed|timeout|try again/i)
+  554 |         .isVisible({ timeout: 3000 })
+  555 |         .catch(() => false);
+  556 |       const hasContent = await page.locator('main, #root').isVisible().catch(() => false);
+  557 | 
+  558 |       expect(
+  559 |         hasLoadingOrError || hasText || hasContent,
+  560 |         'API timeout should show a loading/error state rather than crash',
+> 561 |       ).toBeTruthy();
+      |         ^ Error: API timeout should show a loading/error state rather than crash
+  562 | 
+  563 |       await page.screenshot({
+  564 |         path: 'test-results/nightly-regression-api-timeout.png',
+  565 |         fullPage: true,
+  566 |         timeout: TEST_TIMEOUTS.screenshot,
+  567 |       });
+  568 | 
+  569 |       // Unroute so it doesn't affect subsequent tests
+  570 |       await page.unrouteAll();
+  571 |     });
+  572 | 
+  573 |     test('rate-limited API response (429) should show a user-facing message', async ({ page }) => {
+  574 |       await page.route('**/esologs.com/**', async (route) => {
+  575 |         await route.fulfill({
+  576 |           status: 429,
+  577 |           contentType: 'application/json',
+  578 |           body: JSON.stringify({ error: 'Too Many Requests' }),
+  579 |         });
+  580 |       });
+  581 | 
+  582 |       await page.goto('/report/prV8jWb1NqFJc97Z', {
+  583 |         waitUntil: 'domcontentloaded',
+  584 |         timeout: TEST_TIMEOUTS.navigation,
+  585 |       });
+  586 |       await page.waitForTimeout(6000);
+  587 | 
+  588 |       // App should not crash — any visible content is acceptable
+  589 |       const hasContent = await page.locator('main, #root, body').first().isVisible().catch(() => false);
+  590 |       expect(hasContent, 'A 429 response should not crash the page').toBeTruthy();
+  591 | 
+  592 |       // No uncaught JS exceptions from the rate-limit scenario
+  593 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  594 |       const criticalErrors = errors.filter(
+  595 |         (e) =>
+  596 |           !e.includes('ResizeObserver') &&
+  597 |           !e.includes('Not implemented') &&
+  598 |           !e.includes('Non-Error promise rejection') &&
+  599 |           !e.includes('ChunkLoadError'),
+  600 |       );
+  601 |       expect(criticalErrors, '429 response should not cause uncaught JS exceptions').toHaveLength(0);
+  602 | 
+  603 |       await page.unrouteAll();
+  604 |     });
+  605 |   });
+  606 | 
+  607 |   test.describe('Cross-browser Compatibility Checks', () => {
+  608 |     test('should verify key functionality works across browsers', async ({ page, browserName }) => {
+  609 |       // Test basic navigation in different browsers
+  610 |       await page.goto('/calculator', {
+  611 |         waitUntil: 'domcontentloaded',
+  612 |         timeout: TEST_TIMEOUTS.navigation,
+  613 |       });
+  614 | 
+  615 |       await page.waitForTimeout(3000);
+  616 | 
+  617 |       // Verify basic functionality works
+  618 |       const hasInteractiveElements = await page
+  619 |         .locator('input, button, select, .MuiButton-root')
+  620 |         .count();
+  621 | 
+  622 |       expect(hasInteractiveElements).toBeGreaterThan(0);
+  623 | 
+  624 |       await page.screenshot({
+  625 |         path: `test-results/nightly-regression-${browserName}-compatibility.png`,
+  626 |         fullPage: true,
+  627 |         timeout: TEST_TIMEOUTS.screenshot,
+  628 |       });
+  629 | 
+  630 |       console.log(`${browserName}: Found ${hasInteractiveElements} interactive elements`);
+  631 |     });
+  632 |   });
+  633 | });
+  634 | 
+  635 | 
+```
