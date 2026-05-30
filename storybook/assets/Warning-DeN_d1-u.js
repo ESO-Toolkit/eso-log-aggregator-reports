@@ -1,0 +1,1 @@
+import{o as e}from"./preload-helper-CHxnduP2.js";import{I as t}from"./iframe-B1hwYefZ.js";import{Bt as n}from"./material-ueqQPYUB.js";import{r}from"./ExpandMore-CRnwj0-3.js";var i,a,o=e((()=>{r(),i=t(),a=n((0,i.jsx)(`path`,{d:`M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z`}),`Warning`)}));export{o as n,a as t};
