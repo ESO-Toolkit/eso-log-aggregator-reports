@@ -1,0 +1,408 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression.spec.ts >> Nightly Regression Tests - Real Data >> Visual Regression Detection >> should capture full page screenshots for visual comparison
+- Location: tests/nightly-regression.spec.ts:726:9
+
+# Error details
+
+```
+Error: Report prV8jWb1NqFJc97Z appears to have minimal content (61 characters)
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5]:
+      - /url: "#main-content"
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]:
+            - img "ESO Toolkit logo" [ref=e12]
+            - text: ESO Toolkit
+        - button "toggle navigation" [ref=e14] [cursor=pointer]
+    - dialog "Navigation menu" [ref=e19]:
+      - button "U Profile View profile" [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]: U
+        - generic [ref=e25]:
+          - paragraph [ref=e26]: Profile
+          - paragraph [ref=e27]: View profile
+        - img [ref=e28]
+      - paragraph [ref=e30]: Navigate
+      - generic [ref=e31]:
+        - button "👥 Roster Hub" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: 👥
+          - paragraph [ref=e34]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: 🏗️
+          - paragraph [ref=e37]: Build Hub
+        - button "🧩 Pack Hub" [ref=e38] [cursor=pointer]:
+          - generic [ref=e39]: 🧩
+          - paragraph [ref=e40]: Pack Hub
+      - paragraph [ref=e41]: Reports
+      - generic [ref=e42]:
+        - button "📁 My Reports Your uploaded logs" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: 📁
+          - generic [ref=e45]:
+            - paragraph [ref=e46]: My Reports
+            - paragraph [ref=e47]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]: 🎲
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: Sample Report
+            - paragraph [ref=e52]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: 📊
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: Latest Reports
+            - paragraph [ref=e57]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 🏆
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: Leaderboards
+            - paragraph [ref=e62]: Top parse rankings
+      - paragraph [ref=e63]: Tools
+      - generic [ref=e64]:
+        - button "📝 Text Editor Format guild announcements" [ref=e65] [cursor=pointer]:
+          - generic [ref=e66]: 📝
+          - generic [ref=e67]:
+            - paragraph [ref=e68]: Text Editor
+            - paragraph [ref=e69]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e70] [cursor=pointer]:
+          - img [ref=e72]
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: Calculator
+            - paragraph [ref=e82]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e83] [cursor=pointer]:
+          - generic [ref=e84]: 📈
+          - generic [ref=e85]:
+            - paragraph [ref=e86]: Parse Analysis
+            - paragraph [ref=e87]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: ⚔️
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Loadout Manager
+            - paragraph [ref=e92]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e93] [cursor=pointer]:
+          - generic [ref=e94]: 👥
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: Roster Builder
+            - paragraph [ref=e97]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]: 🔧
+          - generic [ref=e100]:
+            - paragraph [ref=e101]: Build Editor
+            - paragraph [ref=e102]: Create & share builds
+      - paragraph [ref=e103]: Appearance
+      - generic [ref=e104]:
+        - button "Switch to light mode" [ref=e105] [cursor=pointer]:
+          - img [ref=e107]
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Theme
+            - paragraph [ref=e111]: Dark · tap to switch
+        - 'button "Performance: Auto · Medium — change" [ref=e112] [cursor=pointer]':
+          - img [ref=e114]
+          - generic [ref=e116]:
+            - paragraph [ref=e117]: Performance
+            - paragraph [ref=e118]: Auto · Medium
+          - img [ref=e119]
+      - button "Log out" [ref=e122] [cursor=pointer]:
+        - img [ref=e124]
+        - text: Log out
+    - main [active] [ref=e126]
+    - generic [ref=e129]: Navigated to Page
+    - contentinfo [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - generic [ref=e134]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e135]
+            - paragraph [ref=e136]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e137]:
+            - link "Join Discord" [ref=e138] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e140] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - img "ESO Toolkit logo" [ref=e145]
+              - generic [ref=e146]:
+                - heading "ESO Helper Tools" [level=3] [ref=e147]
+                - paragraph [ref=e148]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e149]:
+              - generic [ref=e150]: Real-time analytics
+              - generic [ref=e152]: Player-built insights
+              - generic [ref=e154]: Free beta access
+              - generic [ref=e156]: Community-driven support
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - paragraph [ref=e161]: Tools
+              - generic [ref=e162]:
+                - link "Build Calculator" [ref=e163]:
+                  - /url: /calculator
+                  - generic [ref=e164]: Build Calculator
+                  - img [ref=e165]
+                - link "Text Editor" [ref=e167]:
+                  - /url: /text-editor
+                  - generic [ref=e168]: Text Editor
+                  - img [ref=e169]
+                - link "Log Analyzer" [ref=e171]:
+                  - /url: /my-reports
+                  - generic [ref=e172]: Log Analyzer
+                  - img [ref=e173]
+                - link "Roster Builder" [ref=e175]:
+                  - /url: /roster-builder
+                  - generic [ref=e176]: Roster Builder
+                  - img [ref=e177]
+                - link "My Reports" [ref=e179]:
+                  - /url: /my-reports
+                  - generic [ref=e180]: My Reports
+                  - img [ref=e181]
+                - link "Gear Sets" [ref=e183]:
+                  - /url: /gear-sets
+                  - generic [ref=e184]: Gear Sets
+                  - img [ref=e185]
+            - generic [ref=e187]:
+              - paragraph [ref=e188]: Quick Links
+              - generic [ref=e189]:
+                - link "Home" [ref=e190]:
+                  - /url: /
+                  - generic [ref=e191]: Home
+                  - img [ref=e192]
+                - link "Privacy Settings" [ref=e194]:
+                  - /url: /privacy-settings
+                  - generic [ref=e195]: Privacy Settings
+                  - img [ref=e196]
+                - link "Calculation Knowledge Base" [ref=e198]:
+                  - /url: /docs/calculations
+                  - generic [ref=e199]: Calculation Knowledge Base
+                  - img [ref=e200]
+                - link "What's New" [ref=e202]:
+                  - /url: /whats-new
+                  - generic [ref=e203]: What's New
+                  - img [ref=e204]
+                - link "About" [ref=e206]:
+                  - /url: /about
+                  - generic [ref=e207]: About
+                  - img [ref=e208]
+        - generic [ref=e211]:
+          - paragraph [ref=e212]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e213]:
+            - link "Privacy Policy" [ref=e214]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e215] [cursor=pointer]:
+              - img [ref=e217]
+              - text: Report a Bug
+  - generic [ref=e221]:
+    - button "Close" [ref=e222] [cursor=pointer]:
+      - img [ref=e223]
+    - generic [ref=e225]:
+      - img [ref=e227]
+      - heading "Privacy & Cookies" [level=6] [ref=e229]
+    - paragraph [ref=e230]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e231]:
+        - /url: /privacy
+    - generic [ref=e232]:
+      - button "Decline All" [ref=e233] [cursor=pointer]
+      - button "Customize" [ref=e234] [cursor=pointer]
+      - button "Accept All" [ref=e235] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  648 |         return; // Skip this test gracefully
+  649 |       }
+  650 | 
+  651 |       await firstFightButton.click({ force: true });
+  652 |       await page.waitForURL(/\/fight\/\d+/, { timeout: TEST_TIMEOUTS.navigation }).catch(() => {
+  653 |         console.log('Fight navigation failed');
+  654 |       });
+  655 |     });
+  656 |   });
+  657 | 
+  658 |   test.describe('Performance and Error Monitoring', () => {
+  659 |     test('should monitor load times and network requests', async ({ page }, testInfo) => {
+  660 |       const reportId = REAL_REPORT_IDS[0];
+  661 |       const performanceFightId = TEST_DATA.KNOWN_FIGHT_ID;
+  662 | 
+  663 |       // Track performance metrics
+  664 |       const startTime = Date.now();
+  665 | 
+  666 |       // Navigate to report and click into a fight to measure load time
+  667 |       const insightsStartTime = Date.now();
+  668 |       await page.goto(`/report/${reportId}`, {
+  669 |         waitUntil: 'domcontentloaded',
+  670 |         timeout: TEST_TIMEOUTS.navigation,
+  671 |       });
+  672 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  673 |       await waitForAppMount(page);
+  674 | 
+  675 |       // Click a fight button to load fight details
+  676 |       const fightButton = page.locator(SELECTORS.ANY_FIGHT_BUTTON).first();
+  677 |       if (!(await fightButton.isVisible({ timeout: 15000 }).catch(() => false))) {
+  678 |         console.log('ℹ️ No fight buttons — skipping performance test');
+  679 |         return;
+  680 |       }
+  681 |       await fightButton.click({ force: true });
+  682 |       await waitForAppMount(page);
+  683 | 
+  684 |       const insightsLoadTime = Date.now() - insightsStartTime;
+  685 | 
+  686 |       const isMobileOrTablet = testInfo.project.name.includes('mobile') || testInfo.project.name.includes('tablet');
+  687 |       const timeoutThreshold = isMobileOrTablet ? 90000 : 60000;
+  688 |       expect(insightsLoadTime).toBeLessThan(timeoutThreshold);
+  689 | 
+  690 |       console.log(`Report + fight loaded in ${insightsLoadTime}ms`);
+  691 | 
+  692 |       // Check for failed network requests
+  693 |       const failedRequests: any[] = [];
+  694 |       page.on('response', (response) => {
+  695 |         if (response.status() >= 400 && /^https?:\/\/(?:[\w.-]+\.)?esologs\.com(?:\/|$)/.test(response.url())) {
+  696 |           failedRequests.push({
+  697 |             url: response.url(),
+  698 |             status: response.status(),
+  699 |             statusText: response.statusText(),
+  700 |           });
+  701 |         }
+  702 |       });
+  703 | 
+  704 |       // Test a couple more tabs by clicking in the UI
+  705 |       const quickTestTabs = ['damage done', 'players'];
+  706 |       for (const tabLabel of quickTestTabs) {
+  707 |         const tab = page.locator('[role="tab"]').filter({ hasText: new RegExp(tabLabel, 'i') }).first();
+  708 |         if (await tab.isVisible({ timeout: 3000 }).catch(() => false)) {
+  709 |           await tab.click();
+  710 |           await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+  711 |           console.log(`✅ ${tabLabel} tab loaded successfully`);
+  712 |         } else {
+  713 |           console.log(`ℹ️ ${tabLabel} tab not found`);
+  714 |         }
+  715 |       }
+  716 | 
+  717 |       if (failedRequests.length > 0) {
+  718 |         console.log('⚠️ Some requests failed, but continuing test:', failedRequests);
+  719 |       } else {
+  720 |         console.log('✅ All requests succeeded');
+  721 |       }
+  722 |     });
+  723 |   });
+  724 | 
+  725 |   test.describe('Visual Regression Detection', () => {
+  726 |     test('should capture full page screenshots for visual comparison', async ({ page }) => {
+  727 |       const reportId = REAL_REPORT_IDS[0];
+  728 | 
+  729 |       // Landing page
+  730 |       await page.goto(`/report/${reportId}`, {
+  731 |         waitUntil: 'domcontentloaded',
+  732 |         timeout: TEST_TIMEOUTS.navigation,
+  733 |       });
+  734 | 
+  735 |       // Try networkidle but fallback to content check if it times out
+  736 |       try {
+  737 |         await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.networkIdle });
+  738 |       } catch (error) {
+  739 |         console.log('⚠️ NetworkIdle timeout for visual regression test, checking for content instead...');
+  740 |         await waitForAppMount(page);
+  741 |       }
+  742 | 
+  743 |       // Check if the page loaded successfully
+  744 |       const bodyContent = await page.locator('body').textContent();
+  745 |       const contentLength = bodyContent?.length || 0;
+  746 |       
+  747 |       if (contentLength < 100) {
+> 748 |         throw new Error(`Report ${reportId} appears to have minimal content (${contentLength} characters)`);
+      |               ^ Error: Report prV8jWb1NqFJc97Z appears to have minimal content (61 characters)
+  749 |       }
+  750 | 
+  751 |       console.log(`✅ Report ${reportId} loaded with ${contentLength} characters of content`);
+  752 | 
+  753 |       // Take screenshot of landing page
+  754 |       try {
+  755 |         await page.screenshot({
+  756 |           path: `test-results/visual-regression-report-landing.png`,
+  757 |           fullPage: false, // Faster viewport screenshot
+  758 |           timeout: 10000,
+  759 |         });
+  760 |         console.log('✅ Landing page screenshot captured');
+  761 |       } catch (screenshotError) {
+  762 |         console.log('⚠️ Landing page screenshot failed:', (screenshotError as Error).message);
+  763 |       }
+  764 | 
+  765 |       // Skip fight detail screenshots for now due to loading issues
+  766 |       console.log(
+  767 |         '✅ Visual regression test completed (fight details skipped due to loading issues)',
+  768 |       );
+  769 |     });
+  770 |   });
+  771 | 
+  772 |   test.describe('Data Consistency Checks', () => {
+  773 |     test('should verify data makes sense across tabs', async ({ page }) => {
+  774 |       const reportId = REAL_REPORT_IDS[0];
+  775 | 
+  776 |       console.log('Testing data consistency across tabs...');
+  777 | 
+  778 |       // Navigate to report and click into a fight via the SPA
+  779 |       await page.goto(`/report/${reportId}`, {
+  780 |         waitUntil: 'domcontentloaded',
+  781 |         timeout: TEST_TIMEOUTS.navigation,
+  782 |       });
+  783 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  784 |       await waitForAppMount(page);
+  785 | 
+  786 |       const fightButton = page.locator(SELECTORS.ANY_FIGHT_BUTTON).first();
+  787 |       if (!(await fightButton.isVisible({ timeout: 15000 }).catch(() => false))) {
+  788 |         console.log('ℹ️ No fight buttons — skipping data consistency test');
+  789 |         return;
+  790 |       }
+  791 |       await fightButton.click({ force: true });
+  792 |       await waitForAppMount(page);
+  793 | 
+  794 |       // Check key tabs by clicking in the UI
+  795 |       const tabsToCheck = ['insights', 'players'];
+  796 | 
+  797 |       for (const tabLabel of tabsToCheck) {
+  798 |         try {
+  799 |           const tab = page.locator('[role="tab"]').filter({ hasText: new RegExp(tabLabel, 'i') }).first();
+  800 |           if (!(await tab.isVisible({ timeout: 3000 }).catch(() => false))) {
+  801 |             console.log(`ℹ️ Tab "${tabLabel}" not found — skipping`);
+  802 |             continue;
+  803 |           }
+  804 |           await tab.click();
+  805 |           await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  806 | 
+  807 |           const hasContent = await page
+  808 |             .locator('[data-testid*="data"], [role="table"], .MuiPaper-root')
+  809 |             .first()
+  810 |             .isVisible({ timeout: 5000 })
+  811 |             .catch(() => false);
+  812 | 
+  813 |           if (hasContent) {
+  814 |             console.log(`✅ ${tabLabel} tab has content`);
+  815 |           } else {
+  816 |             console.log(`⚠️ ${tabLabel} tab may not have content`);
+  817 |           }
+  818 |         } catch (tabError) {
+  819 |           console.log(`⚠️ ${tabLabel} tab failed:`, (tabError as Error).message);
+  820 |         }
+  821 |       }
+  822 | 
+  823 |       console.log('✅ Data consistency check completed');
+  824 |     });
+  825 |   });
+  826 | });
+  827 | 
+  828 | 
+  829 | 
+```
