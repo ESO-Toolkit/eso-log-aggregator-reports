@@ -1,0 +1,227 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-auth.spec.ts >> Nightly Regression - Authentication and Reports >> Authenticated Management Pages >> build editor should load or redirect gracefully
+- Location: tests/nightly-regression-auth.spec.ts:420:9
+
+# Error details
+
+```
+Error: /build-editor should either render or redirect to login
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Test source
+
+```ts
+  344 |       }
+  345 |     });
+  346 |   });
+  347 | 
+  348 |   // ---------------------------------------------------------------------------
+  349 |   // ESO-745: Authenticated management pages
+  350 |   // ---------------------------------------------------------------------------
+  351 |   test.describe('Authenticated Management Pages', () => {
+  352 |     test('my-builds page should load or redirect gracefully', async ({ page }) => {
+  353 |       await page.goto('/my-builds', {
+  354 |         waitUntil: 'domcontentloaded',
+  355 |         timeout: TEST_TIMEOUTS.navigation,
+  356 |       });
+  357 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  358 |       await waitForAppMount(page);
+  359 | 
+  360 |       // Client credentials tokens don't carry a user subject, so /my-builds may
+  361 |       // redirect to login. Both outcomes (loaded content OR redirect to login) are valid.
+  362 |       const url = page.url();
+  363 |       const hasContent = await page
+  364 |         .locator('main, .MuiContainer-root, .build-list, [data-testid*="build"]')
+  365 |         .first()
+  366 |         .isVisible({ timeout: 5000 })
+  367 |         .catch(() => false);
+  368 |       const hasLoginPrompt = await page
+  369 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  370 |         .first()
+  371 |         .isVisible({ timeout: 3000 })
+  372 |         .catch(() => false);
+  373 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  374 | 
+  375 |       expect(
+  376 |         hasContent || hasLoginPrompt || isOnLogin,
+  377 |         '/my-builds should either render or redirect to login',
+  378 |       ).toBeTruthy();
+  379 | 
+  380 |       await page.screenshot({
+  381 |         path: 'test-results/nightly-regression-my-builds.png',
+  382 |         fullPage: true,
+  383 |         timeout: TEST_TIMEOUTS.screenshot,
+  384 |       });
+  385 |     });
+  386 | 
+  387 |     test('my-rosters page should load or redirect gracefully', async ({ page }) => {
+  388 |       await page.goto('/my-rosters', {
+  389 |         waitUntil: 'domcontentloaded',
+  390 |         timeout: TEST_TIMEOUTS.navigation,
+  391 |       });
+  392 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  393 |       await waitForAppMount(page);
+  394 | 
+  395 |       const url = page.url();
+  396 |       const hasContent = await page
+  397 |         .locator('main, .MuiContainer-root, [data-testid*="roster"]')
+  398 |         .first()
+  399 |         .isVisible({ timeout: 5000 })
+  400 |         .catch(() => false);
+  401 |       const hasLoginPrompt = await page
+  402 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  403 |         .first()
+  404 |         .isVisible({ timeout: 3000 })
+  405 |         .catch(() => false);
+  406 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  407 | 
+  408 |       expect(
+  409 |         hasContent || hasLoginPrompt || isOnLogin,
+  410 |         '/my-rosters should either render or redirect to login',
+  411 |       ).toBeTruthy();
+  412 | 
+  413 |       await page.screenshot({
+  414 |         path: 'test-results/nightly-regression-my-rosters.png',
+  415 |         fullPage: true,
+  416 |         timeout: TEST_TIMEOUTS.screenshot,
+  417 |       });
+  418 |     });
+  419 | 
+  420 |     test('build editor should load or redirect gracefully', async ({ page }) => {
+  421 |       await page.goto('/build-editor', {
+  422 |         waitUntil: 'domcontentloaded',
+  423 |         timeout: TEST_TIMEOUTS.navigation,
+  424 |       });
+  425 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  426 |       await waitForAppMount(page);
+  427 | 
+  428 |       const url = page.url();
+  429 |       const hasEditor = await page
+  430 |         .locator('main, [data-testid*="build"], [data-testid*="editor"], .MuiContainer-root')
+  431 |         .first()
+  432 |         .isVisible({ timeout: 5000 })
+  433 |         .catch(() => false);
+  434 |       const hasLoginPrompt = await page
+  435 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  436 |         .first()
+  437 |         .isVisible({ timeout: 3000 })
+  438 |         .catch(() => false);
+  439 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  440 | 
+  441 |       expect(
+  442 |         hasEditor || hasLoginPrompt || isOnLogin,
+  443 |         '/build-editor should either render or redirect to login',
+> 444 |       ).toBeTruthy();
+      |         ^ Error: /build-editor should either render or redirect to login
+  445 | 
+  446 |       await page.screenshot({
+  447 |         path: 'test-results/nightly-regression-build-editor.png',
+  448 |         fullPage: true,
+  449 |         timeout: TEST_TIMEOUTS.screenshot,
+  450 |       });
+  451 |     });
+  452 | 
+  453 |     test('roster builder should load or redirect gracefully', async ({ page }) => {
+  454 |       await page.goto('/roster-builder', {
+  455 |         waitUntil: 'domcontentloaded',
+  456 |         timeout: TEST_TIMEOUTS.navigation,
+  457 |       });
+  458 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  459 |       await waitForAppMount(page);
+  460 | 
+  461 |       const url = page.url();
+  462 |       const hasBuilder = await page
+  463 |         .locator('main, [data-testid*="roster"], .MuiContainer-root')
+  464 |         .first()
+  465 |         .isVisible({ timeout: 5000 })
+  466 |         .catch(() => false);
+  467 |       const hasLoginPrompt = await page
+  468 |         .locator('button:has-text("Login"), a:has-text("Login"), [data-testid*="login"]')
+  469 |         .first()
+  470 |         .isVisible({ timeout: 3000 })
+  471 |         .catch(() => false);
+  472 |       const isOnLogin = url.includes('/login') || url.includes('/oauth');
+  473 | 
+  474 |       expect(
+  475 |         hasBuilder || hasLoginPrompt || isOnLogin,
+  476 |         '/roster-builder should either render or redirect to login',
+  477 |       ).toBeTruthy();
+  478 | 
+  479 |       await page.screenshot({
+  480 |         path: 'test-results/nightly-regression-roster-builder.png',
+  481 |         fullPage: true,
+  482 |         timeout: TEST_TIMEOUTS.screenshot,
+  483 |       });
+  484 |     });
+  485 |   });
+  486 | 
+  487 |   // ---------------------------------------------------------------------------
+  488 |   // ESO-750: Expanded negative / error scenario testing
+  489 |   // ---------------------------------------------------------------------------
+  490 |   test.describe('Negative Scenarios', () => {
+  491 |     test('invalid fight ID within a valid report should fallback gracefully', async ({ page }) => {
+  492 |       const reportId = '3gjVGWB2dxCL8XAw';
+  493 |       await page.goto(`/report/${reportId}/fight/99999/insights`, {
+  494 |         waitUntil: 'domcontentloaded',
+  495 |         timeout: TEST_TIMEOUTS.navigation,
+  496 |       });
+  497 |       await waitForAppMount(page);
+  498 | 
+  499 |       const hasError = await page
+  500 |         .getByText(/not found|invalid|error|fight.*not.*exist/i)
+  501 |         .first()
+  502 |         .isVisible()
+  503 |         .catch(() => false);
+  504 |       const redirected = !page.url().includes('99999');
+  505 |       const hasContent = await page.locator('main, #root').first().isVisible().catch(() => false);
+  506 | 
+  507 |       expect(
+  508 |         hasError || redirected || hasContent,
+  509 |         'Invalid fight ID should be handled gracefully',
+  510 |       ).toBeTruthy();
+  511 | 
+  512 |       // Page must remain navigable — no uncaught exceptions
+  513 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  514 |       const criticalErrors = errors.filter(
+  515 |         (e) =>
+  516 |           !e.includes('ResizeObserver') &&
+  517 |           !e.includes('Not implemented') &&
+  518 |           !e.includes('Non-Error promise rejection') &&
+  519 |           !e.includes('ChunkLoadError'),
+  520 |       );
+  521 |       expect(criticalErrors, 'Invalid fight ID should not cause JS exceptions').toHaveLength(0);
+  522 |     });
+  523 | 
+  524 |     test('simulated API timeout should show loading or error state', async ({ page }) => {
+  525 |       // Intercept esologs API requests and force a 504 to simulate a timeout
+  526 |       await page.route('**/esologs.com/**', async (route) => {
+  527 |         await route.fulfill({
+  528 |           status: 504,
+  529 |           contentType: 'application/json',
+  530 |           body: JSON.stringify({ error: 'Gateway Timeout' }),
+  531 |         });
+  532 |       });
+  533 | 
+  534 |       await page.goto('/report/prV8jWb1NqFJc97Z', {
+  535 |         waitUntil: 'domcontentloaded',
+  536 |         timeout: TEST_TIMEOUTS.navigation,
+  537 |       });
+  538 |       await waitForAppMount(page);
+  539 | 
+  540 |       // Should show a loading state, error message, or at minimum not crash
+  541 |       const hasLoadingOrError = await page
+  542 |         .locator(
+  543 |           '.loading, .MuiCircularProgress-root, .MuiAlert-root, .error, .skeleton, .MuiSkeleton-root',
+  544 |         )
+```
