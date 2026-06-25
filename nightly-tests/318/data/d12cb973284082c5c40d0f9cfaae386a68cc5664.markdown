@@ -1,0 +1,153 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-pages.spec.ts >> Nightly Regression - Pages & Features >> Home & Informational Pages >> what's new page should load changelog content
+- Location: tests/nightly-regression-pages.spec.ts:113:9
+
+# Error details
+
+```
+Error: page.goto: HTTP/2 Error: NO_ERROR
+Call log:
+  - navigating to "https://esotk.com/whats-new", waiting until "domcontentloaded"
+
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@playwright/test';
+  2   | import { TEST_TIMEOUTS, waitForAppMount } from './selectors';
+  3   | 
+  4   | /**
+  5   |  * Nightly Regression Tests - Pages & Features
+  6   |  *
+  7   |  * Smoke-level coverage for pages that have no existing nightly test coverage.
+  8   |  * Tests run against the live production site with no mocking.
+  9   |  *
+  10  |  * Coverage: ESO-741 (builds), ESO-742 (rosters), ESO-743 (home/whats-new),
+  11  |  *           ESO-744 (scribing), ESO-746 (leaderboards), ESO-748 (profiles),
+  12  |  *           ESO-749 (gear-sets, logs, parse-analysis), ESO-751 (docs)
+  13  |  *
+  14  |  * Auth: These tests do NOT require credentials. They work with or without
+  15  |  * stored auth state. Auth-gated page tests live in nightly-regression-auth.spec.ts.
+  16  |  */
+  17  | 
+  18  | /**
+  19  |  * Shared helper: navigate to a page and assert it loaded meaningful content.
+  20  |  * Returns false (and logs) instead of throwing if the page is missing, so the
+  21  |  * test can fail with a useful assertion message rather than an unhandled error.
+  22  |  */
+  23  | async function expectPageLoads(
+  24  |   page: Parameters<Parameters<typeof test>[1]>[0],
+  25  |   path: string,
+  26  |   screenshotName: string,
+  27  | ): Promise<void> {
+> 28  |   await page.goto(path, {
+      |              ^ Error: page.goto: HTTP/2 Error: NO_ERROR
+  29  |     waitUntil: 'domcontentloaded',
+  30  |     timeout: TEST_TIMEOUTS.navigation,
+  31  |   });
+  32  | 
+  33  |   await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {
+  34  |     // networkidle can time out on data-heavy pages — not a failure on its own
+  35  |   });
+  36  | 
+  37  |   await waitForAppMount(page);
+  38  | 
+  39  |   const bodyText = await page.locator('body').textContent().catch(() => '');
+  40  |   const contentLength = bodyText?.length ?? 0;
+  41  | 
+  42  |   if (contentLength < 50) {
+  43  |     console.log(`🔍 ${path} body content too short (${contentLength} chars)`);
+  44  |     console.log(`🔍 URL: ${page.url()}`);
+  45  |     console.log(`🔍 Title: ${await page.title()}`);
+  46  |   }
+  47  | 
+  48  |   expect(contentLength, `${path} should render meaningful content`).toBeGreaterThan(50);
+  49  | 
+  50  |   // No uncaught JS errors
+  51  |   const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  52  |   const criticalErrors = errors.filter(
+  53  |     (e) =>
+  54  |       !e.includes('ResizeObserver') &&
+  55  |       !e.includes('Not implemented') &&
+  56  |       !e.includes('Non-Error promise rejection') &&
+  57  |       !e.includes('ChunkLoadError'),
+  58  |   );
+  59  |   expect(criticalErrors, `${path} should have no critical JS errors`).toHaveLength(0);
+  60  | 
+  61  |   await page.screenshot({
+  62  |     path: `test-results/nightly-regression-pages-${screenshotName}.png`,
+  63  |     // fullPage removed: WebKit hangs scrolling through long pages under CI load,
+  64  |     // causing 10-20 s screenshot timeouts. Viewport capture is sufficient for
+  65  |     // smoke-level evidence that the page rendered correctly.
+  66  |     timeout: TEST_TIMEOUTS.screenshot,
+  67  |   });
+  68  | }
+  69  | 
+  70  | test.describe('Nightly Regression - Pages & Features', () => {
+  71  |   test.beforeEach(async ({ page }) => {
+  72  |     test.setTimeout(120000);
+  73  | 
+  74  |     await page.addInitScript(() => {
+  75  |       (window as any).testErrors = [];
+  76  |       window.addEventListener('error', (ev) => {
+  77  |         (window as any).testErrors.push(ev.error?.message ?? ev.message);
+  78  |       });
+  79  |       window.addEventListener('unhandledrejection', (ev) => {
+  80  |         (window as any).testErrors.push(`Unhandled rejection: ${ev.reason}`);
+  81  |       });
+  82  |     });
+  83  |   });
+  84  | 
+  85  |   // ---------------------------------------------------------------------------
+  86  |   // ESO-743: Home / landing / informational pages
+  87  |   // ---------------------------------------------------------------------------
+  88  |   test.describe('Home & Informational Pages', () => {
+  89  |     test('home page should load with visible content', async ({ page }) => {
+  90  |       await page.goto('/', {
+  91  |         waitUntil: 'domcontentloaded',
+  92  |         timeout: TEST_TIMEOUTS.navigation,
+  93  |       });
+  94  |       await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  95  |       await waitForAppMount(page);
+  96  | 
+  97  |       const hasNav = await page.locator('nav, header').first().isVisible({ timeout: 10000 }).catch(() => false);
+  98  |       const hasMain = await page.locator('main, #root, .app').first().isVisible({ timeout: 5000 }).catch(() => false);
+  99  |       const hasText = await page
+  100 |         .getByText(/eso|toolkit|log|report/i)
+  101 |         .first()
+  102 |         .isVisible({ timeout: 5000 })
+  103 |         .catch(() => false);
+  104 | 
+  105 |       expect(hasNav || hasMain || hasText, 'Home page should render navigable content').toBeTruthy();
+  106 | 
+  107 |       await page.screenshot({
+  108 |         path: 'test-results/nightly-regression-pages-home.png',
+  109 |         timeout: TEST_TIMEOUTS.screenshot,
+  110 |       });
+  111 |     });
+  112 | 
+  113 |     test("what's new page should load changelog content", async ({ page }) => {
+  114 |       await expectPageLoads(page, '/whats-new', 'whats-new');
+  115 | 
+  116 |       // Should have some release notes / changelog entries
+  117 |       const hasContent = await page
+  118 |         .locator('h1, h2, h3, li, p')
+  119 |         .first()
+  120 |         .isVisible({ timeout: 8000 })
+  121 |         .catch(() => false);
+  122 |       expect(hasContent, "/whats-new should display changelog entries").toBeTruthy();
+  123 |     });
+  124 | 
+  125 |     test('about page should load with content', async ({ page }) => {
+  126 |       await expectPageLoads(page, '/about', 'about');
+  127 |     });
+  128 | 
+```
