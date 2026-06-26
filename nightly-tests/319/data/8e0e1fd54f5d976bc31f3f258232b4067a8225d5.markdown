@@ -1,0 +1,16 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-pages.spec.ts >> Nightly Regression - Pages & Features >> Build System >> first available shared build should load
+- Location: tests/nightly-regression-pages.spec.ts:192:9
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded.
+```
