@@ -1,0 +1,227 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-pages.spec.ts >> Nightly Regression - Pages & Features >> Scribing Simulator >> scribing simulator should load with interactive UI
+- Location: tests/nightly-regression-pages.spec.ts:303:9
+
+# Error details
+
+```
+Error: /scribing-simulator should render interactive UI
+
+expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Test source
+
+```ts
+  223 |       await page.screenshot({
+  224 |         path: 'test-results/nightly-regression-pages-shared-build.png',
+  225 |         timeout: TEST_TIMEOUTS.screenshot,
+  226 |       });
+  227 |     });
+  228 |   });
+  229 | 
+  230 |   // ---------------------------------------------------------------------------
+  231 |   // ESO-742: Roster system pages (public hub + viewer)
+  232 |   // ---------------------------------------------------------------------------
+  233 |   test.describe('Roster System', () => {
+  234 |     test('roster hub should load and display rosters', async ({ page }) => {
+  235 |       await page.goto('/roster-hub', {
+  236 |         waitUntil: 'domcontentloaded',
+  237 |         timeout: TEST_TIMEOUTS.navigation,
+  238 |       });
+  239 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  240 |       await waitForAppMount(page);
+  241 | 
+  242 |       const hasContent = await page
+  243 |         .locator(
+  244 |           'main, .MuiContainer-root, .roster-list, .roster-card, [data-testid*="roster"], .MuiCard-root',
+  245 |         )
+  246 |         .first()
+  247 |         .isVisible({ timeout: 10000 })
+  248 |         .catch(() => false);
+  249 | 
+  250 |       const bodyText = await page.locator('body').textContent().catch(() => '');
+  251 |       expect(
+  252 |         hasContent || (bodyText?.length ?? 0) > 100,
+  253 |         '/roster-hub should render content',
+  254 |       ).toBeTruthy();
+  255 | 
+  256 |       await page.screenshot({
+  257 |         path: 'test-results/nightly-regression-pages-roster-hub.png',
+  258 |         timeout: TEST_TIMEOUTS.screenshot,
+  259 |       });
+  260 |     });
+  261 | 
+  262 |     test('first available shared roster should load', async ({ page }) => {
+  263 |       await page.goto('/roster-hub', {
+  264 |         waitUntil: 'domcontentloaded',
+  265 |         timeout: TEST_TIMEOUTS.navigation,
+  266 |       });
+  267 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  268 |       await waitForAppMount(page);
+  269 | 
+  270 |       const rosterLink = page.locator('a[href*="/rv"], a[href*="/roster-view"]').first();
+  271 | 
+  272 |       if (!(await rosterLink.isVisible({ timeout: 5000 }).catch(() => false))) {
+  273 |         console.log('ℹ️ No roster links found on /roster-hub — skipping shared roster test');
+  274 |         return;
+  275 |       }
+  276 | 
+  277 |       const href = await rosterLink.getAttribute('href');
+  278 |       console.log(`🔍 Testing shared roster at: ${href}`);
+  279 | 
+  280 |       await rosterLink.click();
+  281 |       await page.waitForLoadState('domcontentloaded', { timeout: TEST_TIMEOUTS.navigation });
+  282 |       await waitForAppMount(page);
+  283 | 
+  284 |       const hasContent = await page
+  285 |         .locator('main, .MuiContainer-root, [data-testid*="roster"]')
+  286 |         .first()
+  287 |         .isVisible({ timeout: 8000 })
+  288 |         .catch(() => false);
+  289 | 
+  290 |       expect(hasContent, `Shared roster ${href} should render content`).toBeTruthy();
+  291 | 
+  292 |       await page.screenshot({
+  293 |         path: 'test-results/nightly-regression-pages-shared-roster.png',
+  294 |         timeout: TEST_TIMEOUTS.screenshot,
+  295 |       });
+  296 |     });
+  297 |   });
+  298 | 
+  299 |   // ---------------------------------------------------------------------------
+  300 |   // ESO-744: Scribing Simulator
+  301 |   // ---------------------------------------------------------------------------
+  302 |   test.describe('Scribing Simulator', () => {
+  303 |     test('scribing simulator should load with interactive UI', async ({ page }) => {
+  304 |       await page.goto('/calculator#scribing', {
+  305 |         waitUntil: 'domcontentloaded',
+  306 |         timeout: TEST_TIMEOUTS.navigation,
+  307 |       });
+  308 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  309 |       await waitForAppMount(page);
+  310 | 
+  311 |       const hasSimulator = await page
+  312 |         .locator(
+  313 |           '[data-testid*="scribing"], [data-testid*="simulator"], .scribing-simulator, select, input, .MuiSelect-root',
+  314 |         )
+  315 |         .first()
+  316 |         .isVisible({ timeout: 10000 })
+  317 |         .catch(() => false);
+  318 | 
+  319 |       const bodyText = await page.locator('body').textContent().catch(() => '');
+  320 |       expect(
+  321 |         hasSimulator || (bodyText?.length ?? 0) > 100,
+  322 |         '/scribing-simulator should render interactive UI',
+> 323 |       ).toBeTruthy();
+      |         ^ Error: /scribing-simulator should render interactive UI
+  324 | 
+  325 |       await page.screenshot({
+  326 |         path: 'test-results/nightly-regression-pages-scribing-simulator.png',
+  327 |         timeout: TEST_TIMEOUTS.screenshot,
+  328 |       });
+  329 |     });
+  330 | 
+  331 |     test('scribing simulator should respond to a basic skill selection', async ({ page }) => {
+  332 |       await page.goto('/calculator#scribing', {
+  333 |         waitUntil: 'domcontentloaded',
+  334 |         timeout: TEST_TIMEOUTS.navigation,
+  335 |       });
+  336 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  337 |       await waitForAppMount(page);
+  338 | 
+  339 |       // Try to interact with the first available select/dropdown
+  340 |       const firstSelect = page
+  341 |         .locator('select, .MuiSelect-root, [role="combobox"], [data-testid*="select"]')
+  342 |         .first();
+  343 | 
+  344 |       if (!(await firstSelect.isVisible({ timeout: 5000 }).catch(() => false))) {
+  345 |         console.log('ℹ️ No interactive elements found on /scribing-simulator yet — page may still be loading');
+  346 |         return;
+  347 |       }
+  348 | 
+  349 |       await firstSelect.click();
+  350 |       await page.waitForTimeout(1000);
+  351 | 
+  352 |       // Look for an option in the dropdown
+  353 |       const firstOption = page.locator('[role="option"], .MuiMenuItem-root, option').first();
+  354 |       if (await firstOption.isVisible({ timeout: 3000 }).catch(() => false)) {
+  355 |         await firstOption.click();
+  356 |         await page.waitForTimeout(1500);
+  357 |         console.log('✅ Scribing simulator responded to skill selection');
+  358 |       }
+  359 | 
+  360 |       // No JS errors after interaction
+  361 |       const errors: string[] = await page.evaluate(() => (window as any).testErrors ?? []);
+  362 |       const criticalErrors = errors.filter(
+  363 |         (e) =>
+  364 |           !e.includes('ResizeObserver') &&
+  365 |           !e.includes('Not implemented') &&
+  366 |           !e.includes('Non-Error promise rejection') &&
+  367 |           !e.includes('ChunkLoadError'),
+  368 |       );
+  369 |       expect(criticalErrors, 'No critical errors after scribing interaction').toHaveLength(0);
+  370 | 
+  371 |       await page.screenshot({
+  372 |         path: 'test-results/nightly-regression-pages-scribing-interaction.png',
+  373 |         timeout: TEST_TIMEOUTS.screenshot,
+  374 |       });
+  375 |     });
+  376 |   });
+  377 | 
+  378 |   // ---------------------------------------------------------------------------
+  379 |   // ESO-746: Leaderboards
+  380 |   // ---------------------------------------------------------------------------
+  381 |   test.describe('Leaderboards', () => {
+  382 |     test('leaderboards page should load with data rows', async ({ page }) => {
+  383 |       await page.goto('/leaderboards', {
+  384 |         waitUntil: 'domcontentloaded',
+  385 |         timeout: TEST_TIMEOUTS.navigation,
+  386 |       });
+  387 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  388 |       await waitForAppMount(page);
+  389 | 
+  390 |       const hasTable = await page
+  391 |         .locator('.MuiDataGrid-root, table, .leaderboard, [data-testid*="leaderboard"]')
+  392 |         .first()
+  393 |         .isVisible({ timeout: 10000 })
+  394 |         .catch(() => false);
+  395 | 
+  396 |       const bodyText = await page.locator('body').textContent().catch(() => '');
+  397 |       expect(
+  398 |         hasTable || (bodyText?.length ?? 0) > 100,
+  399 |         '/leaderboards should render data',
+  400 |       ).toBeTruthy();
+  401 | 
+  402 |       // Verify no failed API requests for esologs.com
+  403 |       // (errors already captured via addInitScript in beforeEach)
+  404 | 
+  405 |       await page.screenshot({
+  406 |         path: 'test-results/nightly-regression-pages-leaderboards.png',
+  407 |         timeout: TEST_TIMEOUTS.screenshot,
+  408 |       });
+  409 |     });
+  410 |   });
+  411 | 
+  412 |   // ---------------------------------------------------------------------------
+  413 |   // ESO-748: Public user profiles
+  414 |   // ---------------------------------------------------------------------------
+  415 |   test.describe('User Profiles', () => {
+  416 |     test('public user profile should load from latest-reports', async ({ page }) => {
+  417 |       // Find a real username by pulling one from the latest reports page
+  418 |       await page.goto('/latest-reports', {
+  419 |         waitUntil: 'domcontentloaded',
+  420 |         timeout: TEST_TIMEOUTS.navigation,
+  421 |       });
+  422 |       await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.dataLoad }).catch(() => {});
+  423 |       await waitForAppMount(page);
+```
