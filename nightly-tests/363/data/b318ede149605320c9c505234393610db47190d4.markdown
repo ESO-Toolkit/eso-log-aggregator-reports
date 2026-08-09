@@ -1,0 +1,1117 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-interactive.spec.ts >> Nightly Regression - Interactive Features >> Fight Replay Functionality >> should load and interact with fight replay
+- Location: tests/nightly-regression-interactive.spec.ts:201:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button[aria-label*="play"], button[aria-label*="pause"], .replay-controls, .play-button, .pause-button').first()
+    - locator resolved to <button tabindex="0" type="button" aria-current="true" class="MuiBox-root css-a0mrlt" aria-label="Trash: Tormented Skullmancer, Cleared, 0:08, currently playing">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4]:
+      - /url: "#main-content"
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - button "ESO Toolkit logo ESO Toolkit" [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img "ESO Toolkit logo" [ref=e11]
+            - text: ESO Toolkit
+        - navigation "Main navigation" [ref=e12]:
+          - button "roster hub Roster Hub" [ref=e13] [cursor=pointer]:
+            - img "roster hub" [ref=e15]: 👥
+            - text: Roster Hub
+          - button "build hub Build Hub" [ref=e16] [cursor=pointer]:
+            - img "build hub" [ref=e18]: 🏗️
+            - text: Build Hub
+          - button "pack hub Pack Hub" [ref=e19] [cursor=pointer]:
+            - img "pack hub" [ref=e21]: 🧩
+            - text: Pack Hub
+          - button "Reports" [ref=e22] [cursor=pointer]:
+            - img [ref=e24]
+            - text: Reports
+            - img [ref=e27]
+          - button "Tools" [ref=e29] [cursor=pointer]:
+            - img [ref=e31]
+            - text: Tools
+            - img [ref=e34]
+          - button "Profile" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]: U
+            - paragraph [ref=e39]: Profile
+            - img [ref=e40]
+    - dialog "Navigation menu" [ref=e42]:
+      - button "U Profile View profile" [ref=e45] [cursor=pointer]:
+        - generic [ref=e46]: U
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Profile
+          - paragraph [ref=e50]: View profile
+        - img [ref=e51]
+      - paragraph [ref=e53]: Navigate
+      - generic [ref=e54]:
+        - button "👥 Roster Hub" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 👥
+          - paragraph [ref=e57]: Roster Hub
+        - button "🏗️ Build Hub" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 🏗️
+          - paragraph [ref=e60]: Build Hub
+        - button "🧩 Pack Hub" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]: 🧩
+          - paragraph [ref=e63]: Pack Hub
+      - paragraph [ref=e64]: Reports
+      - generic [ref=e65]:
+        - button "📁 My Reports Your uploaded logs" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📁
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: My Reports
+            - paragraph [ref=e70]: Your uploaded logs
+        - button "🎲 Sample Report Explore a demo log" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: 🎲
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Sample Report
+            - paragraph [ref=e75]: Explore a demo log
+        - button "📊 Latest Reports Recently uploaded" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 📊
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: Latest Reports
+            - paragraph [ref=e80]: Recently uploaded
+        - button "🏆 Leaderboards Top parse rankings" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: 🏆
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Leaderboards
+            - paragraph [ref=e85]: Top parse rankings
+        - button "🧬 Build Leaderboard Top DPS builds by archetype" [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: 🧬
+          - generic [ref=e88]:
+            - paragraph [ref=e89]: Build Leaderboard
+            - paragraph [ref=e90]: Top DPS builds by archetype
+      - paragraph [ref=e91]: Tools
+      - generic [ref=e92]:
+        - button "📝 Text Editor Format guild announcements" [ref=e93] [cursor=pointer]:
+          - generic [ref=e94]: 📝
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: Text Editor
+            - paragraph [ref=e97]: Format guild announcements
+        - button "Calculator Stat & damage math" [ref=e98] [cursor=pointer]:
+          - img [ref=e100]
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Calculator
+            - paragraph [ref=e110]: Stat & damage math
+        - button "📈 Parse Analysis Break down your parses" [ref=e111] [cursor=pointer]:
+          - generic [ref=e112]: 📈
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: Parse Analysis
+            - paragraph [ref=e115]: Break down your parses
+        - button "⚔️ Loadout Manager Manage gear loadouts" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: ⚔️
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: Loadout Manager
+            - paragraph [ref=e120]: Manage gear loadouts
+        - button "👥 Roster Builder Plan trial compositions" [ref=e121] [cursor=pointer]:
+          - generic [ref=e122]: 👥
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: Roster Builder
+            - paragraph [ref=e125]: Plan trial compositions
+        - button "🔧 Build Editor Create & share builds" [ref=e126] [cursor=pointer]:
+          - generic [ref=e127]: 🔧
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: Build Editor
+            - paragraph [ref=e130]: Create & share builds
+        - button "✒️ Scribing Plan scribed skills" [ref=e131] [cursor=pointer]:
+          - generic [ref=e132]: ✒️
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Scribing
+            - paragraph [ref=e135]: Plan scribed skills
+      - paragraph [ref=e136]: Appearance
+      - generic [ref=e137]:
+        - button "Switch to light mode" [ref=e138] [cursor=pointer]:
+          - img [ref=e140]
+          - generic [ref=e142]:
+            - paragraph [ref=e143]: Theme
+            - paragraph [ref=e144]: Dark · tap to switch
+        - 'button "Performance: Auto · Medium — change" [ref=e145] [cursor=pointer]':
+          - img [ref=e147]
+          - generic [ref=e149]:
+            - paragraph [ref=e150]: Performance
+            - paragraph [ref=e151]: Auto · Medium
+          - img [ref=e152]
+      - button "Log out" [ref=e155] [cursor=pointer]:
+        - img [ref=e157]
+        - text: Log out
+    - main [active] [ref=e159]:
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - button "Back to Fight" [ref=e164] [cursor=pointer]:
+            - img [ref=e166]
+            - text: Back to Fight
+          - heading "Tormented Skullmancer" [level=1] [ref=e168]
+          - generic [ref=e170]:
+            - img [ref=e171]
+            - generic [ref=e174]: 0:08
+        - group "Ossein Cage chapters" [ref=e175]:
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - heading "Ossein Cage" [level=6] [ref=e178]
+              - generic [ref=e180]: 9 / 19 bosses
+            - generic [ref=e182] [cursor=pointer]:
+              - switch "Include trash fights" [checked] [ref=e185]
+              - generic [ref=e188]: Include trash
+          - generic [ref=e189]:
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:08, currently playing" [ref=e190] [cursor=pointer]':
+              - img [ref=e192]
+              - generic [ref=e194]:
+                - paragraph [ref=e195]: Tormented Skullmancer
+                - generic [ref=e196]:
+                  - img [ref=e197]
+                  - generic [ref=e199]: Cleared
+                  - generic [ref=e200]: · 0:08
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:24" [ref=e201] [cursor=pointer]':
+              - img [ref=e203]
+              - generic [ref=e205]:
+                - paragraph [ref=e206]: Tormented Skullmancer
+                - generic [ref=e207]:
+                  - img [ref=e208]
+                  - generic [ref=e210]: Cleared
+                  - generic [ref=e211]: · 0:24
+            - 'button "Boss: Red Witch Gedna Relvel, Veteran, Kill, 0:42" [ref=e212] [cursor=pointer]':
+              - img "Red Witch Gedna Relvel" [ref=e214]
+              - generic [ref=e215]:
+                - paragraph [ref=e216]: Red Witch Gedna Relvel
+                - generic [ref=e217]:
+                  - img [ref=e218]
+                  - generic [ref=e220]: Kill
+                  - generic [ref=e221]: · 0:42
+                  - generic [ref=e222]: · Veteran
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:13" [ref=e223] [cursor=pointer]':
+              - img [ref=e225]
+              - generic [ref=e227]:
+                - paragraph [ref=e228]: Tormented Skullmancer
+                - generic [ref=e229]:
+                  - img [ref=e230]
+                  - generic [ref=e232]: Cleared
+                  - generic [ref=e233]: · 0:13
+            - 'button "Trash: Channeler, Cleared, 0:07" [ref=e234] [cursor=pointer]':
+              - img [ref=e236]
+              - generic [ref=e238]:
+                - paragraph [ref=e239]: Channeler
+                - generic [ref=e240]:
+                  - img [ref=e241]
+                  - generic [ref=e243]: Cleared
+                  - generic [ref=e244]: · 0:07
+            - 'button "Trash: Tormented Skullmancer, Cleared, 1:00" [ref=e245] [cursor=pointer]':
+              - img [ref=e247]
+              - generic [ref=e249]:
+                - paragraph [ref=e250]: Tormented Skullmancer
+                - generic [ref=e251]:
+                  - img [ref=e252]
+                  - generic [ref=e254]: Cleared
+                  - generic [ref=e255]: · 1:00
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:11" [ref=e256] [cursor=pointer]':
+              - img [ref=e258]
+              - generic [ref=e260]:
+                - paragraph [ref=e261]: Tormented Skullmancer
+                - generic [ref=e262]:
+                  - img [ref=e263]
+                  - generic [ref=e265]: Cleared
+                  - generic [ref=e266]: · 0:11
+            - 'button "Boss: Hall of Fleshcraft, Veteran HM, Kill, 3:04" [ref=e267] [cursor=pointer]':
+              - img "Hall of Fleshcraft" [ref=e269]
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: Hall of Fleshcraft
+                - generic [ref=e272]:
+                  - img [ref=e273]
+                  - generic [ref=e275]: Kill
+                  - generic [ref=e276]: · 3:04
+                  - generic [ref=e277]: · Veteran HM
+            - 'button "Trash: Hall of Fleshcraft, Cleared, 0:07" [ref=e278] [cursor=pointer]':
+              - img [ref=e280]
+              - generic [ref=e282]:
+                - paragraph [ref=e283]: Hall of Fleshcraft
+                - generic [ref=e284]:
+                  - img [ref=e285]
+                  - generic [ref=e287]: Cleared
+                  - generic [ref=e288]: · 0:07
+            - 'button "Trash: Tormented Crusher, Cleared, 0:21" [ref=e289] [cursor=pointer]':
+              - img [ref=e291]
+              - generic [ref=e293]:
+                - paragraph [ref=e294]: Tormented Crusher
+                - generic [ref=e295]:
+                  - img [ref=e296]
+                  - generic [ref=e298]: Cleared
+                  - generic [ref=e299]: · 0:21
+            - 'button "Trash: Tormented Crusher, Cleared, 0:36" [ref=e300] [cursor=pointer]':
+              - img [ref=e302]
+              - generic [ref=e304]:
+                - paragraph [ref=e305]: Tormented Crusher
+                - generic [ref=e306]:
+                  - img [ref=e307]
+                  - generic [ref=e309]: Cleared
+                  - generic [ref=e310]: · 0:36
+            - 'button "Boss: Tortured Ranyu / Tortured Kathutet / Tortured Amkaos, Veteran, Kill, 0:12" [ref=e311] [cursor=pointer]':
+              - generic [ref=e312]:
+                - paragraph [ref=e313]: Tortured Ranyu / Tortured Kathutet / Tortured Amkaos
+                - generic [ref=e314]:
+                  - img [ref=e315]
+                  - generic [ref=e317]: Kill
+                  - generic [ref=e318]: · 0:12
+                  - generic [ref=e319]: · Veteran
+            - 'button "Trash: Tormented Crusher, Cleared, 0:14" [ref=e320] [cursor=pointer]':
+              - img [ref=e322]
+              - generic [ref=e324]:
+                - paragraph [ref=e325]: Tormented Crusher
+                - generic [ref=e326]:
+                  - img [ref=e327]
+                  - generic [ref=e329]: Cleared
+                  - generic [ref=e330]: · 0:14
+            - 'button "Boss: Jynorah and Skorkhif, Veteran HM, 35% left, 3:01" [ref=e331] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e333]
+              - generic [ref=e334]:
+                - paragraph [ref=e335]: Jynorah and Skorkhif
+                - generic [ref=e336]:
+                  - img [ref=e337]
+                  - generic [ref=e339]: 35% left
+                  - generic [ref=e340]: · 3:01
+                  - generic [ref=e341]: · Veteran HM
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:09" [ref=e342] [cursor=pointer]':
+              - img [ref=e344]
+              - generic [ref=e346]:
+                - paragraph [ref=e347]: Tormented Skullmancer
+                - generic [ref=e348]:
+                  - img [ref=e349]
+                  - generic [ref=e351]: Cleared
+                  - generic [ref=e352]: · 0:09
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:26" [ref=e353] [cursor=pointer]':
+              - img [ref=e355]
+              - generic [ref=e357]:
+                - paragraph [ref=e358]: Tormented Skullmancer
+                - generic [ref=e359]:
+                  - img [ref=e360]
+                  - generic [ref=e362]: Cleared
+                  - generic [ref=e363]: · 0:26
+            - 'button "Boss: Red Witch Gedna Relvel, pull 2, Veteran, Kill, 0:41" [ref=e364] [cursor=pointer]':
+              - img "Red Witch Gedna Relvel" [ref=e366]
+              - generic [ref=e367]:
+                - paragraph [ref=e368]:
+                  - text: Red Witch Gedna Relvel
+                  - generic [ref=e369]: "· #2"
+                - generic [ref=e370]:
+                  - img [ref=e371]
+                  - generic [ref=e373]: Kill
+                  - generic [ref=e374]: · 0:41
+                  - generic [ref=e375]: · Veteran
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:31" [ref=e376] [cursor=pointer]':
+              - img [ref=e378]
+              - generic [ref=e380]:
+                - paragraph [ref=e381]: Tormented Skullmancer
+                - generic [ref=e382]:
+                  - img [ref=e383]
+                  - generic [ref=e385]: Cleared
+                  - generic [ref=e386]: · 0:31
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:29" [ref=e387] [cursor=pointer]':
+              - img [ref=e389]
+              - generic [ref=e391]:
+                - paragraph [ref=e392]: Tormented Skullmancer
+                - generic [ref=e393]:
+                  - img [ref=e394]
+                  - generic [ref=e396]: Cleared
+                  - generic [ref=e397]: · 0:29
+            - 'button "Trash: Channeler, Cleared, 0:23" [ref=e398] [cursor=pointer]':
+              - img [ref=e400]
+              - generic [ref=e402]:
+                - paragraph [ref=e403]: Channeler
+                - generic [ref=e404]:
+                  - img [ref=e405]
+                  - generic [ref=e407]: Cleared
+                  - generic [ref=e408]: · 0:23
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:10" [ref=e409] [cursor=pointer]':
+              - img [ref=e411]
+              - generic [ref=e413]:
+                - paragraph [ref=e414]: Tormented Skullmancer
+                - generic [ref=e415]:
+                  - img [ref=e416]
+                  - generic [ref=e418]: Cleared
+                  - generic [ref=e419]: · 0:10
+            - 'button "Boss: Hall of Fleshcraft, pull 2, Veteran HM, Kill, 3:01" [ref=e420] [cursor=pointer]':
+              - img "Hall of Fleshcraft" [ref=e422]
+              - generic [ref=e423]:
+                - paragraph [ref=e424]:
+                  - text: Hall of Fleshcraft
+                  - generic [ref=e425]: "· #2"
+                - generic [ref=e426]:
+                  - img [ref=e427]
+                  - generic [ref=e429]: Kill
+                  - generic [ref=e430]: · 3:01
+                  - generic [ref=e431]: · Veteran HM
+            - 'button "Trash: Tormented Crusher, Cleared, 0:23" [ref=e432] [cursor=pointer]':
+              - img [ref=e434]
+              - generic [ref=e436]:
+                - paragraph [ref=e437]: Tormented Crusher
+                - generic [ref=e438]:
+                  - img [ref=e439]
+                  - generic [ref=e441]: Cleared
+                  - generic [ref=e442]: · 0:23
+            - 'button "Trash: Tormented Crusher, Cleared, 0:36" [ref=e443] [cursor=pointer]':
+              - img [ref=e445]
+              - generic [ref=e447]:
+                - paragraph [ref=e448]: Tormented Crusher
+                - generic [ref=e449]:
+                  - img [ref=e450]
+                  - generic [ref=e452]: Cleared
+                  - generic [ref=e453]: · 0:36
+            - 'button "Trash: Tortured Ranyu / Tortured Kathutet / Tortured Amkaos, Cleared, 0:13" [ref=e454] [cursor=pointer]':
+              - img [ref=e456]
+              - generic [ref=e458]:
+                - paragraph [ref=e459]: Tortured Ranyu / Tortured Kathutet / Tortured Amkaos
+                - generic [ref=e460]:
+                  - img [ref=e461]
+                  - generic [ref=e463]: Cleared
+                  - generic [ref=e464]: · 0:13
+            - 'button "Trash: Tormented Crusher, Cleared, 0:14" [ref=e465] [cursor=pointer]':
+              - img [ref=e467]
+              - generic [ref=e469]:
+                - paragraph [ref=e470]: Tormented Crusher
+                - generic [ref=e471]:
+                  - img [ref=e472]
+                  - generic [ref=e474]: Cleared
+                  - generic [ref=e475]: · 0:14
+            - 'button "Boss: Jynorah and Skorkhif, pull 2, Veteran HM, Kill, 4:41" [ref=e476] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e478]
+              - generic [ref=e479]:
+                - paragraph [ref=e480]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e481]: "· #2"
+                - generic [ref=e482]:
+                  - img [ref=e483]
+                  - generic [ref=e485]: Kill
+                  - generic [ref=e486]: · 4:41
+                  - generic [ref=e487]: · Veteran HM
+            - 'button "Boss: Blood Drinker Thisa, Veteran, Kill, 2:29" [ref=e488] [cursor=pointer]':
+              - img "Blood Drinker Thisa" [ref=e490]
+              - generic [ref=e491]:
+                - paragraph [ref=e492]: Blood Drinker Thisa
+                - generic [ref=e493]:
+                  - img [ref=e494]
+                  - generic [ref=e496]: Kill
+                  - generic [ref=e497]: · 2:29
+                  - generic [ref=e498]: · Veteran
+            - 'button "Trash: Tormented Skullmancer, Cleared, 1:14" [ref=e499] [cursor=pointer]':
+              - img [ref=e501]
+              - generic [ref=e503]:
+                - paragraph [ref=e504]: Tormented Skullmancer
+                - generic [ref=e505]:
+                  - img [ref=e506]
+                  - generic [ref=e508]: Cleared
+                  - generic [ref=e509]: · 1:14
+            - 'button "Boss: Overfiend Kazpian, Veteran HM, Kill, 5:04" [ref=e510] [cursor=pointer]':
+              - img "Overfiend Kazpian" [ref=e512]
+              - generic [ref=e513]:
+                - paragraph [ref=e514]: Overfiend Kazpian
+                - generic [ref=e515]:
+                  - img [ref=e516]
+                  - generic [ref=e518]: Kill
+                  - generic [ref=e519]: · 5:04
+                  - generic [ref=e520]: · Veteran HM
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:16" [ref=e521] [cursor=pointer]':
+              - img [ref=e523]
+              - generic [ref=e525]:
+                - paragraph [ref=e526]: Tormented Skullmancer
+                - generic [ref=e527]:
+                  - img [ref=e528]
+                  - generic [ref=e530]: Cleared
+                  - generic [ref=e531]: · 0:16
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:36" [ref=e532] [cursor=pointer]':
+              - img [ref=e534]
+              - generic [ref=e536]:
+                - paragraph [ref=e537]: Tormented Skullmancer
+                - generic [ref=e538]:
+                  - img [ref=e539]
+                  - generic [ref=e541]: Cleared
+                  - generic [ref=e542]: · 0:36
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:40" [ref=e543] [cursor=pointer]':
+              - img [ref=e545]
+              - generic [ref=e547]:
+                - paragraph [ref=e548]: Tormented Skullmancer
+                - generic [ref=e549]:
+                  - img [ref=e550]
+                  - generic [ref=e552]: Cleared
+                  - generic [ref=e553]: · 0:40
+            - 'button "Trash: Channeler, Cleared, 0:09" [ref=e554] [cursor=pointer]':
+              - img [ref=e556]
+              - generic [ref=e558]:
+                - paragraph [ref=e559]: Channeler
+                - generic [ref=e560]:
+                  - img [ref=e561]
+                  - generic [ref=e563]: Cleared
+                  - generic [ref=e564]: · 0:09
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:29" [ref=e565] [cursor=pointer]':
+              - img [ref=e567]
+              - generic [ref=e569]:
+                - paragraph [ref=e570]: Tormented Skullmancer
+                - generic [ref=e571]:
+                  - img [ref=e572]
+                  - generic [ref=e574]: Cleared
+                  - generic [ref=e575]: · 0:29
+            - 'button "Trash: Channeler, Cleared, 0:19" [ref=e576] [cursor=pointer]':
+              - img [ref=e578]
+              - generic [ref=e580]:
+                - paragraph [ref=e581]: Channeler
+                - generic [ref=e582]:
+                  - img [ref=e583]
+                  - generic [ref=e585]: Cleared
+                  - generic [ref=e586]: · 0:19
+            - 'button "Trash: Tormented Skullmancer, Cleared, 0:13" [ref=e587] [cursor=pointer]':
+              - img [ref=e589]
+              - generic [ref=e591]:
+                - paragraph [ref=e592]: Tormented Skullmancer
+                - generic [ref=e593]:
+                  - img [ref=e594]
+                  - generic [ref=e596]: Cleared
+                  - generic [ref=e597]: · 0:13
+            - 'button "Boss: Hall of Fleshcraft, pull 3, Veteran HM, Kill, 3:04" [ref=e598] [cursor=pointer]':
+              - img "Hall of Fleshcraft" [ref=e600]
+              - generic [ref=e601]:
+                - paragraph [ref=e602]:
+                  - text: Hall of Fleshcraft
+                  - generic [ref=e603]: "· #3"
+                - generic [ref=e604]:
+                  - img [ref=e605]
+                  - generic [ref=e607]: Kill
+                  - generic [ref=e608]: · 3:04
+                  - generic [ref=e609]: · Veteran HM
+            - 'button "Trash: Channeler, Cleared, 0:05" [ref=e610] [cursor=pointer]':
+              - img [ref=e612]
+              - generic [ref=e614]:
+                - paragraph [ref=e615]: Channeler
+                - generic [ref=e616]:
+                  - img [ref=e617]
+                  - generic [ref=e619]: Cleared
+                  - generic [ref=e620]: · 0:05
+            - 'button "Trash: Tormented Soul Devourer, Cleared, 0:18" [ref=e621] [cursor=pointer]':
+              - img [ref=e623]
+              - generic [ref=e625]:
+                - paragraph [ref=e626]: Tormented Soul Devourer
+                - generic [ref=e627]:
+                  - img [ref=e628]
+                  - generic [ref=e630]: Cleared
+                  - generic [ref=e631]: · 0:18
+            - 'button "Trash: Tormented Crusher, Cleared, 0:17" [ref=e632] [cursor=pointer]':
+              - img [ref=e634]
+              - generic [ref=e636]:
+                - paragraph [ref=e637]: Tormented Crusher
+                - generic [ref=e638]:
+                  - img [ref=e639]
+                  - generic [ref=e641]: Cleared
+                  - generic [ref=e642]: · 0:17
+            - 'button "Trash: Tormented Crusher, Cleared, 0:13" [ref=e643] [cursor=pointer]':
+              - img [ref=e645]
+              - generic [ref=e647]:
+                - paragraph [ref=e648]: Tormented Crusher
+                - generic [ref=e649]:
+                  - img [ref=e650]
+                  - generic [ref=e652]: Cleared
+                  - generic [ref=e653]: · 0:13
+            - 'button "Boss: Jynorah and Skorkhif, pull 3, Veteran HM, 74% left, 0:48" [ref=e654] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e656]
+              - generic [ref=e657]:
+                - paragraph [ref=e658]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e659]: "· #3"
+                - generic [ref=e660]:
+                  - img [ref=e661]
+                  - generic [ref=e663]: 74% left
+                  - generic [ref=e664]: · 0:48
+                  - generic [ref=e665]: · Veteran HM
+            - 'button "Trash: Jynorah and Skorkhif, Cleared, 0:09" [ref=e666] [cursor=pointer]':
+              - img [ref=e668]
+              - generic [ref=e670]:
+                - paragraph [ref=e671]: Jynorah and Skorkhif
+                - generic [ref=e672]:
+                  - img [ref=e673]
+                  - generic [ref=e675]: Cleared
+                  - generic [ref=e676]: · 0:09
+            - 'button "Boss: Jynorah and Skorkhif, pull 4, Veteran HM, 39% left, 3:43" [ref=e677] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e679]
+              - generic [ref=e680]:
+                - paragraph [ref=e681]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e682]: "· #4"
+                - generic [ref=e683]:
+                  - img [ref=e684]
+                  - generic [ref=e686]: 39% left
+                  - generic [ref=e687]: · 3:43
+                  - generic [ref=e688]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 5, Veteran HM, 43% left, 3:04" [ref=e689] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e691]
+              - generic [ref=e692]:
+                - paragraph [ref=e693]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e694]: "· #5"
+                - generic [ref=e695]:
+                  - img [ref=e696]
+                  - generic [ref=e698]: 43% left
+                  - generic [ref=e699]: · 3:04
+                  - generic [ref=e700]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 6, Veteran HM, 39% left, 4:32" [ref=e701] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e703]
+              - generic [ref=e704]:
+                - paragraph [ref=e705]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e706]: "· #6"
+                - generic [ref=e707]:
+                  - img [ref=e708]
+                  - generic [ref=e710]: 39% left
+                  - generic [ref=e711]: · 4:32
+                  - generic [ref=e712]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 7, Veteran HM, 39% left, 5:11" [ref=e713] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e715]
+              - generic [ref=e716]:
+                - paragraph [ref=e717]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e718]: "· #7"
+                - generic [ref=e719]:
+                  - img [ref=e720]
+                  - generic [ref=e722]: 39% left
+                  - generic [ref=e723]: · 5:11
+                  - generic [ref=e724]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 8, Veteran HM, 40% left, 4:37" [ref=e725] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e727]
+              - generic [ref=e728]:
+                - paragraph [ref=e729]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e730]: "· #8"
+                - generic [ref=e731]:
+                  - img [ref=e732]
+                  - generic [ref=e734]: 40% left
+                  - generic [ref=e735]: · 4:37
+                  - generic [ref=e736]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 9, Veteran HM, 32% left, 5:43" [ref=e737] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e739]
+              - generic [ref=e740]:
+                - paragraph [ref=e741]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e742]: "· #9"
+                - generic [ref=e743]:
+                  - img [ref=e744]
+                  - generic [ref=e746]: 32% left
+                  - generic [ref=e747]: · 5:43
+                  - generic [ref=e748]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 10, Veteran HM, 35% left, 5:39" [ref=e749] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e751]
+              - generic [ref=e752]:
+                - paragraph [ref=e753]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e754]: "· #10"
+                - generic [ref=e755]:
+                  - img [ref=e756]
+                  - generic [ref=e758]: 35% left
+                  - generic [ref=e759]: · 5:39
+                  - generic [ref=e760]: · Veteran HM
+            - 'button "Boss: Jynorah and Skorkhif, pull 11, Veteran HM, 34% left, 5:20" [ref=e761] [cursor=pointer]':
+              - img "Jynorah and Skorkhif" [ref=e763]
+              - generic [ref=e764]:
+                - paragraph [ref=e765]:
+                  - text: Jynorah and Skorkhif
+                  - generic [ref=e766]: "· #11"
+                - generic [ref=e767]:
+                  - img [ref=e768]
+                  - generic [ref=e770]: 34% left
+                  - generic [ref=e771]: · 5:20
+                  - generic [ref=e772]: · Veteran HM
+        - button "Map Markers" [ref=e774] [cursor=pointer]:
+          - img [ref=e776]
+          - text: Map Markers
+          - img [ref=e779]
+        - generic [ref=e781]:
+          - img "3D fight replay arena showing player positions over time" [ref=e783]:
+            - generic [ref=e787]:
+              - button "Players12" [expanded] [ref=e788] [cursor=pointer]:
+                - generic [ref=e789]: Players12
+                - img [ref=e790]
+              - generic [ref=e796]:
+                - generic [ref=e797]:
+                  - button "Change @Centurio_Regor figure color" [ref=e798] [cursor=pointer]
+                  - paragraph [ref=e800]: "@Centurio_Regor"
+                  - button "Hide @Centurio_Regor" [ref=e803] [cursor=pointer]:
+                    - img [ref=e804]
+                  - button "Show @Centurio_Regor path" [ref=e806] [cursor=pointer]:
+                    - img [ref=e807]
+                - generic [ref=e809]:
+                  - button "Change @SandroKilltDich figure color" [ref=e810] [cursor=pointer]
+                  - paragraph [ref=e812]: "@SandroKilltDich"
+                  - button "Hide @SandroKilltDich" [ref=e815] [cursor=pointer]:
+                    - img [ref=e816]
+                  - button "Show @SandroKilltDich path" [ref=e818] [cursor=pointer]:
+                    - img [ref=e819]
+                - generic [ref=e821]:
+                  - button "Change @Lord_Drad figure color" [ref=e822] [cursor=pointer]
+                  - paragraph [ref=e824]: "@Lord_Drad"
+                  - button "Hide @Lord_Drad" [ref=e827] [cursor=pointer]:
+                    - img [ref=e828]
+                  - button "Show @Lord_Drad path" [ref=e830] [cursor=pointer]:
+                    - img [ref=e831]
+                - generic [ref=e833]:
+                  - button "Change @theLEERest figure color" [ref=e834] [cursor=pointer]
+                  - paragraph [ref=e836]: "@theLEERest"
+                  - button "Hide @theLEERest" [ref=e839] [cursor=pointer]:
+                    - img [ref=e840]
+                  - button "Show @theLEERest path" [ref=e842] [cursor=pointer]:
+                    - img [ref=e843]
+                - generic [ref=e845]:
+                  - button "Change @DerNippler figure color" [ref=e846] [cursor=pointer]
+                  - paragraph [ref=e848]: "@DerNippler"
+                  - button "Hide @DerNippler" [ref=e851] [cursor=pointer]:
+                    - img [ref=e852]
+                  - button "Show @DerNippler path" [ref=e854] [cursor=pointer]:
+                    - img [ref=e855]
+                - generic [ref=e857]:
+                  - button "Change @Syoni figure color" [ref=e858] [cursor=pointer]
+                  - paragraph [ref=e860]: "@Syoni"
+                  - button "Hide @Syoni" [ref=e863] [cursor=pointer]:
+                    - img [ref=e864]
+                  - button "Show @Syoni path" [ref=e866] [cursor=pointer]:
+                    - img [ref=e867]
+                - generic [ref=e869]:
+                  - button "Change @Mobitor figure color" [ref=e870] [cursor=pointer]
+                  - paragraph [ref=e872]: "@Mobitor"
+                  - button "Hide @Mobitor" [ref=e875] [cursor=pointer]:
+                    - img [ref=e876]
+                  - button "Show @Mobitor path" [ref=e878] [cursor=pointer]:
+                    - img [ref=e879]
+                - generic [ref=e881]:
+                  - button "Change @TingleTony figure color" [ref=e882] [cursor=pointer]
+                  - paragraph [ref=e884]: "@TingleTony"
+                  - button "Hide @TingleTony" [ref=e887] [cursor=pointer]:
+                    - img [ref=e888]
+                  - button "Show @TingleTony path" [ref=e890] [cursor=pointer]:
+                    - img [ref=e891]
+                - generic [ref=e893]:
+                  - button "Change @Ryvendur figure color" [ref=e894] [cursor=pointer]
+                  - paragraph [ref=e896]: "@Ryvendur"
+                  - button "Hide @Ryvendur" [ref=e899] [cursor=pointer]:
+                    - img [ref=e900]
+                  - button "Show @Ryvendur path" [ref=e902] [cursor=pointer]:
+                    - img [ref=e903]
+                - generic [ref=e905]:
+                  - button "Change @TochTom figure color" [ref=e906] [cursor=pointer]
+                  - paragraph [ref=e908]: "@TochTom"
+                  - button "Hide @TochTom" [ref=e911] [cursor=pointer]:
+                    - img [ref=e912]
+                  - button "Show @TochTom path" [ref=e914] [cursor=pointer]:
+                    - img [ref=e915]
+                - generic [ref=e917]:
+                  - button "Change @Jacob_Nordhoff figure color" [ref=e918] [cursor=pointer]
+                  - paragraph [ref=e920]: "@Jacob_Nordhoff"
+                  - button "Hide @Jacob_Nordhoff" [ref=e923] [cursor=pointer]:
+                    - img [ref=e924]
+                  - button "Show @Jacob_Nordhoff path" [ref=e926] [cursor=pointer]:
+                    - img [ref=e927]
+                - generic [ref=e929]:
+                  - button "Change @AbhorashNL figure color" [ref=e930] [cursor=pointer]
+                  - paragraph [ref=e932]: "@AbhorashNL"
+                  - button "Hide @AbhorashNL" [ref=e935] [cursor=pointer]:
+                    - img [ref=e936]
+                  - button "Show @AbhorashNL path" [ref=e938] [cursor=pointer]:
+                    - img [ref=e939]
+            - button "Enter fullscreen" [ref=e941] [cursor=pointer]:
+              - img [ref=e942]
+            - 'button "Replay quality: Auto — change" [ref=e944] [cursor=pointer]':
+              - img [ref=e945]
+            - button "Hide actor name tags" [pressed] [ref=e947] [cursor=pointer]:
+              - img [ref=e948]
+            - button "Show keyboard controls" [ref=e950] [cursor=pointer]:
+              - img [ref=e951]
+          - status [ref=e953]
+          - generic [ref=e955]:
+            - slider "Trial timeline" [ref=e957] [cursor=pointer]
+            - generic [ref=e1012]:
+              - slider "Replay timeline" [ref=e1016]: "0"
+              - button "6 deaths at 0:05 • ☠️ Osteon Skeletal Archer (0:05) • ☠️ Osteon Skeletal Archer (0:05) • ☠️ Osteon Skeletal Archer (0:05) • ☠️ Tormented Deadraiser (0:07) • ☠️ Tormented Skullmancer (0:08) • ☠️ Tormented Deadraiser (0:08)" [ref=e1017] [cursor=pointer]
+            - generic [ref=e1018]:
+              - generic [ref=e1019]:
+                - generic [ref=e1020]:
+                  - generic [ref=e1021]: 0:00
+                  - generic [ref=e1022]: / 0:08
+                - generic [ref=e1023]:
+                  - group "Playback speed" [ref=e1024]:
+                    - button "0.5 times speed" [ref=e1025] [cursor=pointer]: 0.5×
+                    - button "1 times speed" [pressed] [ref=e1026] [cursor=pointer]: 1×
+                    - button "2 times speed" [ref=e1027] [cursor=pointer]: 2×
+                    - button "4 times speed" [ref=e1028] [cursor=pointer]: 4×
+                  - button "Choose playback speed" [ref=e1029] [cursor=pointer]:
+                    - img [ref=e1030]
+              - generic [ref=e1032]:
+                - generic "Previous boss" [ref=e1033]:
+                  - button "Previous boss" [disabled]:
+                    - img
+                - generic [ref=e1034]:
+                  - button "Skip to start" [ref=e1035] [cursor=pointer]:
+                    - img [ref=e1036]
+                  - button "Skip backward 10 seconds" [ref=e1038] [cursor=pointer]:
+                    - img [ref=e1039]
+                  - button "Play" [ref=e1042] [cursor=pointer]:
+                    - img [ref=e1043]
+                  - button "Skip forward 10 seconds" [ref=e1045] [cursor=pointer]:
+                    - img [ref=e1046]
+                  - button "Skip to end" [ref=e1049] [cursor=pointer]:
+                    - img [ref=e1050]
+                - 'generic "Next boss: Red Witch Gedna Relvel ( ] )" [ref=e1052]':
+                  - 'button "Next boss: Red Witch Gedna Relvel" [ref=e1053] [cursor=pointer]':
+                    - img [ref=e1054]
+              - generic [ref=e1057]:
+                - generic "Autoplay — automatically continue into the next fight" [ref=e1058] [cursor=pointer]:
+                  - switch "Autoplay the whole trial" [ref=e1061]
+                  - generic [ref=e1064]: Autoplay
+                - button "Share current replay time" [ref=e1065] [cursor=pointer]:
+                  - img [ref=e1067]
+                  - generic [ref=e1069]: Share
+                - button "Collapse controls" [ref=e1070] [cursor=pointer]:
+                  - img [ref=e1071]
+    - generic [ref=e1073]: Navigated to Page
+    - contentinfo [ref=e1074]:
+      - generic [ref=e1075]:
+        - generic [ref=e1076]:
+          - generic [ref=e1077]:
+            - generic [ref=e1078]: Stay ahead of the meta
+            - heading "Ready for the next wave of ESO combat analytics?" [level=2] [ref=e1079]
+            - paragraph [ref=e1080]: Connect with our team for early feature access, share your feedback, and help shape the tools that power top-tier raid strategy.
+          - generic [ref=e1081]:
+            - link "Join Discord" [ref=e1082] [cursor=pointer]:
+              - /url: https://discord.gg/mMjwcQYFdc
+              - text: Join Discord
+            - link "View on GitHub" [ref=e1084] [cursor=pointer]:
+              - /url: https://github.com/ESO-Toolkit/eso-toolkit
+        - generic [ref=e1085]:
+          - generic [ref=e1086]:
+            - generic [ref=e1087]:
+              - img "ESO Toolkit logo" [ref=e1089]
+              - generic [ref=e1090]:
+                - heading "ESO Helper Tools" [level=3] [ref=e1091]
+                - paragraph [ref=e1092]: Data-driven utilities crafted by raiders for raiders. Surface the insights you need to plan faster pulls, tighter logs, and smoother clears.
+            - generic [ref=e1093]:
+              - generic [ref=e1094]: Real-time analytics
+              - generic [ref=e1096]: Player-built insights
+              - generic [ref=e1098]: Free beta access
+              - generic [ref=e1100]: Community-driven support
+          - generic [ref=e1103]:
+            - generic [ref=e1104]:
+              - paragraph [ref=e1105]: Tools
+              - generic [ref=e1106]:
+                - link "Build Calculator" [ref=e1107]:
+                  - /url: /calculator
+                  - generic [ref=e1108]: Build Calculator
+                  - img [ref=e1109]
+                - link "Build Editor" [ref=e1111]:
+                  - /url: /build-editor
+                  - generic [ref=e1112]: Build Editor
+                  - img [ref=e1113]
+                - link "Roster Builder" [ref=e1115]:
+                  - /url: /roster-builder
+                  - generic [ref=e1116]: Roster Builder
+                  - img [ref=e1117]
+                - link "Parse Analysis" [ref=e1119]:
+                  - /url: /parse-analysis
+                  - generic [ref=e1120]: Parse Analysis
+                  - img [ref=e1121]
+                - link "Text Editor" [ref=e1123]:
+                  - /url: /text-editor
+                  - generic [ref=e1124]: Text Editor
+                  - img [ref=e1125]
+                - link "Loadout Manager" [ref=e1127]:
+                  - /url: /loadout-manager
+                  - generic [ref=e1128]: Loadout Manager
+                  - img [ref=e1129]
+                - link "Scribing" [ref=e1131]:
+                  - /url: /calculator#scribing
+                  - generic [ref=e1132]: Scribing
+                  - img [ref=e1133]
+                - link "Gear Sets" [ref=e1135]:
+                  - /url: /gear-sets
+                  - generic [ref=e1136]: Gear Sets
+                  - img [ref=e1137]
+            - generic [ref=e1139]:
+              - paragraph [ref=e1140]: Quick Links
+              - generic [ref=e1141]:
+                - link "Home" [ref=e1142]:
+                  - /url: /
+                  - generic [ref=e1143]: Home
+                  - img [ref=e1144]
+                - link "Roster Hub" [ref=e1146]:
+                  - /url: /roster-hub
+                  - generic [ref=e1147]: Roster Hub
+                  - img [ref=e1148]
+                - link "Build Hub" [ref=e1150]:
+                  - /url: /build-hub
+                  - generic [ref=e1151]: Build Hub
+                  - img [ref=e1152]
+                - link "Pack Hub" [ref=e1154]:
+                  - /url: /pack-hub
+                  - generic [ref=e1155]: Pack Hub
+                  - img [ref=e1156]
+                - link "Leaderboards" [ref=e1158]:
+                  - /url: /leaderboards
+                  - generic [ref=e1159]: Leaderboards
+                  - img [ref=e1160]
+                - link "Calculation Knowledge Base" [ref=e1162]:
+                  - /url: /docs/calculations
+                  - generic [ref=e1163]: Calculation Knowledge Base
+                  - img [ref=e1164]
+                - link "Discord Bot Guide" [ref=e1166]:
+                  - /url: /docs/discord-roster-bot
+                  - generic [ref=e1167]: Discord Bot Guide
+                  - img [ref=e1168]
+                - link "What's New" [ref=e1170]:
+                  - /url: /whats-new
+                  - generic [ref=e1171]: What's New
+                  - img [ref=e1172]
+                - link "About" [ref=e1174]:
+                  - /url: /about
+                  - generic [ref=e1175]: About
+                  - img [ref=e1176]
+        - generic [ref=e1179]:
+          - paragraph [ref=e1180]: ESO Helper Tools is an independent project and is not affiliated with ZeniMax Online Studios, Bethesda, or esologs.com. All trademarks are the property of their respective owners.
+          - generic [ref=e1181]:
+            - link "Privacy Policy" [ref=e1182]:
+              - /url: /privacy
+            - button "Report a Bug" [ref=e1183] [cursor=pointer]:
+              - img [ref=e1185]
+              - text: Report a Bug
+  - generic [ref=e1189]:
+    - button "Close" [ref=e1190] [cursor=pointer]:
+      - img [ref=e1191]
+    - generic [ref=e1193]:
+      - img [ref=e1195]
+      - heading "Privacy & Cookies" [level=6] [ref=e1197]
+    - paragraph [ref=e1198]:
+      - text: We use essential storage for app functionality. Optional analytics and error tracking help us improve.
+      - link "Privacy Policy" [ref=e1199]:
+        - /url: /privacy
+    - generic [ref=e1200]:
+      - button "Decline All" [ref=e1201] [cursor=pointer]
+      - button "Customize" [ref=e1202] [cursor=pointer]
+      - button "Accept All" [ref=e1203] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  344 |         fullPage: true,
+  345 |         timeout: TEST_TIMEOUTS.screenshot,
+  346 |       });
+  347 | 
+  348 |       // Check if fight links are available (may not be present for all reports)
+  349 |       const _firstFightLink = page.locator(SELECTORS.ANY_FIGHT_BUTTON).first();
+  350 | 
+  351 |       // Check if fights exist in DOM first, then check usability
+  352 |       const fightButtonCount = await page.locator(SELECTORS.ANY_FIGHT_BUTTON).count();
+  353 | 
+  354 |       let hasFights = false;
+  355 |       let usableFightButton = null;
+  356 |       if (fightButtonCount > 0) {
+  357 |         // Try scrolling to the first fight button
+  358 |         const firstButton = page.locator(SELECTORS.ANY_FIGHT_BUTTON).first();
+  359 |         await firstButton.scrollIntoViewIfNeeded().catch(() => {});
+  360 |         await page.waitForTimeout(1000); // Wait for any animations
+  361 | 
+  362 |         // If fight buttons exist in DOM, check if any are usable
+  363 |         for (let i = 0; i < Math.min(fightButtonCount, 5); i++) {
+  364 |           const button = page.locator(SELECTORS.ANY_FIGHT_BUTTON).nth(i);
+  365 | 
+  366 |           // Try scrolling to this specific button
+  367 |           await button.scrollIntoViewIfNeeded().catch(() => {});
+  368 | 
+  369 |           const isVisible = await button.isVisible({ timeout: 2000 }).catch(() => false);
+  370 | 
+  371 |           // If not visible, try checking if it's just outside viewport but clickable
+  372 |           if (!isVisible) {
+  373 |             const isEnabled = await button.isEnabled().catch(() => false);
+  374 |             const boundingBox = await button.boundingBox().catch(() => null);
+  375 | 
+  376 |             if (isEnabled && boundingBox) {
+  377 |               hasFights = true;
+  378 |               usableFightButton = button;
+  379 |               break;
+  380 |             }
+  381 |           } else {
+  382 |             hasFights = true;
+  383 |             usableFightButton = button;
+  384 |             break;
+  385 |           }
+  386 |         }
+  387 |       }
+  388 | 
+  389 |       let fightId: string;
+  390 |       
+  391 |       if (!hasFights) {
+  392 |         console.log(`ℹ️  No fights found in UI for report ${reportId} - using known fight ID from test data`);
+  393 |         // Use known fight ID from test data instead of skipping
+  394 |         fightId = '5'; // We know qdxpGgyQ92A31LBr has fight-5 from test data
+  395 |       } else {
+  396 |         const href = await usableFightButton!.getAttribute('href');
+  397 |         fightId = href?.match(/\/fight\/(\d+)/)?.[1] || '';
+  398 | 
+  399 |         // If no href, try to extract from data-testid
+  400 |         if (!fightId) {
+  401 |           const dataTestId = await usableFightButton!.getAttribute('data-testid');
+  402 |           if (dataTestId) {
+  403 |             const idMatch = dataTestId.match(/fight-button-(.+)/);
+  404 |             if (idMatch) {
+  405 |               fightId = idMatch[1];
+  406 |             }
+  407 |           }
+  408 |         }
+  409 | 
+  410 |         if (!fightId) {
+  411 |           console.log('⚠️  Could not extract fight ID from href:', href, '- falling back to known fight ID');
+  412 |           fightId = '5'; // Fallback to known fight ID
+  413 |         }
+  414 |       }
+  415 | 
+  416 |       // Navigate to replay page
+  417 |       await page.goto(`/report/${reportId}/fight/${fightId}/replay`, {
+  418 |         waitUntil: 'domcontentloaded',
+  419 |         timeout: TEST_TIMEOUTS.navigation,
+  420 |       });
+  421 | 
+  422 |       // Wait for replay to load - this might take longer
+  423 |       await page.waitForTimeout(5000);
+  424 | 
+  425 |       // Look for replay controls
+  426 |       const replayControls = page.locator(
+  427 |         'button[aria-label*="play"], button[aria-label*="pause"], .replay-controls, .play-button, .pause-button',
+  428 |       );
+  429 | 
+  430 |       const hasReplayInterface = await replayControls
+  431 |         .first()
+  432 |         .isVisible({ timeout: TEST_TIMEOUTS.interaction });
+  433 | 
+  434 |       // Take screenshot whether replay loaded or not (for debugging)
+  435 |       await page.screenshot({
+  436 |         path: `test-results/nightly-regression-replay-${reportId}-${fightId}.png`,
+  437 |         fullPage: true,
+  438 |         timeout: TEST_TIMEOUTS.screenshot,
+  439 |       });
+  440 | 
+  441 |       if (hasReplayInterface) {
+  442 |         // Test play/pause functionality
+  443 |         const playButton = replayControls.first();
+> 444 |         await playButton.click();
+      |                          ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
+  445 | 
+  446 |         // Wait for replay to start
+  447 |         await page.waitForTimeout(3000);
+  448 | 
+  449 |         await page.screenshot({
+  450 |           path: `test-results/nightly-regression-replay-playing-${reportId}.png`,
+  451 |           fullPage: true,
+  452 |           timeout: TEST_TIMEOUTS.screenshot,
+  453 |         });
+  454 | 
+  455 |         // Test pause
+  456 |         const pauseButton = page.locator('button[aria-label*="pause"], .pause-button').first();
+  457 | 
+  458 |         if (await pauseButton.isVisible({ timeout: 3000 })) {
+  459 |           await pauseButton.click();
+  460 |           await page.waitForTimeout(1000);
+  461 |         }
+  462 | 
+  463 |         // Test timeline scrubbing if available
+  464 |         const timeline = page.locator('input[type="range"], .timeline-slider, .scrubber');
+  465 |         if (await timeline.first().isVisible({ timeout: 3000 })) {
+  466 |           // For sliders, force click is often needed due to overlay elements
+  467 |           await timeline.first().click({ force: true });
+  468 |           await page.waitForTimeout(2000);
+  469 | 
+  470 |           await page.screenshot({
+  471 |             path: `test-results/nightly-regression-replay-scrubbed-${reportId}.png`,
+  472 |             fullPage: true,
+  473 |             timeout: TEST_TIMEOUTS.screenshot,
+  474 |           });
+  475 |         }
+  476 |       }
+  477 | 
+  478 |       // Verify no critical errors occurred
+  479 |       const errors = await page.evaluate(() => (window as any).testErrors || []);
+  480 |       const criticalErrors = errors.filter(
+  481 |         (error: string) => !error.includes('ResizeObserver') && !error.includes('Not implemented'),
+  482 |       );
+  483 | 
+  484 |       // Only fail on critical errors, not minor ones that don't affect functionality
+  485 |       if (criticalErrors.length > 0) {
+  486 |         console.warn('Replay errors detected:', criticalErrors);
+  487 |       }
+  488 |     });
+  489 |   });
+  490 | 
+  491 |   test.describe('Live Logging Functionality', () => {
+  492 |     test('should load live logging interface', async ({ page }) => {
+  493 |       const reportId = REPORT_WITH_FIGHTS;
+  494 | 
+  495 |       // Navigate to live logging
+  496 |       await page.goto(`/report/${reportId}/live`, {
+  497 |         waitUntil: 'domcontentloaded',
+  498 |         timeout: TEST_TIMEOUTS.navigation,
+  499 |       });
+  500 | 
+  501 |       await page.waitForTimeout(5000);
+  502 | 
+  503 |       // LiveLog is a passive polling wrapper around ReportFightDetails — it has
+  504 |       // no Start/Stop/Connect controls. Earlier heuristics here matched
+  505 |       // unrelated UI (e.g. the "Enlivening Overflow" CP name, footer "Connect
+  506 |       // with our team" CTA), causing a speculative click that retried until a
+  507 |       // 30s timeout on chromium. The test now just takes a smoke-test
+  508 |       // screenshot, matching the pattern used by sibling tests in this file.
+  509 |       try {
+  510 |         await page.screenshot({
+  511 |           path: `test-results/nightly-regression-live-logging-${reportId}.png`,
+  512 |           fullPage: true,
+  513 |           timeout: 15000,
+  514 |         });
+  515 |       } catch (screenshotError) {
+  516 |         console.log('Screenshot failed but continuing test:', (screenshotError as Error).message);
+  517 |       }
+  518 |     });
+  519 |   });
+  520 | 
+  521 |   test.describe('Advanced Visualizations', () => {
+  522 |     test('should test location heatmap visualization', async ({ page }) => {
+  523 |       const reportId = REPORT_WITH_FIGHTS;
+  524 | 
+  525 |       // Use known fight ID directly — avoids an extra landing-page API round-trip
+  526 |       const fightId = TEST_DATA.KNOWN_FIGHT_ID;
+  527 | 
+  528 |       console.log(`ℹ️  Using fight ${fightId} for heatmap visualization test`);
+  529 | 
+  530 |       // Navigate to location heatmap (experimental tab)
+  531 |       await withBrowserStability(async () => {
+  532 |         await page.goto(`/report/${reportId}/fight/${fightId}/location-heatmap`, {
+  533 |           waitUntil: 'domcontentloaded',
+  534 |           timeout: TEST_TIMEOUTS.navigation,
+  535 |         });
+  536 |       }, 'heatmap navigation');
+  537 | 
+  538 |       // Wait longer for heatmaps to render with stability protection
+  539 |       await withBrowserStability(async () => {
+  540 |         await page.waitForTimeout(15000); // Increased timeout for heatmap rendering
+  541 |       }, 'heatmap rendering wait');
+  542 | 
+  543 |       // Look for heatmap visualization - be more specific about what we're looking for
+  544 |       const heatmapElements = page.locator('canvas, .heatmap, .visualization, .map-container');
+```
