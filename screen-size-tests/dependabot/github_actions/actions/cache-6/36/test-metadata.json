@@ -1,0 +1,14 @@
+{
+  "testRun": {
+    "timestamp": "2026-08-10T10:55:36+00:00",
+    "branch": "dependabot/github_actions/actions/cache-6",
+    "commit": "7b8d9c5099bc16896ebc3a55b479509bf9634a4e",
+    "workflow": "Screen Size Testing - Core Panels & Insights Analysis",
+    "runId": "31380120130",
+    "runNumber": "36",
+    "deviceCategories": "mobile",
+    "updateSnapshots": "false",
+    "screenshotCount": 141
+  },
+  "reportUrl": "https://ESO-Toolkit.github.io/eso-log-aggregator-reports/screen-size-tests/dependabot/github_actions/actions/cache-6/36/index.html"
+}
