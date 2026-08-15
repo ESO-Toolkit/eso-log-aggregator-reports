@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: nightly-regression-interactive.spec.ts >> Nightly Regression - Interactive Features >> Fight Replay Functionality >> should load and interact with fight replay
+- Location: tests/nightly-regression-interactive.spec.ts:201:9
+
+# Error details
+
+```
+Error: page.goto: Error receiving data: Connection reset by peer
+Call log:
+  - navigating to "https://esotk.com/report/prV8jWb1NqFJc97Z", waiting until "domcontentloaded"
+
+```
+
+# Test source
+
+```ts
+  120 |         // Check if button is actually usable
+  121 |         await button.scrollIntoViewIfNeeded();
+  122 |         const isVisible = await button.isVisible({ timeout: 5000 });
+  123 |         const isEnabled = await button.isEnabled();
+  124 | 
+  125 |         console.log(`🔍 Button ${i}: visible=${isVisible}, enabled=${isEnabled}`);
+  126 | 
+  127 |         if (isVisible && isEnabled) {
+  128 |           // Try to get fight ID from data-testid first (more reliable)
+  129 |           const dataTestId = await button.getAttribute('data-testid');
+  130 |           let extractedFightId = dataTestId?.match(/fight-button-(.+)/)?.[1];
+  131 | 
+  132 |           // If no data-testid, try href as fallback
+  133 |           if (!extractedFightId) {
+  134 |             const href = await button.getAttribute('href');
+  135 |             extractedFightId = href?.match(/\/fight\/(\d+)/)?.[1];
+  136 |           }
+  137 | 
+  138 |           if (extractedFightId) {
+  139 |             hasFights = true;
+  140 |             usableFightButton = button;
+  141 |             fightId = extractedFightId;
+  142 |             console.log(`✅ Found usable fight button: ${fightId}`);
+  143 |             break;
+  144 |           }
+  145 |         }
+  146 |       } catch {
+  147 |         // Continue to next button if this one fails
+  148 |         continue;
+  149 |       }
+  150 |     }
+  151 |   }
+  152 | 
+  153 |   if (!hasFights) {
+  154 |     console.log(`ℹ️ No fight buttons found in UI - using known fight ID: ${fightId}`);
+  155 |   }
+  156 | 
+  157 |   // Always return a fight ID - either discovered or known from test data
+  158 |   return { hasFights, fightButton: usableFightButton, fightId };
+  159 | }
+  160 | 
+  161 | test.describe('Nightly Regression - Interactive Features', () => {
+  162 |   // Resolve the primary report ID once before all tests run so the suite
+  163 |   // survives expiry of the hardcoded primary ID (ESO-740).
+  164 |   test.beforeAll(async ({ browser }) => {
+  165 |     const page = await browser.newPage();
+  166 |     try {
+  167 |       REPORT_WITH_FIGHTS = await resolveWorkingReportId(page);
+  168 |     } finally {
+  169 |       await page.close();
+  170 |     }
+  171 |   });
+  172 | 
+  173 |   test.beforeEach(async ({ page }) => {
+  174 |     // No API mocking - we need real data for these features
+  175 |     test.setTimeout(180000); // 3 minutes per test for complex features
+  176 | 
+  177 |     // Monitor console errors
+  178 |     const errors: string[] = [];
+  179 |     page.on('pageerror', (error) => {
+  180 |       errors.push(error.message);
+  181 |     });
+  182 | 
+  183 |     // Monitor network failures
+  184 |     const failedRequests: any[] = [];
+  185 |     page.on('response', (response) => {
+  186 |       if (response.status() >= 400) {
+  187 |         failedRequests.push({
+  188 |           url: response.url(),
+  189 |           status: response.status(),
+  190 |         });
+  191 |       }
+  192 |     });
+  193 | 
+  194 |     await page.addInitScript(() => {
+  195 |       (window as any).testErrors = [];
+  196 |       (window as any).failedRequests = [];
+  197 |     });
+  198 |   });
+  199 | 
+  200 |   test.describe('Fight Replay Functionality', () => {
+  201 |     test('should load and interact with fight replay', async ({ page }, testInfo) => {
+  202 |       const reportId = REPORT_WITH_FIGHTS;
+  203 | 
+  204 |       // Check if real authentication is available from global setup
+  205 |       const hasAuth = hasRealAuthentication();
+  206 |       
+  207 |       if (!hasAuth) {
+  208 |         console.log('ℹ️ No real authentication available - skipping fight replay test');
+  209 |         console.log('💡 To enable this test, set authentication environment variables:');
+  210 |         console.log('   - ESO_LOGS_API_KEY (recommended for testing), or');
+  211 |         console.log('   - OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET, or');
+  212 |         console.log('   - ESO_LOGS_TEST_EMAIL and ESO_LOGS_TEST_PASSWORD');
+  213 |         test.skip(true, 'Fight replay test requires authentication which is not available');
+  214 |         return;
+  215 |       }
+  216 |       
+  217 |       console.log('✅ Real authentication detected - running fight replay test with prod data');
+  218 | 
+  219 |       // Navigate to report to get fights (authentication will be loaded from global state)
+> 220 |       await page.goto(`/report/${reportId}`, {
+      |                  ^ Error: page.goto: Error receiving data: Connection reset by peer
+  221 |         waitUntil: 'domcontentloaded',
+  222 |         timeout: TEST_TIMEOUTS.navigation,
+  223 |       });
+  224 | 
+  225 |       // Try networkidle but fallback to content check if it times out
+  226 |       try {
+  227 |         await page.waitForLoadState('networkidle', { timeout: TEST_TIMEOUTS.networkIdle });
+  228 |       } catch {
+  229 |         console.log('⚠️ NetworkIdle timeout for fight replay, checking for content instead...');
+  230 |         await page.waitForTimeout(5000); // Longer wait for production site
+  231 |       }
+  232 | 
+  233 |       // Additional wait for WebKit to ensure JavaScript has fully executed
+  234 |       if (testInfo.project.name.includes('webkit')) {
+  235 |         await page.waitForTimeout(5000); // Increased timeout
+  236 |       }
+  237 | 
+  238 |       // More comprehensive content detection with multiple fallbacks
+  239 |       let contentFound = false;
+  240 |       
+  241 |       // Method 1: Try standard fight list/loading indicators
+  242 |       try {
+  243 |         await expect(page.locator(SELECTORS.FIGHT_LIST_OR_LOADING).first()).toBeVisible({
+  244 |           timeout: TEST_TIMEOUTS.dataLoad,
+  245 |         });
+  246 |         contentFound = true;
+  247 |         console.log('✅ Standard content indicators found');
+  248 |       } catch {
+  249 |         console.log('⚠️ Standard fight list/loading indicators not found, trying alternate detection...');
+  250 |       }
+  251 |       
+  252 |       // Method 2: Check for any report content (broader search)
+  253 |       if (!contentFound) {
+  254 |         try {
+  255 |           const reportContent = page.locator(SELECTORS.REPORT_CONTENT);
+  256 |           await expect(reportContent.first()).toBeVisible({ timeout: 15000 }); // Longer timeout
+  257 |           contentFound = true;
+  258 |           console.log('✅ Found report content via broader search');
+  259 |         } catch {
+  260 |           console.log('⚠️ Broad report content search also failed');
+  261 |         }
+  262 |       }
+  263 |       
+  264 |       // Method 3: Check for any visible content with text (most permissive)
+  265 |       if (!contentFound) {
+  266 |         try {
+  267 |           await page.waitForFunction(() => {
+  268 |             const body = document.body;
+  269 |             return body && body.innerText && body.innerText.length > 100;
+  270 |           }, { timeout: 10000 });
+  271 |           
+  272 |           const textContent = await page.textContent('body');
+  273 |           if (textContent && textContent.length > 1000) {
+  274 |             contentFound = true;
+  275 |             console.log(`✅ Found meaningful page content (${textContent.length} characters)`);
+  276 |           }
+  277 |         } catch {
+  278 |           console.log('⚠️ Even basic content detection failed');
+  279 |         }
+  280 |       }
+  281 |       
+  282 |       // Method 4: Final fallback - check page URL and basic structure
+  283 |       if (!contentFound) {
+  284 |         const currentUrl = page.url();
+  285 |         if (currentUrl.includes('/report/') && !currentUrl.includes('error') && !currentUrl.includes('404')) {
+  286 |           // Page loaded correctly, might just be slow
+  287 |           console.log('⚠️ Content detection failed but URL looks correct, waiting more...');
+  288 |           await page.waitForTimeout(10000);
+  289 |           
+  290 |           // Try once more with very permissive detection
+  291 |           const hasAnyContent = await page.locator('div, main, section, article').count();
+  292 |           if (hasAnyContent > 5) {
+  293 |             contentFound = true;
+  294 |             console.log('✅ Found basic page structure, assuming content is loading');
+  295 |           }
+  296 |         }
+  297 |       }
+  298 |       
+  299 |       if (!contentFound) {
+  300 |         console.log('❌ All content detection methods failed - this may indicate a production issue');
+  301 |         
+  302 |         // Enhanced debugging
+  303 |         const currentUrl = page.url();
+  304 |         const pageTitle = await page.title();
+  305 |         const bodyText = await page.textContent('body');
+  306 |         
+  307 |         console.log('🔍 Debug info:', {
+  308 |           currentUrl,
+  309 |           pageTitle,
+  310 |           bodyTextLength: bodyText?.length || 0,
+  311 |           bodyTextPreview: bodyText?.substring(0, 200),
+  312 |         });
+  313 |         
+  314 |         // Take screenshot for debugging but with error handling
+  315 |         try {
+  316 |           await page.screenshot({ 
+  317 |             path: 'test-results/fight-replay-no-content-debug.png', 
+  318 |             fullPage: true,
+  319 |             timeout: TEST_TIMEOUTS.screenshot, 
+  320 |           });
+```
