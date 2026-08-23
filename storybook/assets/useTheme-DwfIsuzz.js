@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./react-BZJXY1be.js";import{g as n,h as r,i,n as a,r as o}from"./identifier-CX9opxIW.js";function s(){let e=n(o);return e.$$material||e}function c(){return(c=e((()=>{t(),r(),i(),a()})))()}export{s as n,c as t};
