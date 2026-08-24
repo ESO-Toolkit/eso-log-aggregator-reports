@@ -1,85 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <title>storybook - Storybook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+
     
-    <!-- Cache control meta tags for better cache management -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     
-    <meta
-      name="description"
-      content="ESO Log Insights by NotaGuild — Advanced analytics and visualization tool for Elder Scrolls Online combat logs. Analyze damage, healing, buffs, and performance with beautiful charts and detailed breakdowns."
-    />
-    <meta
-      name="keywords"
-      content="ESO, Elder Scrolls Online, combat logs, DPS meter, raid analysis, MMO analytics, ESO Logs, damage meter, healing analysis"
-    />
-    <meta name="author" content="NotaGuild" />
+    <style>
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('./sb-common-assets/nunito-sans-regular.woff2') format('woff2');
+      }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://esotk.com/" />
-    <meta property="og:title" content="ESO Log Insights by NotaGuild" />
-    <meta
-      property="og:description"
-      content="Advanced analytics and visualization tool for Elder Scrolls Online combat logs. Analyze damage, healing, buffs, and performance with beautiful charts and detailed breakdowns."
-    />
-    <meta property="og:image" content="%PUBLIC_URL%/android-chrome-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="ESO Log Insights - Combat Log Analytics Tool" />
-    <meta property="og:site_name" content="ESO Log Insights" />
-    <meta property="og:locale" content="en_US" />
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url('./sb-common-assets/nunito-sans-italic.woff2') format('woff2');
+      }
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://esotk.com/" />
-    <meta name="twitter:title" content="ESO Log Insights by NotaGuild" />
-    <meta
-      name="twitter:description"
-      content="Advanced analytics and visualization tool for Elder Scrolls Online combat logs. Analyze damage, healing, buffs, and performance with beautiful charts and detailed breakdowns."
-    />
-    <meta name="twitter:image" content="%PUBLIC_URL%/android-chrome-512x512.png" />
-    <meta name="twitter:image:alt" content="ESO Log Insights - Combat Log Analytics Tool" />
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('./sb-common-assets/nunito-sans-bold.woff2') format('woff2');
+      }
 
-    <!-- Discord -->
-    <meta name="theme-color" content="#7289da" />
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url('./sb-common-assets/nunito-sans-bold-italic.woff2') format('woff2');
+      }
+    </style>
 
-    <!-- Additional meta tags for better SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="application-name" content="ESO Log Insights" />
-    <meta name="apple-mobile-web-app-title" content="ESO Log Insights" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="./sb-manager/runtime.js" rel="modulepreload" />
 
-    <!-- Critical resource hints for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://assets.rpglogs.com" />
+    
+    <link href="./sb-addons/storybook-core-server-presets-0/common-manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/links-1/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/docs-2/manager-bundle.js" rel="modulepreload" />
+       
 
-    <!-- Load critical fonts with font-display swap for better LCP -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-    <title>ESO Log Insights by NotaGuild</title>
+    <style>
+      #storybook-root[hidden] {
+        display: none !important;
+      }
+    </style>
+
+    
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    
+    <script>
+      
+        
+          window['FEATURES'] = {
+  "actions": true,
+  "argTypeTargetsV7": true,
+  "babelRemoveBugfixes": false,
+  "backgrounds": true,
+  "changeDetection": true,
+  "componentsManifest": false,
+  "controls": true,
+  "disallowImplicitActionsInRenderV8": true,
+  "highlight": true,
+  "interactions": true,
+  "legacyDecoratorFileOrder": false,
+  "measure": true,
+  "outline": true,
+  "menuOnboardingChecklist": true,
+  "sidebarOnboardingChecklist": true,
+  "viewport": true
+};
+        
+      
+        
+          window['REFS'] = {};
+        
+      
+        
+          window['LOGLEVEL'] = "info";
+        
+      
+        
+          window['DOCS_OPTIONS'] = {
+  "defaultName": "Docs"
+};
+        
+      
+        
+          window['CONFIG_TYPE'] = "PRODUCTION";
+        
+      
+        
+          window['DOCGEN_STORY_PREPARED'] = false;
+        
+      
+        
+      
+        
+      
+        
+          window['TAGS_OPTIONS'] = {};
+        
+      
+        
+          window['STORYBOOK_BUILDER'] = "vite";
+        
+      
+        
+          window['STORYBOOK_FRAMEWORK'] = "react-vite";
+        
+      
+        
+          window['STORYBOOK_RENDERER'] = "react";
+        
+      
+        
+      
+    </script>
+    
+
+    <script type="module">
+      import './sb-manager/globals-runtime.js';
+
+      
+        import './sb-addons/storybook-core-server-presets-0/common-manager-bundle.js';
+      
+        import './sb-addons/links-1/manager-bundle.js';
+      
+        import './sb-addons/docs-2/manager-bundle.js';
+      
+
+      import './sb-manager/runtime.js';
+    </script>
   </body>
 </html>
