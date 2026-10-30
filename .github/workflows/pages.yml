@@ -1,0 +1,82 @@
+name: Publish lightweight reports site
+
+on:
+  push:
+    branches: [gh-pages]
+  pull_request:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reports-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out publishing tools without report attachments
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+            /scripts/
+            /README.md
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Test site preparation
+        run: python -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Check out pages while preserving trace viewer resources
+        run: |
+          python - <<'PY' > "$RUNNER_TEMP/report-sparse"
+          import subprocess
+          import sys
+          sys.path.insert(0, "scripts")
+          from prepare_site import report_sparse_patterns
+
+          paths = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "-z", "HEAD"])
+          print("\n".join(report_sparse_patterns(paths.decode("utf-8").split("\0"))))
+          PY
+          git sparse-checkout set --no-cone --stdin < "$RUNNER_TEMP/report-sparse"
+
+      - name: Prepare bounded Pages payload
+        run: >-
+          python scripts/prepare_site.py
+          --source .
+          --output "$RUNNER_TEMP/report-site"
+          --repository "$GITHUB_REPOSITORY"
+          --commit "$GITHUB_SHA"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: ${{ runner.temp }}/report-site
+
+  deploy:
+    if: github.ref == 'refs/heads/gh-pages' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
